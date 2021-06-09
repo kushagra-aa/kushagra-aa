@@ -9,7 +9,7 @@
 
 - 🌱 I’m currently learning **Angular, Node.js, Express JS**
 
-- 👨‍💻 All of my projects are available at (Working On It!)) [https://kushagra-aa.github.io/portfolio/](https://kushagra-aa.github.io/portfolio/)
+- 👨‍💻 All of my projects are available at (Working On It!)) [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
 - 💬 Ask me about **HTML, SCSS, CSS, JS**
 
