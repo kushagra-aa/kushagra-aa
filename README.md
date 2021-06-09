@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Kushagra Agnihotri</h1>
-<h3 align="center">A passionate Full Stack developer from India</h3>
+<h3 align="center">A passionate Full Stack developer & UI/UX Designer from India</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=kushagra-aa&label=Visitors&color=5e0080&style=flat" alt="kushagra-aa" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=kushagra-aa&label=Views&color=40f76e&style=for-the-badge" alt="kushagra-aa" /> </p>
 
 <p align="left"> <a href="https://twitter.com/a_kushagraa" target="blank"><img src="https://img.shields.io/twitter/follow/a_kushagraa?logo=twitter&style=for-the-badge" alt="a_kushagraa" /></a> </p>
 
