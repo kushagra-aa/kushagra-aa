@@ -11,7 +11,7 @@
 
 - 👨‍💻 All of my projects are available at (Working On It!)) [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
-- 💬 Ask me about **HTML, SCSS, CSS, JS**
+- 💬 Ask me about **HTML, SCSS, CSS, JS, TS**
 
 - 📫 How to reach me **kushagraagnihotri24@gmail.com**
 
