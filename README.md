@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Kushagra Agnihotri</h1>
-<h3 align="center">A passionate Full Stack developer & UI/UX Designer from India</h3>
+<h3 align="center">A passionate Full Stack Web Developer & UI/UX Designer from India</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kushagra-aa&label=Views&color=40f76e&style=for-the-badge" alt="kushagra-aa" /> </p>
 
@@ -7,15 +7,15 @@
 
 - 🔭 I’m currently working on [3-D](https://github.com/kushagra-aa/3-d)
 
-- 🌱 I’m currently learning **Angular, Node.js, Express JS**
+- 🌱 I’m currently learning **Python**
 
-- 👨‍💻 All of my projects are available at (Working On It!)) [Portfolio](https://kushagra-aa.github.io/portfolio/)
+- 👨‍💻 All of my projects are available at (STILL Working On It!) [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
 - 💬 Ask me about **HTML, SCSS, CSS, JS, TS**
 
 - 📫 How to reach me **kushagraagnihotri24@gmail.com**
 
-- ⚡ Fun fact **I think I'm A Quick Learner**
+- ⚡ Fun fact **I'm A Quick Learner**
 
 ---
 
