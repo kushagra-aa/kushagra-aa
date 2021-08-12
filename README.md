@@ -5,13 +5,13 @@
 
 <p align="left"> <a href="https://twitter.com/a_kushagraa" target="blank"><img src="https://img.shields.io/twitter/follow/a_kushagraa?logo=twitter&style=for-the-badge" alt="a_kushagraa" /></a> </p>
 
-- 🔭 I’m currently working on [3-D](https://github.com/kushagra-aa/3-d)
+- 🔭 I’m currently working on [Mult Lists](https://github.com/kushagra-aa/multlists)
 
-- 🌱 I’m currently learning **Python**
+- 🌱 I’m currently learning **Python-Django**
 
 - 👨‍💻 All of my projects are available at (STILL Working On It!) [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
-- 💬 Ask me about **HTML, SCSS, CSS, JS, TS**
+- 💬 Ask me about **HTML, SCSS, CSS, JS, TS, Python**
 
 - 📫 How to reach me **kushagraagnihotri24@gmail.com**
 
