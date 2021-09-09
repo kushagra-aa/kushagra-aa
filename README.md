@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://twitter.com/a_kushagraa" target="blank"><img src="https://img.shields.io/twitter/follow/a_kushagraa?logo=twitter&style=for-the-badge" alt="a_kushagraa" /></a> </p>
 
-- 🔭 I’m currently working on [Mult Lists](https://github.com/kushagra-aa/multlists)
+- 🔭 I’m currently working on [Book It](https://github.com/kushagra-aa/bookit)
 
 - 🌱 I’m currently learning **Python-Django**
 
