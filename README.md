@@ -9,7 +9,7 @@
 
 - 🌱 I’m currently learning **Python-Django**
 
-- 👨‍💻 All of my projects are available at (STILL Working On It!) [Portfolio](https://kushagra-aa.github.io/portfolio/)
+- 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
 - 💬 Ask me about **HTML, SCSS, CSS, JS, TS, Python**
 
