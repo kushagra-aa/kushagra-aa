@@ -7,7 +7,7 @@
 
 - 🔭 I’m currently working on [Book It](https://github.com/kushagra-aa/bookit)
 
-- 👉🏻Latest Creation [Wakk It](https://kushagra-aa.github.io/WakIt/)
+- 👉🏻Latest Creation [Book It](https://github.com/kushagra-aa/bookit)
 
 - 🌱 I’m currently learning **Python-Django**
 
