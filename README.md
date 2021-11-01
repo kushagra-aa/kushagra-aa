@@ -7,7 +7,9 @@
 
 - 🔭 I’m currently working on [Stone Paper Scissors](https://github.com/kushagra-aa/StonePaperScissors)
 
-- 👉🏻Latest Creation [Book It](https://github.com/kushagra-aa/bookit)
+- 👉🏻Latest Creations
+  - 👉 [Book It](https://github.com/kushagra-aa/bookit)
+  - 👉 [Stone Paper Scissors](https://github.com/kushagra-aa/StonePaperScissors)
 
 - 🌱 I’m currently learning **Python-Django**
 
