@@ -11,7 +11,7 @@
   - 👉 [Book It](https://github.com/kushagra-aa/bookit)
   - 👉 [Stone Paper Scissors](https://github.com/kushagra-aa/StonePaperScissors)
 
-- 🌱 I’m currently learning **Python-Django**
+- 🌱 I’m currently learning **Angular-MEAN**
 
 - 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
