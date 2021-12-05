@@ -5,12 +5,12 @@
 
 <p align="left"> <a href="https://twitter.com/a_kushagraa" target="blank"><img src="https://img.shields.io/twitter/follow/a_kushagraa?logo=twitter&style=for-the-badge" alt="a_kushagraa" /></a> </p>
 
-- 🔭 I’m currently working on [Video Games](https://github.com/kushagra-aa/video-games)
+- 🔭 I’m currently working on [Books](https://github.com/kushagra-aa/bookit)
 
 - 👉🏻Latest Creations
-  - 👉 [Book It](https://github.com/kushagra-aa/bookit)
-  - 👉 [Stone Paper Scissors](https://github.com/kushagra-aa/StonePaperScissors)
+  - 👉 [Video Games](https://github.com/kushagra-aa/video-games)
   - 👉 [TT Toe](https://github.com/kushagra-aa/tttoe)
+  - 👉 [Book It](https://github.com/kushagra-aa/bookit)
 
 - 🌱 I’m currently learning **Angular-MEAN**
 
