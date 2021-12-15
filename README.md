@@ -5,9 +5,10 @@
 
 <p align="left"> <a href="https://twitter.com/a_kushagraa" target="blank"><img src="https://img.shields.io/twitter/follow/a_kushagraa?logo=twitter&style=for-the-badge" alt="a_kushagraa" /></a> </p>
 
-- 🔭 I’m currently working on [Widd Flix](https://github.com/kushagra-aa/widdflix)
+- 🔭 I’m currently working on 
 
 - 👉🏻Latest Creations
+  - 👉 [Widd Flix](https://github.com/kushagra-aa/widdflix)
   - 👉 [Video Games](https://github.com/kushagra-aa/video-games)
   - 👉 [TT Toe](https://github.com/kushagra-aa/tttoe)
   - 👉 [Book It](https://github.com/kushagra-aa/bookit)
