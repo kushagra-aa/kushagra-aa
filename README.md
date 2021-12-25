@@ -13,7 +13,7 @@
   - 👉 [TT Toe](https://github.com/kushagra-aa/tttoe)
   - 👉 [Book It](https://github.com/kushagra-aa/bookit)
 
-- 🌱 I’m currently learning **Angular-MEAN**
+- 🌱 I’m currently learning **ReactJS**
 
 - 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/)
 
