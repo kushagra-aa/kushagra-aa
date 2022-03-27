@@ -8,10 +8,10 @@
 - 🔭 I’m currently working on [Road Game](https://github.com/kushagra-aa/road-game)
 
 - 👉🏻Latest Creations
+  - 👉 [My Medium](https://github.com/kushagra-aa/medium-clone)
   - 👉 [Widd Flix](https://github.com/kushagra-aa/widdflix)
   - 👉 [Video Games](https://github.com/kushagra-aa/video-games)
   - 👉 [TT Toe](https://github.com/kushagra-aa/tttoe)
-  - 👉 [Book It](https://github.com/kushagra-aa/bookit)
 
 - 🌱 I’m currently learning **ReactJS**
 
