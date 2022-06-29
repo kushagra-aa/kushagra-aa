@@ -15,10 +15,9 @@
 
 - 🌱 I’m currently learning **NextJS**
 
-- 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/)
+- 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/) (Working on a New One)
 
-- 💬 Ask me about **HTML, SCSS, CSS, JS, TS, Python**
-
+- 💬 Ask me about **HTML, SCSS, CSS, JS, TS, Python** 
 - 📫 How to reach me **kushagraagnihotri24@gmail.com**
 
 - ⚡ Fun fact **I'm A Quick Learner**
