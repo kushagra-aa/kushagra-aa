@@ -13,7 +13,7 @@
   - 👉 [Video Games](https://github.com/kushagra-aa/video-games)
   - 👉 [TT Toe](https://github.com/kushagra-aa/tttoe)
 
-- 🌱 I’m currently learning **NextJS**
+- 🌱 I’m currently learning **NextJS** & **Django Rest Framework**
 
 - 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/) (Working on a New One)
 
