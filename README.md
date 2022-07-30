@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://twitter.com/a_kushagraa" target="blank"><img src="https://img.shields.io/twitter/follow/a_kushagraa?logo=twitter&style=for-the-badge" alt="a_kushagraa" /></a> </p>
 
-- 🔭 I’m currently working on (🤫top secret)
+- 🔭 I’m currently working on [Password Generator](https://github.com/kushagra-aa/pass-gen)
 
 - 👉🏻Latest Creations
   - 👉 [My Medium](https://github.com/kushagra-aa/medium-clone)
@@ -13,7 +13,7 @@
   - 👉 [Video Games](https://github.com/kushagra-aa/video-games)
   - 👉 [TT Toe](https://github.com/kushagra-aa/tttoe)
 
-- 🌱 I’m currently learning **NextJS** & **Django Rest Framework**
+- 🌱 I’m currently learning **Django Rest Framework**
 
 - 👨‍💻 All of my projects are available at [Portfolio](https://kushagra-aa.github.io/portfolio/) (Working on a New One)
 
