@@ -8,5 +8,5 @@ export default function Home() {
     console.log('first', first);
   }, []);
 
-  return <main className={styles.main}></main>;
+  return <main className={styles.main} />;
 }

@@ -6,6 +6,7 @@ module.exports = {
   },
   extends: [
     'prettier',
+    'plugin:import/recommended',
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',

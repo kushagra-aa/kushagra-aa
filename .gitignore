@@ -5,6 +5,8 @@
 */.pnp
 .pnp.js
 
+**/yarn.lock
+
 # testing
 */coverage
 
@@ -33,3 +35,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python cache
+**/__pycache__
+
+# django migrations
+**/migrations
+
+# python environment
+*/*env
