@@ -9,8 +9,18 @@
         "typescriptreact",
         "javascriptreact"
     ],
+    "eslint.workingDirectories": [
+        {
+            "directory": "front-end"
+        }
+    ],
     "editor.formatOnSave": true,
     "scss.validate": false,
     "css.validate": false,
-    "postcss.validate": false
+    "postcss.validate": false,
+    "cSpell.words": [
+        "flexbox",
+        "flexbugs",
+        "stylelint"
+    ]
 }
