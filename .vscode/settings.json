@@ -9,6 +9,11 @@
         "typescriptreact",
         "javascriptreact"
     ],
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss"
+    ],
     "eslint.workingDirectories": [
         {
             "directory": "front-end"
@@ -22,5 +27,8 @@
         "flexbox",
         "flexbugs",
         "stylelint"
-    ]
+    ],
+    "files.associations": {
+        "*.css": "postcss"
+    }
 }
