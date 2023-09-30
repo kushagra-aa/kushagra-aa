@@ -1,6 +1,4 @@
-import React from "react";
-
-export function CaretDown() {
+export function CaretDownIcon() {
   return (
     <svg
       width="36"
@@ -18,7 +16,7 @@ export function CaretDown() {
   );
 }
 
-export function CaretLeft() {
+export function CaretLeftIcon() {
   return (
     <svg
       width="36"
@@ -35,7 +33,7 @@ export function CaretLeft() {
     </svg>
   );
 }
-export function CaretRight() {
+export function CaretRightIcon() {
   return (
     <svg
       width="36"
@@ -52,7 +50,7 @@ export function CaretRight() {
     </svg>
   );
 }
-export function CaretUp() {
+export function CaretUpIcon() {
   return (
     <svg
       width="36"
@@ -69,7 +67,7 @@ export function CaretUp() {
     </svg>
   );
 }
-export function Check() {
+export function CheckIcon() {
   return (
     <svg
       width="36"
@@ -86,7 +84,7 @@ export function Check() {
     </svg>
   );
 }
-export function CheckSquare() {
+export function CheckSquareIcon() {
   return (
     <svg
       width="36"
@@ -108,7 +106,7 @@ export function CheckSquare() {
     </svg>
   );
 }
-export function ClockCircle() {
+export function ClockCircleIcon() {
   return (
     <svg
       width="36"
@@ -137,7 +135,7 @@ export function ClockCircle() {
     </svg>
   );
 }
-export function Close() {
+export function CloseIcon() {
   return (
     <svg
       width="36"
@@ -154,7 +152,7 @@ export function Close() {
     </svg>
   );
 }
-export function CloseCircle() {
+export function CloseCircleIcon() {
   return (
     <svg
       width="36"
@@ -183,7 +181,7 @@ export function CloseCircle() {
     </svg>
   );
 }
-export function Code() {
+export function CodeIcon() {
   return (
     <svg
       width="36"
@@ -200,7 +198,7 @@ export function Code() {
     </svg>
   );
 }
-export function Comment() {
+export function CommentIcon() {
   return (
     <svg
       width="36"
@@ -234,7 +232,7 @@ export function Comment() {
     </svg>
   );
 }
-export function Contacts() {
+export function ContactsIcon() {
   return (
     <svg
       width="36"
@@ -258,7 +256,7 @@ export function Contacts() {
     </svg>
   );
 }
-export function Copyright() {
+export function CopyrightIcon() {
   return (
     <svg
       width="36"
@@ -310,7 +308,7 @@ export function DarkIcon() {
     </svg>
   );
 }
-export function Down() {
+export function DownIcon() {
   return (
     <svg
       width="36"
@@ -327,7 +325,7 @@ export function Down() {
     </svg>
   );
 }
-export function DownCicle() {
+export function DownCircleIcon() {
   return (
     <svg
       width="36"
@@ -356,7 +354,7 @@ export function DownCicle() {
     </svg>
   );
 }
-export function Exclamation() {
+export function ExclamationIcon() {
   return (
     <svg
       width="36"
@@ -373,7 +371,7 @@ export function Exclamation() {
     </svg>
   );
 }
-export function FolderOpen() {
+export function FolderOpenIcon() {
   return (
     <svg
       width="36"
@@ -397,7 +395,7 @@ export function FolderOpen() {
     </svg>
   );
 }
-export function FunnelPlot() {
+export function FunnelPlotIcon() {
   return (
     <svg
       width="36"
@@ -414,7 +412,7 @@ export function FunnelPlot() {
     </svg>
   );
 }
-export function Heart() {
+export function HeartIcon() {
   return (
     <svg
       width="36"
@@ -431,7 +429,7 @@ export function Heart() {
     </svg>
   );
 }
-export function Home() {
+export function HomeIcon() {
   return (
     <svg
       width="36"
@@ -455,7 +453,7 @@ export function Home() {
     </svg>
   );
 }
-export function IdCard() {
+export function IdCardIcon() {
   return (
     <svg
       width="36"
@@ -479,7 +477,7 @@ export function IdCard() {
     </svg>
   );
 }
-export function Inbox() {
+export function InboxIcon() {
   return (
     <svg
       width="36"
@@ -496,7 +494,7 @@ export function Inbox() {
     </svg>
   );
 }
-export function Info() {
+export function InfoIcon() {
   return (
     <svg
       width="36"
@@ -513,7 +511,7 @@ export function Info() {
     </svg>
   );
 }
-export function InfoCircle() {
+export function InfoCircleIcon() {
   return (
     <svg
       width="36"
@@ -542,7 +540,7 @@ export function InfoCircle() {
     </svg>
   );
 }
-export function Left() {
+export function LeftIcon() {
   return (
     <svg
       width="36"
@@ -559,7 +557,7 @@ export function Left() {
     </svg>
   );
 }
-export function LeftCircle() {
+export function LeftCircleIcon() {
   return (
     <svg
       width="36"
@@ -608,7 +606,7 @@ export function LightIcon() {
     </svg>
   );
 }
-export function Link() {
+export function LinkIcon() {
   return (
     <svg
       width="36"
@@ -625,7 +623,7 @@ export function Link() {
     </svg>
   );
 }
-export function Mail() {
+export function MailIcon() {
   return (
     <svg
       width="36"
@@ -649,7 +647,7 @@ export function Mail() {
     </svg>
   );
 }
-export function Menu() {
+export function MenuIcon() {
   return (
     <svg
       width="36"
@@ -666,7 +664,7 @@ export function Menu() {
     </svg>
   );
 }
-export function Message() {
+export function MessageIcon() {
   return (
     <svg
       width="36"
@@ -690,7 +688,7 @@ export function Message() {
     </svg>
   );
 }
-export function Minus() {
+export function MinusIcon() {
   return (
     <svg
       width="36"
@@ -707,7 +705,7 @@ export function Minus() {
     </svg>
   );
 }
-export function More() {
+export function MoreIcon() {
   return (
     <svg
       width="36"
@@ -724,7 +722,7 @@ export function More() {
     </svg>
   );
 }
-export function Phone() {
+export function PhoneIcon() {
   return (
     <svg
       width="36"
@@ -741,7 +739,7 @@ export function Phone() {
     </svg>
   );
 }
-export function Plus() {
+export function PlusIcon() {
   return (
     <svg
       width="36"
@@ -758,7 +756,7 @@ export function Plus() {
     </svg>
   );
 }
-export function Question() {
+export function QuestionIcon() {
   return (
     <svg
       width="36"
@@ -775,7 +773,7 @@ export function Question() {
     </svg>
   );
 }
-export function Right() {
+export function RightIcon() {
   return (
     <svg
       width="36"
@@ -792,7 +790,7 @@ export function Right() {
     </svg>
   );
 }
-export function RightCircle() {
+export function RightCircleIcon() {
   return (
     <svg
       width="36"
@@ -821,7 +819,7 @@ export function RightCircle() {
     </svg>
   );
 }
-export function Search() {
+export function SearchIcon() {
   return (
     <svg
       width="36"
@@ -838,7 +836,7 @@ export function Search() {
     </svg>
   );
 }
-export function Send() {
+export function SendIcon() {
   return (
     <svg
       width="36"
@@ -855,7 +853,7 @@ export function Send() {
     </svg>
   );
 }
-export function Stop() {
+export function StopIcon() {
   return (
     <svg
       width="36"
@@ -872,7 +870,7 @@ export function Stop() {
     </svg>
   );
 }
-export function Team() {
+export function TeamIcon() {
   return (
     <svg
       width="36"
@@ -889,7 +887,7 @@ export function Team() {
     </svg>
   );
 }
-export function Thunderbolt() {
+export function ThunderboltIcon() {
   return (
     <svg
       width="36"
@@ -906,7 +904,7 @@ export function Thunderbolt() {
     </svg>
   );
 }
-export function Up() {
+export function UpIcon() {
   return (
     <svg
       width="36"
@@ -923,7 +921,7 @@ export function Up() {
     </svg>
   );
 }
-export function UpCircle() {
+export function UpCircleIcon() {
   return (
     <svg
       width="36"
@@ -952,7 +950,7 @@ export function UpCircle() {
     </svg>
   );
 }
-export function User() {
+export function UserIcon() {
   return (
     <svg
       width="36"
@@ -969,7 +967,7 @@ export function User() {
     </svg>
   );
 }
-export function Warning() {
+export function WarningIcon() {
   return (
     <svg
       width="36"
