@@ -1,5 +1,56 @@
 @import url("margin-padding");
+@import url("flex-grid");
+@import url("misc");
 
 .mode-button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: var(--color-bg-2);
+  border-radius: 0 0 0 100%;
+  overflow: hidden;
+
+  & input#mode {
+    display: none;
+
+    &:checked {
+      & + .icons {
+        & > #light-icon {
+          display: inline-block;
+        }
+
+        & > #dark-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & label {
+    @extend %flex,
+      %align-center,
+      %justify-content-center,
+      %pointer,
+      %pb-0.25,
+      %pl-0.25,
+      %select-none;
+
+    height: inherit;
+    width: inherit;
+
+    & > .icons {
+      & > span {
+        &#light-icon {
+          display: none;
+        }
+
+        & > svg {
+          height: 32px;
+          width: 32px;
+        }
+      }
+    }
+  }
 }

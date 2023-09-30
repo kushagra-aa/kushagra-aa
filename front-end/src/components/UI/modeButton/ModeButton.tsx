@@ -5,13 +5,15 @@ function ModeButton() {
   return (
     <div className="mode-button">
       <label htmlFor="mode">
-        <span id="light-icon">
-          <LightIcon />
-        </span>
-        <span id="dark-icon">
-          <DarkIcon />
-        </span>
         <input type="checkbox" name="mode" id="mode" />
+        <div className="icons">
+          <span id="dark-icon">
+            <DarkIcon />
+          </span>
+          <span id="light-icon">
+            <LightIcon />
+          </span>
+        </div>
       </label>
     </div>
   );
