@@ -25,6 +25,7 @@
     "css.validate": false,
     "postcss.validate": false,
     "cSpell.words": [
+        "behance",
         "flexbox",
         "flexbugs",
         "stylelint"

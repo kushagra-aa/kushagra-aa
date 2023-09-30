@@ -19,8 +19,8 @@ body {
   display: flex;
   align-items: flex-start;
 
-  --main-width: calc(100vw - 18vh);
   --nav-width: 32vh;
+  --main-width: calc(100vw - var(--nav-width));
   --main-height: 100vh;
   --nav-height: 100vh;
 

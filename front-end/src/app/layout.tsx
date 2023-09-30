@@ -4,6 +4,7 @@ import ModeButton from "@/components/UI/modeButton/ModeButton";
 import "./globals.css";
 import Nav from "@/components/layout/nav/Nav";
 import Main from "@/components/layout/main/Main";
+import Footer from "@/components/layout/footer/Footer";
 
 const fontFam = Sora({ subsets: ["latin"] });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
       <body className={fontFam.className}>
         <ModeButton />
         <Nav />
-        <Main>{children}</Main>
+        <Main>
+          {children}
+          <Footer />
+        </Main>
       </body>
     </html>
   );
