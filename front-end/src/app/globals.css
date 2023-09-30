@@ -7,15 +7,27 @@
 @import url("positioning");
 @import url("size");
 
-:root {
-  --color-bg-1: var(--global-color-light-1);
-  --color-bg-2: var(--global-color-light-2);
-  --color-fg-1: var(--global-color-dark-1);
-  --color-fg-2: var(--global-color-dark-2);
-}
-
 h1 {
   @extend %font-desktop-display-1;
 
   color: var(--global-color-accent-1);
+}
+
+body {
+  background-color: var(--color-bg-1);
+  color: var(--color-fg-1);
+
+  &.dark-mode {
+    --color-bg-1: var(--global-color-dark-1);
+    --color-bg-2: var(--global-color-dark-2);
+    --color-fg-1: var(--global-color-light-1);
+    --color-fg-2: var(--global-color-light-2);
+  }
+
+  &.light-mode {
+    --color-bg-1: var(--global-color-light-1);
+    --color-bg-2: var(--global-color-light-2);
+    --color-fg-1: var(--global-color-dark-1);
+    --color-fg-2: var(--global-color-dark-2);
+  }
 }

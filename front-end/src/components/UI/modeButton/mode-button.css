@@ -12,22 +12,6 @@
   border-radius: 0 0 0 100%;
   overflow: hidden;
 
-  & input#mode {
-    display: none;
-
-    &:checked {
-      & + .icons {
-        & > #light-icon {
-          display: inline-block;
-        }
-
-        & > #dark-icon {
-          display: none;
-        }
-      }
-    }
-  }
-
   & label {
     @extend %flex,
       %align-center,
@@ -42,13 +26,13 @@
 
     & > .icons {
       & > span {
-        &#light-icon {
-          display: none;
-        }
-
         & > svg {
           height: 32px;
           width: 32px;
+
+          & > path {
+            fill: var(--color-fg-2);
+          }
         }
       }
     }
