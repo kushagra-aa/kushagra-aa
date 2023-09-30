@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+    "postcss-import": { path: "./src/styles/utils" },
     "postcss-flexbugs-fixes": {},
     "postcss-preset-env": {
       autoprefixer: {
@@ -14,4 +15,3 @@ module.exports = {
     stylelint: {},
   },
 };
-console.log('"object" :>> ', "object");
