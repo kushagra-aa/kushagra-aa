@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import ModeButton from "@/components/UI/modeButton/ModeButton";
 import "./globals.css";
+import Nav from "@/components/layout/nav/Nav";
+import Main from "@/components/layout/main/Main";
 
 const fontFam = Sora({ subsets: ["latin"] });
 
@@ -19,7 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={fontFam.className}>
         <ModeButton />
-        {children}
+        <Nav />
+        <Main>{children}</Main>
       </body>
     </html>
   );

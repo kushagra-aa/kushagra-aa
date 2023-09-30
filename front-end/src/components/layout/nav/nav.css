@@ -1,3 +1,80 @@
+@import url("flex-grid");
+@import url("margin-padding");
+
 nav {
-  color: aliceblue;
+  @extend %flex, %align-center, %flex-column;
+
+  justify-content: space-evenly;
+  background-color: var(--color-bg-2);
+  height: var(--nav-height);
+  width: var(--nav-width);
+  border-right: 1px solid var(--global-color-accent-2);
+
+  & > svg {
+    width: 131px;
+    height: 131px;
+
+    & > g {
+      &#side {
+        & > path {
+          fill: var(--color-fg-1);
+        }
+      }
+    }
+
+    & > path {
+      &#mid {
+        fill: var(--global-color-accent-1);
+      }
+    }
+  }
+
+  & > .nav-items {
+    margin-bottom: 4rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: inherit;
+    list-style: none;
+
+    & > .nav-item {
+      width: inherit;
+      transition: background-color 0.2s ease-in-out;
+
+      & > a {
+        padding: 0.25rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        width: inherit;
+        color: var(--color-fg-2);
+        font-size: var(--font-desktop-nav);
+        font-weight: 300;
+        text-decoration: none;
+        border-left: 4px solid transparent;
+        cursor: pointer;
+
+        & > svg {
+          width: 1.5rem;
+          height: 1.5rem;
+
+          & path {
+            fill: var(--color-fg-2);
+          }
+        }
+      }
+
+      &:hover {
+        background-color: var(--global-color-light-1-30);
+      }
+
+      &.active {
+        & > a {
+          border-color: var(--color-fg-2);
+        }
+      }
+    }
+  }
 }

@@ -1,3 +1,6 @@
 main {
-  color: aliceblue;
+  display: flex;
+  height: var(--main-height);
+  width: var(--main-width);
+  overflow-y: scroll;
 }

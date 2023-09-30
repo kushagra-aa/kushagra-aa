@@ -1,7 +1,7 @@
 import "./main.css";
 
-function Main() {
-  return <main>Main</main>;
+function Main({ children }: { children: React.ReactNode }) {
+  return <main>{children}</main>;
 }
 
 export default Main;

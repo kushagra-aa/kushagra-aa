@@ -16,6 +16,13 @@ h1 {
 body {
   background-color: var(--color-bg-1);
   color: var(--color-fg-1);
+  display: flex;
+  align-items: flex-start;
+
+  --main-width: calc(100vw - 18vh);
+  --nav-width: 32vh;
+  --main-height: 100vh;
+  --nav-height: 100vh;
 
   &.dark-mode {
     --color-bg-1: var(--global-color-dark-1);
