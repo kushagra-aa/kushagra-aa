@@ -19,6 +19,7 @@
             "directory": "front-end"
         }
     ],
+    "stylelint.configFile": "front-end/.stylelintrc.json",
     "editor.formatOnSave": true,
     "scss.validate": false,
     "css.validate": false,
