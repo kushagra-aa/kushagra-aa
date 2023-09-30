@@ -19,7 +19,8 @@
             "directory": "front-end"
         }
     ],
-    "stylelint.configFile": "front-end/.stylelintrc.json",
+    "stylelint.configFile": "front-end/.stylelintrc",
+    "prettier.configPath": "front-end/.prettierrc",
     "editor.formatOnSave": true,
     "scss.validate": false,
     "css.validate": false,

@@ -1,0 +1,264 @@
+/* Font Size */
+%font-desktop-nav {
+  font-size: 32px;
+}
+
+%font-desktop-display-1 {
+  font-size: 72px;
+}
+
+%font-desktop-display-2 {
+  font-size: 56px;
+}
+
+%font-desktop-heading-1 {
+  font-size: 48px;
+}
+
+%font-desktop-heading-2 {
+  font-size: 32px;
+}
+
+%font-desktop-heading-3 {
+  font-size: 24px;
+}
+
+%font-desktop-heading-4 {
+  font-size: 20px;
+}
+
+%font-desktop-heading-5 {
+  font-size: 18px;
+}
+
+%font-desktop-heading-6 {
+  font-size: 16px;
+}
+
+%font-desktop-sub-heading-1 {
+  font-size: 20px;
+}
+
+%font-desktop-sub-heading-2 {
+  font-size: 18px;
+}
+
+%font-desktop-para-1 {
+  font-size: 20px;
+}
+
+%font-desktop-para-2 {
+  font-size: 16px;
+}
+
+%font-desktop-button-1 {
+  font-size: 24px;
+}
+
+%font-desktop-button-2 {
+  font-size: 18px;
+}
+
+%font-desktop-button-3 {
+  font-size: 14px;
+}
+
+%font-mobile-nav {
+  font-size: 8px;
+}
+
+%font-mobile-nav-active {
+  font-size: 8px;
+}
+
+%font-mobile-display-1 {
+  font-size: 48px;
+}
+
+%font-mobile-display-2 {
+  font-size: 32px;
+}
+
+%font-mobile-heading-1 {
+  font-size: 32px;
+}
+
+%font-mobile-heading-2 {
+  font-size: 24px;
+}
+
+%font-mobile-heading-3 {
+  font-size: 20px;
+}
+
+%font-mobile-heading-4 {
+  font-size: 18px;
+}
+
+%font-mobile-heading-5 {
+  font-size: 16px;
+}
+
+%font-mobile-heading-6 {
+  font-size: 14px;
+}
+
+%font-mobile-sub-heading-1 {
+  font-size: 18px;
+}
+
+%font-mobile-sub-heading-2 {
+  font-size: 16px;
+}
+
+%font-mobile-para-1 {
+  font-size: 18px;
+}
+
+%font-mobile-para-2 {
+  font-size: 16px;
+}
+
+%font-mobile-button-1 {
+  font-size: 20px;
+}
+
+%font-mobile-button-2 {
+  font-size: 16px;
+}
+
+%font-mobile-button-3 {
+  font-size: 14px;
+}
+
+/* Font Weight */
+%font-extra-bold {
+  font-weight: 800;
+}
+%font-bold {
+  font-weight: 700;
+}
+%font-semi-bold {
+  font-weight: 600;
+}
+%font-regular {
+  font-weight: 400;
+}
+%font-light {
+  font-weight: 300;
+}
+%font-extra-light {
+  font-weight: 200;
+}
+%font-thin {
+  font-weight: 100;
+}
+
+/* Font Style */
+%font-italic {
+  font-style: italic;
+}
+%font-underline {
+  text-decoration: underline;
+}
+%font-overline {
+  text-decoration: overline;
+}
+%font-line-through {
+  text-decoration: line-through;
+}
+
+/* Underline Offset  */
+%underline-offset-1 {
+  text-underline-offset: 1px;
+}
+
+%underline-offset-2 {
+  text-underline-offset: 2px;
+}
+
+%underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+%underline-offset-8 {
+  text-underline-offset: 8px;
+}
+
+/* Text Transform */
+%uppercase {
+  text-transform: uppercase;
+}
+
+%lowercase {
+  text-transform: lowercase;
+}
+
+%capitalize {
+  text-transform: capitalize;
+}
+
+%normal-case {
+  text-transform: none;
+}
+
+/* Text Overflow */
+%truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%text-clip {
+  text-overflow: clip;
+}
+
+/* Text Align */
+%text-left {
+  text-align: left;
+}
+
+%text-right {
+  text-align: right;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%text-justify {
+  text-align: justify;
+}
+
+/* Text Vertical Align */
+%align-baseline {
+  vertical-align: baseline;
+}
+
+%align-top {
+  vertical-align: top;
+}
+
+%align-middle {
+  vertical-align: middle;
+}
+
+%align-bottom {
+  vertical-align: bottom;
+}
+
+%align-text-top {
+  vertical-align: text-top;
+}
+
+%align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+%align-sub {
+  vertical-align: sub;
+}
+
+%align-super {
+  vertical-align: super;
+}
