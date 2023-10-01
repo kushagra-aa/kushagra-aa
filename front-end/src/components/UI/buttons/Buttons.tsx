@@ -11,10 +11,10 @@ type Colors =
 
 type ButtonPropType = {
   children: React.ReactNode;
-  onClick: () => void;
   backgroundColor?: Colors;
   foregroundColor?: Colors;
   strokeColor?: Colors;
+  type: "link" | "button";
   size: "small" | "medium" | "large";
   stoke?: "stroke-1" | "stroke-2" | "stroke-3" | "stroke-4";
   theme?: "theme-1" | "theme-2";
@@ -26,7 +26,6 @@ type ButtonPropType = {
 function Button({
   children,
   title,
-  onClick,
   style,
   className,
   backgroundColor,
@@ -35,17 +34,16 @@ function Button({
   size,
   theme,
   stoke,
+  type,
 }: ButtonPropType) {
   return (
-    <button
+    <div
       title={title}
-      onClick={() => onClick()}
       style={style}
-      className={`${className} ${theme}-button background-${backgroundColor} foreground-${foregroundColor} stroke-${strokeColor} ${stoke} button-${size} button`}
-      type="button"
+      className={`${className} ${theme}-button background-${backgroundColor} foreground-${foregroundColor} stroke-${strokeColor} ${stoke} button-${size} ${type}`}
     >
       {children}
-    </button>
+    </div>
   );
 }
 

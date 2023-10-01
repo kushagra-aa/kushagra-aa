@@ -1,5 +1,4 @@
-"use client";
-
+import Link from "next/link";
 import Button from "@/components/UI/buttons/Buttons";
 import styles from "./page.module.css";
 
@@ -8,14 +7,14 @@ export default function Home() {
     <div className={styles.main}>
       <h1>hello</h1>
       <p>hello sub</p>
-      <Button onClick={() => {}} size="small" theme="theme-1">
+      <Button type="button" size="small" theme="theme-1">
         Hello
       </Button>
-      <Button onClick={() => {}} size="medium" theme="theme-2">
+      <Button type="button" size="medium" theme="theme-2">
         Hello
       </Button>
       <Button
-        onClick={() => {}}
+        type="button"
         size="large"
         backgroundColor="accent-2"
         foregroundColor="dark-2"
@@ -23,12 +22,12 @@ export default function Home() {
         Hello
       </Button>
       <Button
-        onClick={() => {}}
+        type="link"
         size="large"
         backgroundColor="accent-1"
         foregroundColor="light-1"
       >
-        Hello
+        <Link href="/">Hello</Link>
       </Button>
     </div>
   );
