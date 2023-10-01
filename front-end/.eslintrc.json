@@ -46,6 +46,7 @@
         "args": "after-used",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "react/require-default-props": "off"
   }
 }

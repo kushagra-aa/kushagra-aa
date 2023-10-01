@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./footer.css";
 import Link from "next/link";
-import Button from "@/components/UI/buttons/Buttons";
+import Button from "@/components/UI/button/Button";
 
 const Socials = {
   telegram: "https://t.me/kushagraa_a",
