@@ -1,5 +1,7 @@
 import Image from "next/image";
 import "./footer.css";
+import Link from "next/link";
+import Button from "@/components/UI/buttons/Buttons";
 
 const Socials = {
   telegram: "https://t.me/kushagraa_a",
@@ -15,7 +17,16 @@ function Footer() {
   return (
     <footer>
       <div className="left">
-        <button type="button">hire me !</button>
+        <Button
+          size="medium"
+          type="link"
+          backgroundColor="dark-2"
+          foregroundColor="accent-1"
+          strokeColor="accent-1"
+          stoke="stroke-1"
+        >
+          <Link href="/">hire me !</Link>
+        </Button>
       </div>
       <div className="mid">
         <p>
@@ -46,7 +57,16 @@ function Footer() {
         </div>
       </div>
       <div className="right">
-        <button type="button">my resume</button>
+        <Button
+          size="medium"
+          type="link"
+          backgroundColor="dark-2"
+          foregroundColor="accent-1"
+          strokeColor="accent-1"
+          stoke="stroke-1"
+        >
+          <Link href="/">my resume</Link>
+        </Button>
       </div>
       <div className="bottom">
         <p>&copy; kushagra-aa. All Rights Reserved</p>
