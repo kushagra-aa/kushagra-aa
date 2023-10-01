@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable react/require-default-props */
 import "./buttons.css";
 
@@ -21,6 +22,7 @@ type ButtonPropType = {
   title?: string;
   className?: string;
   style?: {};
+  disabled?: boolean;
 };
 
 function Button({
@@ -35,12 +37,15 @@ function Button({
   theme,
   stoke,
   type,
+  disabled,
 }: ButtonPropType) {
   return (
     <div
       title={title}
       style={style}
-      className={`${className} ${theme}-button background-${backgroundColor} foreground-${foregroundColor} stroke-${strokeColor} ${stoke} button-${size} ${type}`}
+      className={`${className} ${theme}-button background-${backgroundColor} foreground-${foregroundColor} stroke-${strokeColor} ${stoke} button-${size} ${type}
+      ${disabled ? "disabled" : ""}`}
+      tabIndex={disabled ? -1 : 0}
     >
       {children}
     </div>

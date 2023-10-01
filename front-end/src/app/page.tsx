@@ -10,7 +10,7 @@ export default function Home() {
       <Button type="button" size="small" theme="theme-1">
         Hello
       </Button>
-      <Button type="button" size="medium" theme="theme-2">
+      <Button disabled type="button" size="medium" theme="theme-2">
         Hello
       </Button>
       <Button
@@ -27,7 +27,7 @@ export default function Home() {
         backgroundColor="accent-1"
         foregroundColor="light-1"
       >
-        <Link href="/">Hello</Link>
+        <Link href="/a">Hello</Link>
       </Button>
     </div>
   );
