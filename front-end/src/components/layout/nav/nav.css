@@ -10,21 +10,53 @@ nav {
   width: var(--nav-width);
   border-right: 1px solid var(--global-color-accent-2);
 
-  & > svg {
-    width: 131px;
-    height: 131px;
+  & > .logo {
+    overflow: visible;
 
-    & > g {
-      &#side {
-        & > path {
-          fill: var(--color-fg-1);
+    & > svg {
+      overflow: visible;
+      width: 131px;
+      height: 131px;
+
+      & > g {
+        &#side {
+          & > path {
+            fill: var(--color-fg-1);
+            transition: transform 0.75s ease-in-out;
+          }
+        }
+      }
+
+      & > path {
+        &#mid {
+          fill: var(--global-color-accent-1);
+          transition: transform 0.75s ease-in-out;
+          transform-origin: center center;
         }
       }
     }
 
-    & > path {
-      &#mid {
-        fill: var(--global-color-accent-1);
+    &:hover {
+      & > svg {
+        & > g {
+          &#side {
+            & > path {
+              &:nth-child(2) {
+                transform: translateX(-60px);
+              }
+
+              &:nth-child(1) {
+                transform: translateX(60px);
+              }
+            }
+          }
+        }
+
+        & > path {
+          &#mid {
+            transform: rotate(360deg);
+          }
+        }
       }
     }
   }

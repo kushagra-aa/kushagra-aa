@@ -49,8 +49,9 @@ function Nav() {
 
   return (
     <nav>
-      <LogoFull />
-
+      <div className="logo">
+        <LogoFull />
+      </div>
       <ul className="nav-items">
         {NavItems.map((item) => {
           const isActive =
