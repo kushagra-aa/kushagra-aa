@@ -1,5 +1,27 @@
 main {
   height: var(--main-height);
   width: var(--main-width);
+  overflow-x: hidden;
   overflow-y: scroll;
+
+  /* Thumb Track */
+  scrollbar-color: var(--global-color-accent-1) var(--color-fg-2);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-fg-2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--global-color-accent-1);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--global-color-accent-2);
+  }
 }
