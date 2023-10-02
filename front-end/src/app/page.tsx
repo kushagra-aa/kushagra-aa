@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/UI/button/Button";
-import styles from "./page.module.css";
 import {
   InfoIcon,
   RightIcon,
@@ -9,6 +8,7 @@ import {
   ThunderboltIcon,
 } from "@/components/Icons";
 import Projects from "@/dummyData/projects.json";
+import styles from "./page.module.css";
 
 function HeroSection() {
   return (

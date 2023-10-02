@@ -25,9 +25,11 @@
     "css.validate": false,
     "postcss.validate": false,
     "cSpell.words": [
+        "anansi",
         "behance",
         "flexbox",
         "flexbugs",
+        "photoshop",
         "stylelint",
         "Widdflix"
     ],
