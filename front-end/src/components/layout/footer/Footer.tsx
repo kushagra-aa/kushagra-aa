@@ -34,25 +34,25 @@ function Footer() {
         </p>
         <div className="socials">
           <a href={Socials.telegram} target="_blank" title="Telegram">
-            <Image src="/Icon=telegram.png" alt="telegram" fill />
+            <Image src="/Icon=telegram.png" alt="telegram" fill sizes="100%" />
           </a>
           <a href={Socials.instagram} target="_blank" title="Instagram">
-            <Image src="/Icon=instagram.png" alt="telegram" fill />
+            <Image src="/Icon=instagram.png" alt="telegram" fill sizes="100%" />
           </a>
           <a href={Socials.behance} target="_blank" title="Behance">
-            <Image src="/Icon=behance.png" alt="telegram" fill />
+            <Image src="/Icon=behance.png" alt="telegram" fill sizes="100%" />
           </a>
           <a href={Socials.github} target="_blank" title="GitHub">
-            <Image src="/Icon=github.png" alt="telegram" fill />
+            <Image src="/Icon=github.png" alt="telegram" fill sizes="100%" />
           </a>
           <a href={Socials.linkedin} target="_blank" title="LinkedIn">
-            <Image src="/Icon=linkedin.png" alt="telegram" fill />
+            <Image src="/Icon=linkedin.png" alt="telegram" fill sizes="100%" />
           </a>
           <a href={Socials.whatsapp} target="_blank" title="WhatsApp">
-            <Image src="/Icon=whatsapp.png" alt="telegram" fill />
+            <Image src="/Icon=whatsapp.png" alt="telegram" fill sizes="100%" />
           </a>
           <a href={Socials.x} target="_blank" title="X">
-            <Image src="/Icon=x.png" alt="telegram" fill />
+            <Image src="/Icon=x.png" alt="telegram" fill sizes="100%" />
           </a>
         </div>
       </div>

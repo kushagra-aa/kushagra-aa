@@ -28,7 +28,8 @@
         "behance",
         "flexbox",
         "flexbugs",
-        "stylelint"
+        "stylelint",
+        "Widdflix"
     ],
     "files.associations": {
         "*.css": "postcss"

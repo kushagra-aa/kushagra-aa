@@ -7,22 +7,17 @@
 @import url("positioning");
 @import url("size");
 
-h1 {
-  @extend %font-desktop-display-1;
-
-  color: var(--global-color-accent-1);
-}
-
 body {
-  background-color: var(--color-bg-1);
-  color: var(--color-fg-1);
-  display: flex;
-  align-items: flex-start;
-
   --nav-width: 32vh;
   --main-width: calc(100vw - var(--nav-width));
   --main-height: 100vh;
   --nav-height: 100vh;
+  --main-padding: 3.125rem;
+
+  background-color: var(--color-bg-1);
+  color: var(--color-fg-1);
+  display: flex;
+  align-items: flex-start;
 
   &.dark-mode {
     --color-bg-1: var(--global-color-dark-1);
