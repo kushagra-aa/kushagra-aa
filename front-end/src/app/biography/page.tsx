@@ -1,49 +1,7 @@
-import Link from "next/link";
-import Button from "@/components/UI/button/Button";
 import styles from "./page.module.css";
 import { CodeIcon, FolderOpenIcon, IdCardIcon } from "@/components/Icons";
-
-function LinkRow({
-  button,
-  icon,
-  subTitle,
-  title,
-  link,
-}: {
-  subTitle: string;
-  title: string;
-  link: string;
-  button: string;
-  icon: React.ReactNode;
-}) {
-  return (
-    <div className={styles.link_row}>
-      <p className={styles.link_sub}>{subTitle}</p>
-      <p className={styles.link_title}>{title}</p>
-      <div className={styles.link_arrow}>
-        <span>
-          <i id="line" />
-          <i id="arrow" />
-        </span>
-      </div>
-      <Button
-        className={styles.link_button}
-        size="medium"
-        type="link"
-        theme="theme-2"
-      >
-        <Link href={link}>
-          {button}
-          {icon}
-        </Link>
-      </Button>
-    </div>
-  );
-}
-
-function LinksContainer({ children }: { children: React.ReactNode }) {
-  return <div className={styles.links_container}>{children}</div>;
-}
+import LinksContainer from "@/components/linksRow/LinksContainer";
+import LinkRow from "@/components/linksRow/LinkRow";
 
 export default function Biography() {
   return (
