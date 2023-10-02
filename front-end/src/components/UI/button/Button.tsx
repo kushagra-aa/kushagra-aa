@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable react/require-default-props */
-import "./buttons.css";
+import "./button.css";
 
 type Colors =
   | "dark-1"
