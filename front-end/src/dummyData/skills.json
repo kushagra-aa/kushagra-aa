@@ -1,0 +1,68 @@
+[
+    {
+        "name": "programming",
+        "list": [
+            "JavaScript",
+            "Python",
+            "Dart",
+            "C++"
+        ]
+    },
+    {
+        "name": "web development",
+        "list": [
+            "TypeScript",
+            "ReactJS",
+            "HTML",
+            "CSS",
+            "SCSS",
+            "PostCSS",
+            "NextJS"
+        ]
+    },
+    {
+        "name": "backend",
+        "list": [
+            "ExpressJS",
+            "Node.js",
+            "Django",
+            "Firebase",
+            "SanityIO"
+        ]
+    },
+    {
+        "name": "database",
+        "list": [
+            "MySQL",
+            "MongoDB",
+            "SQLlite"
+        ]
+    },
+    {
+        "name": "tools",
+        "list": [
+            "Git",
+            "VSCode",
+            "Figma",
+            "PostMan",
+            "Vercel",
+            "Tailwind CSS",
+            "Bootstrap",
+            "Zustand",
+            "Redux",
+            "MUI",
+            "ViteJS",
+            "Yarn"
+        ]
+    },
+    {
+        "name": "learning",
+        "list": [
+            "Angular",
+            "Flutter",
+            "Android Studio",
+            "Astro",
+            "Svelte"
+        ]
+    }
+]

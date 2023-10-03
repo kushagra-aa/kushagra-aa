@@ -26,12 +26,17 @@
     "postcss.validate": false,
     "cSpell.words": [
         "anansi",
+        "Astro",
         "behance",
         "flexbox",
         "flexbugs",
         "photoshop",
+        "Rozgaar",
         "stylelint",
-        "Widdflix"
+        "Tambola",
+        "Texzine",
+        "Widdflix",
+        "Zustand"
     ],
     "files.associations": {
         "*.css": "postcss"
