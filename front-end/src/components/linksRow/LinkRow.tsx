@@ -25,7 +25,7 @@ export default function LinkRow({
           <i id="arrow" />
         </span>
       </div>
-      <Button className="link_button" size="medium" type="link" theme="theme-2">
+      <Button className="link_button" size="small" type="link" theme="theme-2">
         <Link href={link}>
           {button}
           {icon}

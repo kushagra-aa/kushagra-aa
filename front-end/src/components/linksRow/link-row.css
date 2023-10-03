@@ -32,12 +32,12 @@
   grid-column: 3/4;
   grid-row: 1/3;
   align-self: center;
-  width: 13.25rem;
+  width: 12rem;
   height: fit-content;
 }
 
 .link_row > .link_button > a > svg {
-  height: 1.25rem;
+  height: 1rem;
 }
 
 .link_row > .link_button > a > svg path {
