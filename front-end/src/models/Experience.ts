@@ -1,4 +1,4 @@
-export type Experience = {
+export type ExperienceType = {
   name: string;
   website?: string;
   role: string;
@@ -9,7 +9,7 @@ export type Experience = {
   skills: string[];
   projects: {
     name: string;
-    points: string;
+    points: string[];
     link?: string;
   }[];
 };

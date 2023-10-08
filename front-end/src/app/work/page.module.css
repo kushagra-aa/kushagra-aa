@@ -1,0 +1,206 @@
+.main > .head {
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.main > .head > h1 {
+  color: var(--color-fg-1);
+  font-size: var(--font-desktop-display-2);
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+}
+
+.head > .sub {
+  color: var(--color-fg-2);
+  font-size: var(--font-desktop-heading-3);
+  font-weight: 600;
+}
+
+.head > .sub > span {
+  color: var(--global-color-accent-2);
+}
+
+.main > section {
+  padding: 1rem var(--main-padding);
+}
+
+.info {
+  display: flex;
+}
+
+.info > .info_ill {
+  width: 100%;
+}
+
+.info > .info_para {
+  font-size: var(--font-desktop-para-1);
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.info > .info_para > .para_highlight {
+  color: var(--global-color-accent-1);
+  font-size: var(--font-desktop-heading-3);
+  font-weight: 600;
+}
+
+.main h2 {
+  color: var(--color-fg-2);
+  font-size: var(--font-desktop-heading-2);
+  font-weight: 700;
+}
+
+.main .sub_2 {
+  color: var(--global-color-accent-1);
+  font-size: var(--font-desktop-sub-heading-2);
+  font-weight: 300;
+}
+
+.exp > .experiences_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.experiences_container > .experience_container {
+  --detials-width: 35%;
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  width: 100%;
+}
+
+.experience_container > .experience_details {
+  display: flex;
+  flex-direction: column;
+  width: var(--detials-width);
+  padding: 0.625rem;
+}
+
+.experience_container:hover > .experience_details {
+  background-color: var(--color-bg-2);
+}
+
+.experience_details > h4 {
+  font-size: var(--font-desktop-heading-4);
+  font-weight: 600;
+}
+
+.experience_details > .experience_org {
+  color: var(--color-fg-1);
+  font-size: var(--font-desktop-heading-5);
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.experience_details > .experience_type_location,
+.experience_details > .experience_duration {
+  color: var(--color-fg-2);
+  font-size: var(--font-desktop-para-2);
+  font-weight: 300;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+}
+
+.experience_container > .experience_projects_skills_outer {
+  position: relative;
+  isolation: isolate;
+  width: calc(100% - var(--detials-width));
+}
+
+.experience_projects_skills_outer > .experience_projects_skills {
+  display: none;
+  width: 100%;
+  height: max-content;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.experience_projects_skills h5 {
+  font-size: var(--font-desktop-heading-4);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.experience_projects .experience_project > p,
+.experience_projects .experience_project > a {
+  font-size: var(--font-desktop-para-1);
+  font-weight: 400;
+  line-height: 2rem;
+  text-decoration: underline;
+}
+
+.experience_project .experience_project_points > li {
+  font-size: var(--font-desktop-para-2);
+  font-weight: 300;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+
+.experience_skills > ul {
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.25rem 1.15rem;
+}
+
+.experience_skills > ul > li {
+  font-size: var(--font-desktop-para-2);
+  font-weight: 400;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.experience_container:hover
+  > .experience_projects_skills_outer
+  > .experience_projects_skills {
+  position: absolute;
+  display: flex;
+  background-color: var(--color-bg-2);
+}
+
+.experience_container:nth-child(odd):not(:last-child):hover
+  > .experience_projects_skills_outer
+  > .experience_projects_skills {
+  top: 0;
+}
+
+.experience_container:nth-child(even):not(:last-child):hover
+  > .experience_projects_skills_outer
+  > .experience_projects_skills {
+  bottom: 0;
+}
+
+.experience_container:last-child:hover
+  > .experience_projects_skills_outer
+  > .experience_projects_skills {
+  bottom: 0;
+}
+
+.skill_categories_container {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.skill_category_container {
+  width: 46%;
+}
+
+.skill_category_container > h3 {
+  font-size: var(--font-desktop-heading-3);
+  font-weight: 600;
+  color: var(--global-color-accent-2);
+  text-transform: capitalize;
+}
+
+.skill_category_container > ul {
+  list-style: square;
+  font-size: var(--font-desktop-para-2);
+  font-weight: 400;
+  line-height: 2rem;
+}
