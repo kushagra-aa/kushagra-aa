@@ -33,3 +33,41 @@ body {
     --color-fg-2: var(--global-color-dark-2);
   }
 }
+
+.loader {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg-1);
+}
+
+.loader > svg {
+  animation: spinner 2s cubic-bezier(0.25, 0.48, 0.91, 0.58) infinite;
+
+  & #side > path {
+    fill: var(--color-fg-1);
+  }
+
+  & #mid > path {
+    fill: var(--global-color-accent-1);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
