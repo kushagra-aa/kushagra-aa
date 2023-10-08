@@ -16,7 +16,7 @@ function Footer() {
           strokeColor="accent-1"
           stoke="stroke-1"
         >
-          <Link href="/">hire me !</Link>
+          <Link href="/contact">hire me !</Link>
         </Button>
       </div>
       <div className="mid">
