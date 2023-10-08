@@ -110,11 +110,14 @@
 }
 
 .experience_projects_skills_outer > .experience_projects_skills {
-  display: none;
+  position: absolute;
+  left: -25%;
+  display: flex;
+  opacity: 0;
   width: 100%;
   height: max-content;
   padding: 0.75rem 1.5rem;
-  transition: all 0.5s ease-in-out;
+  transition: left 0.25s ease-in;
 }
 
 .experience_projects_skills h5 {
@@ -155,8 +158,8 @@
 .experience_container:hover
   > .experience_projects_skills_outer
   > .experience_projects_skills {
-  position: absolute;
-  display: flex;
+  left: 0;
+  opacity: 1;
   background-color: var(--color-bg-2);
 }
 
