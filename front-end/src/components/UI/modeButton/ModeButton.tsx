@@ -6,7 +6,9 @@ import { DarkIcon, LightIcon } from "@/components/Icons";
 import "./mode-button.css";
 
 function ModeButton() {
-  const [mode, setMode] = useState(localStorage.getItem("mode"));
+  const [mode, setMode] = useState(
+    typeof window !== "undefined" ? localStorage.getItem("mode") : "dark",
+  );
 
   const changeMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
@@ -19,7 +21,7 @@ function ModeButton() {
         : "light";
       setMode(m);
     } else {
-      localStorage.setItem("mode", mode);
+      if (typeof window !== "undefined") localStorage.setItem("mode", mode);
       document.documentElement.setAttribute("data-theme", mode);
       document.body.classList.add(mode === "dark" ? "dark-mode" : "light-mode");
       document.body.classList.remove(
