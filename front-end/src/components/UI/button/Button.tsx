@@ -1,14 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable react/require-default-props */
+import { Colors } from "@/constants/colors";
 import "./button.css";
-
-type Colors =
-  | "dark-1"
-  | "dark-2"
-  | "light-1"
-  | "light-2"
-  | "accent-1"
-  | "accent-2";
 
 type ButtonPropType = {
   children: React.ReactNode;

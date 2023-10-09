@@ -1,0 +1,131 @@
+.dropdown_outer {
+  --bg: var(--color-fg-2);
+  --fg: var(--color-bg-2);
+  --accent: var(--global-color-accent-2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  & > .dropdown_inner {
+    width: inherit;
+    z-index: 11;
+
+    & > input {
+      width: inherit;
+      border: none;
+      outline: none;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-size: var(--font-desktop-button-2);
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  & > .dropdown_options {
+    --dropdown-options-height: 11rem;
+
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    background-color: var(--bg);
+    width: inherit;
+
+    &.close {
+      opacity: 0;
+      bottom: 30%;
+      height: 2rem;
+    }
+
+    &.open {
+      opacity: 1;
+      bottom: calc(-1.025 * var(--dropdown-options-height));
+      height: var(--dropdown-options-height);
+    }
+
+    & > button {
+      background: var(--bg);
+      outline: none;
+      border: none;
+      padding: 0.25rem;
+      color: var(--fg);
+      font-size: var(--font-desktop-button-2);
+      text-transform: capitalize;
+
+      &.selected {
+        background: var(--accent);
+        filter: brightness(98%);
+      }
+
+      &:hover {
+        filter: brightness(92%);
+      }
+
+      &:focus-visible,
+      &:focus {
+        filter: brightness(95%);
+      }
+    }
+  }
+
+  & > .dropdown_icon {
+    position: absolute;
+    right: 0.25rem;
+    z-index: 12;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    background-color: var(--bg);
+
+    &.open {
+      & > svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.close {
+      & > svg {
+        transform: rotate(0deg);
+      }
+    }
+
+    & > svg {
+      transition: transform 0.25s ease-in-out;
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+
+  & > .dropdown_clear_icon {
+    display: none;
+    position: absolute;
+    right: 0.25rem;
+    z-index: 13;
+    height: 100%;
+    cursor: pointer;
+    background-color: var(--bg);
+    border: none;
+    outline: none;
+
+    & > svg {
+      height: 1.25rem;
+      width: 1rem;
+    }
+  }
+
+  &:hover {
+    & > .dropdown_clear_icon {
+      display: grid;
+      place-items: center;
+    }
+  }
+}
