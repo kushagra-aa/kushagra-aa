@@ -1,7 +1,6 @@
 {
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
-        "source.organizeImports": true,
     },
     "eslint.validate": [
         "javascript",
@@ -9,18 +8,37 @@
         "typescriptreact",
         "javascriptreact"
     ],
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss"
+    ],
     "eslint.workingDirectories": [
         {
             "directory": "front-end"
         }
     ],
+    "stylelint.configFile": "front-end/.stylelintrc",
+    "prettier.configPath": "front-end/.prettierrc",
     "editor.formatOnSave": true,
     "scss.validate": false,
     "css.validate": false,
     "postcss.validate": false,
     "cSpell.words": [
+        "anansi",
+        "Astro",
+        "behance",
         "flexbox",
         "flexbugs",
-        "stylelint"
-    ]
+        "photoshop",
+        "Rozgaar",
+        "stylelint",
+        "Tambola",
+        "Texzine",
+        "Widdflix",
+        "Zustand"
+    ],
+    "files.associations": {
+        "*.css": "postcss"
+    }
 }

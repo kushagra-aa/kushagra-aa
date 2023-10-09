@@ -2,13 +2,6 @@
     "extends": [
         "stylelint-config-standard"
     ],
-    "ignoreFiles": [
-        "/**/*.js",
-        "/**/*.jsx",
-        "/**/*.ts",
-        "/**/*.tsx",
-        "./node_modules/**/*.*"
-    ],
     "rules": {
         "declaration-block-no-duplicate-properties": true,
         "no-descending-specificity": null,

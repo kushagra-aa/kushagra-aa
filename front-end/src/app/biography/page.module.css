@@ -1,0 +1,68 @@
+.main > h1 {
+  color: var(--color-fg-1);
+  font-size: var(--font-desktop-display-2);
+  text-align: center;
+}
+
+.story {
+  padding: 1rem var(--main-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.story > .story_ill {
+  width: 40%;
+}
+
+.story > .story_container {
+  flex: 1;
+}
+
+.story_container > .story_sub {
+  color: var(--global-color-accent-1);
+  font-size: var(--font-desktop-sub-heading-2);
+  font-weight: 300;
+}
+
+.story_container > .story_head {
+  margin: 0.5rem 0;
+  color: var(--color-fg-2);
+  font-size: var(--font-desktop-heading-2);
+  font-weight: 700;
+}
+
+.story_container > .story_para {
+  color: var(--color-fg-1);
+  font-size: var(--font-desktop-para-2);
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.story_container > .story_para > .story_highlight {
+  color: var(--global-color-accent-1);
+}
+
+.hobbies {
+  margin: 0.5rem var(--main-padding);
+  width: 60%;
+}
+
+.hobbies > h2 {
+  color: var(--global-color-accent-2);
+  font-size: var(--font-desktop-heading-2);
+  font-weight: 600;
+}
+
+.hobbies > ul {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hobbies > ul > li {
+  text-transform: capitalize;
+  font-size: var(--font-desktop-para-1);
+  font-weight: 300;
+  line-height: 2rem;
+}

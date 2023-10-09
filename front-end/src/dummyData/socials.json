@@ -1,0 +1,38 @@
+{
+    "telegram": {
+        "link": "https://t.me/kushagraa_a",
+        "icon": "/Icon=telegram.png"
+    },
+    "instagram": {
+        "link": "https://www.instagram.com/kushagra.pyjs/",
+        "icon": "/Icon=instagram.png"
+    },
+    "behance": {
+        "link": "https://www.behance.net/kushagra-aa",
+        "icon": "/Icon=behance.png"
+    },
+    "github": {
+        "link": "https://github.com/kushagra-aa",
+        "icon": "/Icon=github.png"
+    },
+    "linkedin": {
+        "link": "https://www.linkedin.com/in/kushagra-aa/",
+        "icon": "/Icon=linkedin.png"
+    },
+    "whatsapp": {
+        "link": "wa.me/918299446479",
+        "icon": "/Icon=whatsapp.png"
+    },
+    "x": {
+        "link": "https://twitter.com/a_kushagraa",
+        "icon": "/Icon=x.png"
+    },
+    "mail": {
+        "link": "mailto:kushagraagnihotri24@gmail.com",
+        "icon": "/Icon=mail.png"
+    },
+    "call": {
+        "link": "tel:+918299446479",
+        "icon": "/Icon=call.png"
+    }
+}

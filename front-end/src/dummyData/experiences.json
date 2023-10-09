@@ -1,0 +1,140 @@
+[
+    {
+        "name": "trendAI Intelligence Technology",
+        "website": "https://www.linkedin.com/company/trendai-intelligence/about/",
+        "role": "UI/UX Intern",
+        "location": "online",
+        "type": "internship",
+        "start": "may 2021",
+        "end": "aug 2021",
+        "skills": [
+            "figma",
+            "adobe illustrator",
+            "adobe photoshop",
+            "adobe premierPro"
+        ],
+        "projects": [
+            {
+                "name": "Texzine",
+                "points": [
+                    "UI/UX Designing",
+                    "Wordpress Development",
+                    "Usage Testing"
+                ]
+            },
+            {
+                "name": "Trend AI",
+                "points": [
+                    "Logo Design",
+                    "Video Editing"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Tamasha.live",
+        "website": "https://tamasha.live/",
+        "role": "Web Development Intern",
+        "location": "online",
+        "type": "internship",
+        "start": "dec 2021",
+        "end": "mar 2022",
+        "skills": [
+            "reactJS",
+            "javaScript",
+            "axios",
+            "CSS",
+            "typeScript",
+            "angular"
+        ],
+        "projects": [
+            {
+                "name": "Tambola Game",
+                "points": [
+                    "ReactJS",
+                    "RESTful API Handling",
+                    "Axios"
+                ]
+            },
+            {
+                "name": "App Download Page",
+                "points": [
+                    "ReactJS",
+                    "CSS"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Rozgaar India - SAS One",
+        "website": "https://www.sasone.in/",
+        "role": "Junior Programmer",
+        "location": "lucknow",
+        "type": "fulltime",
+        "start": "jun 2022",
+        "end": "nov 2022",
+        "skills": [
+            "python",
+            "django",
+            "mySQL",
+            "AWS",
+            "linux",
+            "RESTful API",
+            "pandas"
+        ],
+        "projects": [
+            {
+                "name": "One Post",
+                "points": [
+                    "Python - Django",
+                    "RESTful API Handling",
+                    "OAuth 3.0"
+                ]
+            },
+            {
+                "name": "Stock One",
+                "points": [
+                    "Python - Django",
+                    "AWS"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "UnOrg Vendor Solutions",
+        "website": "https://www.unorg.in/",
+        "role": "Software Engineer",
+        "location": "lucknow",
+        "type": "fulltime",
+        "start": "dec 2022",
+        "end": "present",
+        "skills": [
+            "reactJS",
+            "typeScript",
+            "javaScript",
+            "postCSS",
+            "ESLint",
+            "RESTful API",
+            "python",
+            "django"
+        ],
+        "projects": [
+            {
+                "name": "Ops Solution",
+                "points": [
+                    "ReactJS",
+                    "Axios"
+                ]
+            },
+            {
+                "name": "UBooks - V1, 2.0",
+                "points": [
+                    "User Roles",
+                    "Placing Orders",
+                    "Inventory Management",
+                    "Customers Management"
+                ]
+            }
+        ]
+    }
+]
