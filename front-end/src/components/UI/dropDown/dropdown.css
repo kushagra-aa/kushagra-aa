@@ -1,7 +1,8 @@
 .dropdown_outer {
-  --bg: var(--color-fg-2);
-  --fg: var(--color-bg-2);
+  --bg: var(--global-color-light-2);
+  --fg: var(--global-color-dark-2);
   --accent: var(--global-color-accent-2);
+  --radius: 5px;
 
   display: flex;
   align-items: center;
@@ -22,6 +23,7 @@
       color: var(--fg);
       font-size: var(--font-desktop-button-2);
       padding: 0.25rem 0.5rem;
+      border-radius: var(--radius);
     }
   }
 
@@ -38,6 +40,7 @@
     overflow-y: scroll;
     background-color: var(--bg);
     width: inherit;
+    border-radius: var(--radius);
 
     &.close {
       opacity: 0;
