@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable react/require-default-props */
 import { Colors } from "@/constants/colors";
@@ -16,6 +18,7 @@ type ButtonPropType = {
   className?: string;
   style?: {};
   disabled?: boolean;
+  onClick?: () => void;
 };
 
 function Button({
@@ -31,6 +34,7 @@ function Button({
   stoke,
   type,
   disabled,
+  onClick,
 }: ButtonPropType) {
   return (
     <div
@@ -39,6 +43,7 @@ function Button({
       className={`${className} ${theme}-button background-${backgroundColor} foreground-${foregroundColor} stroke-${strokeColor} ${stoke} button-${size} ${type}
       ${disabled ? "disabled" : ""}`}
       tabIndex={disabled ? -1 : 0}
+      onClick={onClick}
     >
       {children}
     </div>
