@@ -33,6 +33,20 @@ const getProjectsAPI = async (params: FiltersType) => {
       return tags.some((t) => projectTags.includes(t));
     });
   }
+  if (params.search) {
+    projects = projects.filter(
+      (project) =>
+        project.name
+          .toLowerCase()
+          .includes(params.search?.toLowerCase() || "") ||
+        project.description
+          .toLowerCase()
+          .includes(params.search?.toLowerCase() || "") ||
+        project.short_description
+          .toLowerCase()
+          .includes(params.search?.toLowerCase() || ""),
+    );
+  }
   return {
     projects: projects.slice(params.start, params.end),
     total_data: projects.length,
@@ -83,7 +97,11 @@ export default function Portfolio() {
         </p>
       </div>
       <div className={styles.filters}>
-        <Search value={filters.search} onSearch={onSearch} />
+        <Search
+          value={filters.search}
+          onSearch={onSearch}
+          searchFor="Project Name, Description"
+        />
         <div className={styles.filters_selects}>
           <p>filters:</p>
           <DropDown
