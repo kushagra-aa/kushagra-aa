@@ -134,6 +134,7 @@ function DropDown({
       onFocus={inputFocus}
       onBlur={inputBlur}
       className={`dropdown_outer ${backgroundColor} ${className}`}
+      title={inputValue}
     >
       <div className="dropdown_inner">
         <Input
