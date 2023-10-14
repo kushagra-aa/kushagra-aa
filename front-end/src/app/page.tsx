@@ -9,6 +9,7 @@ import {
 } from "@/components/Icons";
 import Projects from "@/dummyData/projects.json";
 import styles from "./page.module.css";
+import ProjectType from "@/models/Project";
 
 function HeroSection() {
   return (
@@ -45,11 +46,7 @@ function HeroSection() {
   );
 }
 
-function FeaturedProjectCard({
-  project,
-}: {
-  project: (typeof Projects)[number];
-}) {
+function FeaturedProjectCard({ project }: { project: ProjectType }) {
   return (
     <div className={styles.project_card_content}>
       <Image src={project.picture} alt={project.name} fill sizes="100%" />

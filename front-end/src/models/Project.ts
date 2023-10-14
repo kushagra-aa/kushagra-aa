@@ -1,4 +1,4 @@
-type Project = {
+type ProjectType = {
   name: string;
   slug: string;
   picture: string;
@@ -12,4 +12,4 @@ type Project = {
   completed_at: string;
 };
 
-export default Project;
+export default ProjectType;

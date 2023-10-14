@@ -54,3 +54,9 @@
 .filters_selects > .filter_dropdown {
   width: 10rem;
 }
+
+.main > .projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
