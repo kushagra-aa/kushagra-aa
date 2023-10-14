@@ -7,8 +7,10 @@ import "./search.css";
 export default function Search({
   onSearch,
   value,
+  searchFor,
 }: {
   value?: string;
+  searchFor: string;
   onSearch: (val?: string) => void;
 }) {
   const handleSearch = () => {
@@ -19,7 +21,12 @@ export default function Search({
   };
 
   return (
-    <InputGroup className="search" title="" inputName="search">
+    <InputGroup
+      className="search"
+      title=""
+      hoverTitle={`Search in ${searchFor}`}
+      inputName="search"
+    >
       <Button
         onClick={handleSearch}
         className="search_button"
@@ -29,7 +36,7 @@ export default function Search({
         <SearchIcon />
       </Button>
       <Input
-        placeholder="Search"
+        placeholder={`Search in ${searchFor}`}
         inputName="search"
         id="search"
         type="text"

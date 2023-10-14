@@ -5,14 +5,16 @@ function InputGroup({
   title,
   inputName,
   className,
+  hoverTitle,
 }: {
   children: React.ReactNode;
   title: string;
   inputName: string;
   className?: string;
+  hoverTitle?: string;
 }) {
   return (
-    <label className={className} htmlFor={inputName}>
+    <label title={hoverTitle} className={className} htmlFor={inputName}>
       {title}
       {children}
     </label>
