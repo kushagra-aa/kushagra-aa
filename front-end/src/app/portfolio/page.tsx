@@ -7,24 +7,32 @@ import Search from "@/components/UI/search/Search";
 import ProjectCard from "@/components/postCard/ProjectCard";
 import PROJECTS from "../../dummyData/projects.json";
 import ProjectType from "@/models/Project";
+import Button from "@/components/UI/button/Button";
 
 type FiltersType = {
   tech?: string;
   tag?: string;
   search?: string;
-  start?: number;
-  end?: number;
+  start: number;
+  end: number;
 };
 
-const getProjectsAPI = async (params?: FiltersType) => {
-  return PROJECTS.slice(params?.start || 0, (params?.end || 6) + 1);
+const getProjectsAPI = async (params: FiltersType) => {
+  return {
+    projects: PROJECTS.slice(params.start, params.end),
+    total_data: PROJECTS.length,
+  };
 };
 
-const defaultFiltersValue: FiltersType = {};
+const defaultFiltersValue: FiltersType = {
+  start: 0,
+  end: 6,
+};
 
 export default function Portfolio() {
   const [filters, setFilters] = useState<FiltersType>(defaultFiltersValue);
   const [projects, setProjects] = useState<ProjectType[]>([]);
+  const [total, setTotal] = useState(0);
   const handleTechChange = (value: string): void => {
     setFilters((f) => ({ ...f, tech: value }));
   };
@@ -35,10 +43,15 @@ export default function Portfolio() {
     setFilters((f) => ({ ...f, search: value }));
   };
 
-  const getProjects = async (params?: FiltersType) => {
+  const getProjects = async (params: FiltersType) => {
     await getProjectsAPI(params).then((resp) => {
-      setProjects(resp);
+      setProjects(resp.projects);
+      setTotal(resp.total_data);
     });
+  };
+
+  const handleLoadMore = () => {
+    setFilters((f) => ({ ...f, end: f.end + 6 }));
   };
 
   useEffect(() => {
@@ -102,6 +115,17 @@ export default function Portfolio() {
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
+        {projects.length !== total ? (
+          <Button
+            type="button"
+            size="large"
+            theme="theme-2"
+            className={styles.load_button}
+            onClick={handleLoadMore}
+          >
+            Load More
+          </Button>
+        ) : null}
       </div>
     </div>
   );

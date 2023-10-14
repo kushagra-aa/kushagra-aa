@@ -40,6 +40,10 @@
       width: 100%;
       text-transform: capitalize;
 
+      &:hover {
+        filter: brightness(110%);
+      }
+
       &.details {
         background-color: var(--color-bg-1);
         color: var(--color-fg-1);
