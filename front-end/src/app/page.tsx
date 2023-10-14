@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/UI/button/Button";
 import {
+  CaretRightIcon,
   InfoIcon,
   RightIcon,
   SendIcon,
@@ -57,7 +58,15 @@ function FeaturedProjectCard({ project }: { project: ProjectType }) {
         foregroundColor="accent-2"
       >
         <Link className={styles.project_card_link} href={project.link}>
-          Visit <RightIcon />
+          {project.tags.includes("game") ? (
+            <>
+              Play <CaretRightIcon />
+            </>
+          ) : (
+            <>
+              Visit <RightIcon />
+            </>
+          )}
         </Link>
       </Button>
       <Button
