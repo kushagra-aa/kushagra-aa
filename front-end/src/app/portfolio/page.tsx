@@ -1,58 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Input from "@/components/UI/input/Input";
 import styles from "./page.module.css";
-import InputGroup from "@/components/UI/input/InputGroup";
-import { CloseIcon, SearchIcon } from "@/components/Icons";
-import Button from "@/components/UI/button/Button";
 import DropDown from "@/components/UI/dropDown/DropDown";
-
-function Search({
-  onSearch,
-  value,
-}: {
-  value?: string;
-  onSearch: (val?: string) => void;
-}) {
-  const handleSearch = () => {
-    onSearch(value);
-  };
-  const handleSearchClear = () => {
-    onSearch(undefined);
-  };
-
-  return (
-    <InputGroup className={styles.search} title="" inputName="search">
-      <Button
-        onClick={handleSearch}
-        className={styles.search_button}
-        size="small"
-        type="button"
-      >
-        <SearchIcon />
-      </Button>
-      <Input
-        placeholder="Search"
-        inputName="search"
-        id="search"
-        type="text"
-        value={value || ""}
-        onChange={(e) => {
-          onSearch(e.target.value);
-        }}
-      />
-      <Button
-        onClick={handleSearchClear}
-        className={styles.search_clear_button}
-        size="small"
-        type="button"
-      >
-        <CloseIcon />
-      </Button>
-    </InputGroup>
-  );
-}
+import Search from "@/components/UI/search/Search";
 
 type FiltersType = {
   tech?: string;

@@ -11,7 +11,25 @@ const fontFam = Sora({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Kushagra AA",
   description:
-    "I help people bring their ideas to life. Powered by Designs, Code and coffee, A lot of code and coffee.",
+    "Kushagra Agnihotri, Web Developer passionate about bringing your ideas to life through elegant designs and robust code. Explore my portfolio and discover how I turn creativity into reality.",
+  keywords: [
+    "Web Developer",
+    "Portfolio Website",
+    "Website Projects",
+    "Responsive Web Design",
+    "Web Development Services",
+    "Custom Website Development",
+    "Coding Skills",
+    "Learn Web Development",
+    "Portfolio",
+    "Projects",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "ReactJS",
+    "Next.js",
+  ],
 };
 
 export default function RootLayout({

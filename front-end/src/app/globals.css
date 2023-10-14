@@ -7,8 +7,18 @@
 @import url("positioning");
 @import url("size");
 
+::selection {
+  background-color: var(--global-color-accent-2);
+  color: var(--color-bg-1);
+}
+
+:is(a, button):focus-visible {
+  outline: 1px solid var(--global-color-accent-2);
+  border: 1px solid var(--color-fg-2);
+}
+
 body {
-  --nav-width: 32vh;
+  --nav-width: 36vh;
   --main-width: calc(100vw - var(--nav-width));
   --main-height: 100vh;
   --nav-height: 100vh;
