@@ -101,6 +101,7 @@ export default function Portfolio() {
           value={filters.search}
           onSearch={onSearch}
           searchFor="Project Name, Description"
+          debounceTimeout={1000}
         />
         <div className={styles.filters_selects}>
           <p>filters:</p>
@@ -119,6 +120,7 @@ export default function Portfolio() {
             backgroundColor="light-2"
             value={filters.tech}
             onChange={handleTechChange}
+            debounceTimeout={1000}
             search
             autoSearch
             multiple
@@ -138,6 +140,7 @@ export default function Portfolio() {
             backgroundColor="light-2"
             value={filters.tags}
             onChange={handleTagChange}
+            debounceTimeout={1000}
             search
             autoSearch
             multiple
