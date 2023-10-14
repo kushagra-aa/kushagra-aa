@@ -11,16 +11,31 @@ import Button from "@/components/UI/button/Button";
 
 type FiltersType = {
   tech?: string;
-  tag?: string;
+  tags?: string;
   search?: string;
   start: number;
   end: number;
 };
 
 const getProjectsAPI = async (params: FiltersType) => {
+  let projects = PROJECTS;
+  if (params.tech) {
+    const tech = params.tech.split(",");
+    projects = projects.filter((project) => {
+      const projectTech = project.tech.split(",");
+      return tech.some((t) => projectTech.includes(t));
+    });
+  }
+  if (params.tags) {
+    const tags = params.tags.split(",");
+    projects = projects.filter((project) => {
+      const projectTags = project.tags.split(",");
+      return tags.some((t) => projectTags.includes(t));
+    });
+  }
   return {
-    projects: PROJECTS.slice(params.start, params.end),
-    total_data: PROJECTS.length,
+    projects: projects.slice(params.start, params.end),
+    total_data: projects.length,
   };
 };
 
@@ -37,7 +52,7 @@ export default function Portfolio() {
     setFilters((f) => ({ ...f, tech: value }));
   };
   const handleTagChange = (value: string): void => {
-    setFilters((f) => ({ ...f, tag: value }));
+    setFilters((f) => ({ ...f, tags: value }));
   };
   const onSearch = (value?: string): void => {
     setFilters((f) => ({ ...f, search: value }));
@@ -103,7 +118,7 @@ export default function Portfolio() {
               { value: "desktop" },
             ]}
             backgroundColor="light-2"
-            value={filters.tag}
+            value={filters.tags}
             onChange={handleTagChange}
             search
             autoSearch
