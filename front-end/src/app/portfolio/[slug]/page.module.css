@@ -49,13 +49,12 @@
   letter-spacing: 0.5rem;
   color: var(--color-fg-1);
   text-align: center;
-  padding-top: 0.5rem;
 }
 
 .project_container > .project_description_details {
   display: flex;
   gap: 2rem;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 2rem 1rem;
 }
 
 .project_description_details > p {
