@@ -10,6 +10,10 @@ type ProjectType = {
   github: string;
   started_at: string;
   completed_at: string;
+  with?: {
+    name: string;
+    link: string;
+  };
 };
 
 export default ProjectType;

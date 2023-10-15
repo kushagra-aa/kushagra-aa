@@ -10,7 +10,11 @@
         "link": "https://github.com/kushagra-aa/kushagra-aa",
         "github": "https://github.com/kushagra-aa/kushagra-aa",
         "started_at": "12-08-2002",
-        "completed_at": "12-08-2002"
+        "completed_at": "12-08-2002",
+        "with": {
+            "name": "UnOrg Vendor Solutions",
+            "link": "https://www.unorg.in/"
+        }
     },
     {
         "name": "Games",
@@ -18,12 +22,16 @@
         "picture": "/thumbnails/Games Thumbnail.png",
         "tags": "web,clone",
         "tech": "ReactJS,next.js,ts,html,css",
-        "description": "Road Game is not Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n",
+        "description": "Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\n        Road Game is a  Web Game. Jump and Beware of obstacles!me\nRoad Game is a  Web Game. Jump and Beware of obstacles!me\nRoad Game is a  Web Game. Jump and Beware of o.",
         "short_description": "Road Game is a  Web Game. Jump and Beware of the obstacles comings your way and set an amazing highscore ...",
         "link": "https://github.com/kushagra-aa/kushagra-aa",
         "github": "https://github.com/kushagra-aa/kushagra-aa",
         "started_at": "12-08-2002",
-        "completed_at": "12-08-2002"
+        "completed_at": "12-08-2002",
+        "with": {
+            "name": "Animesh Srivastava",
+            "link": "https://github.com/animesh24"
+        }
     },
     {
         "name": "Calc",
