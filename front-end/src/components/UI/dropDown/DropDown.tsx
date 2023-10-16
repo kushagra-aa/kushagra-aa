@@ -5,6 +5,7 @@ import { Colors } from "@/constants/colors";
 import "./dropdown.css";
 import Input from "../input/Input";
 import { CloseIcon, DownIcon } from "@/components/Icons";
+import useDebounce from "@/hooks/useDebounce";
 
 export type DropDownPropsType = {
   backgroundColor: Colors;
@@ -26,6 +27,7 @@ export type DropDownPropsType = {
   onSearch?: (value: string) => void;
   autoSearch?: boolean;
   multiple?: boolean;
+  debounceTimeout?: number;
 };
 
 function DropDown({
@@ -42,6 +44,7 @@ function DropDown({
   autoSearch,
   multiple,
   placeholder,
+  debounceTimeout,
 }: DropDownPropsType) {
   const [inputValue, setInputValue] = useState("");
   const [inputDisplayValue, setInputDisplayValue] = useState("");
@@ -71,14 +74,6 @@ function DropDown({
   const changeInputValue = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setInputDisplayValue(e.target.value);
     if (search) {
-      if (onSearch) {
-        onSearch(e.target.value);
-      }
-      if (autoSearch) {
-        setDropdownOptions(
-          checkSelectedValues(searchOptions(e.target.value, options)),
-        );
-      }
       setInputSearchValue(e.target.value);
     }
   };
@@ -119,6 +114,21 @@ function DropDown({
     if (onChange) onChange("");
   };
 
+  useDebounce(
+    () => {
+      if (onSearch) {
+        onSearch(inputSearchValue);
+      }
+      if (autoSearch) {
+        setDropdownOptions(
+          checkSelectedValues(searchOptions(inputSearchValue, options)),
+        );
+      }
+    },
+    [inputSearchValue],
+    debounceTimeout,
+  );
+
   useEffect(() => {
     if (!multiple) setInputValue(value || "");
     else setInputValue(value || "");
@@ -134,6 +144,7 @@ function DropDown({
       onFocus={inputFocus}
       onBlur={inputBlur}
       className={`dropdown_outer ${backgroundColor} ${className}`}
+      title={inputValue}
     >
       <div className="dropdown_inner">
         <Input

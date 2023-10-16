@@ -34,6 +34,10 @@ body {
     --color-bg-2: var(--global-color-dark-2);
     --color-fg-1: var(--global-color-light-1);
     --color-fg-2: var(--global-color-light-2);
+    --color-bg-1-rgb: var(--global-color-dark-1-rgb);
+    --color-bg-2-rgb: var(--global-color-dark-2-rgb);
+    --color-fg-1-rgb: var(--global-color-light-1-rgb);
+    --color-fg-2-rgb: var(--global-color-light-2-rgb);
   }
 
   &.light-mode {
@@ -41,6 +45,10 @@ body {
     --color-bg-2: var(--global-color-light-2);
     --color-fg-1: var(--global-color-dark-1);
     --color-fg-2: var(--global-color-dark-2);
+    --color-bg-1-rgb: var(--global-color-light-1-rgb);
+    --color-bg-2-rgb: var(--global-color-light-2-rgb);
+    --color-fg-1-rgb: var(--global-color-dark-1-rgb);
+    --color-fg-2-rgb: var(--global-color-dark-2-rgb);
   }
 }
 

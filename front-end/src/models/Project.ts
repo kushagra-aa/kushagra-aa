@@ -1,4 +1,4 @@
-type Project = {
+type ProjectType = {
   name: string;
   slug: string;
   picture: string;
@@ -10,6 +10,10 @@ type Project = {
   github: string;
   started_at: string;
   completed_at: string;
+  with?: {
+    name: string;
+    link: string;
+  };
 };
 
-export default Project;
+export default ProjectType;

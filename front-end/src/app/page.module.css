@@ -159,6 +159,11 @@
   display: none;
 }
 
+.project_card_link svg {
+  height: 1rem;
+  width: 1rem;
+}
+
 .project_card_link:nth-of-type(1) path {
   fill: var(--global-color-accent-2);
 }

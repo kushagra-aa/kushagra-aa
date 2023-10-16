@@ -6,12 +6,14 @@ function TextArea({
   className,
   cols,
   rows,
+  placeholder,
 }: {
   id: string;
   inputName: string;
   className?: string;
   cols?: number;
   rows?: number;
+  placeholder?: string;
 }) {
   return (
     <textarea
@@ -20,6 +22,7 @@ function TextArea({
       className={className}
       cols={cols}
       rows={rows}
+      placeholder={placeholder}
     />
   );
 }

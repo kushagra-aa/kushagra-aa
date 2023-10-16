@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/UI/button/Button";
 import {
+  CaretRightIcon,
   InfoIcon,
   RightIcon,
   SendIcon,
@@ -9,6 +10,7 @@ import {
 } from "@/components/Icons";
 import Projects from "@/dummyData/projects.json";
 import styles from "./page.module.css";
+import ProjectType from "@/models/Project";
 
 function HeroSection() {
   return (
@@ -45,11 +47,7 @@ function HeroSection() {
   );
 }
 
-function FeaturedProjectCard({
-  project,
-}: {
-  project: (typeof Projects)[number];
-}) {
+function FeaturedProjectCard({ project }: { project: ProjectType }) {
   return (
     <div className={styles.project_card_content}>
       <Image src={project.picture} alt={project.name} fill sizes="100%" />
@@ -60,7 +58,15 @@ function FeaturedProjectCard({
         foregroundColor="accent-2"
       >
         <Link className={styles.project_card_link} href={project.link}>
-          Visit <RightIcon />
+          {project.tags.includes("game") ? (
+            <>
+              Play <CaretRightIcon />
+            </>
+          ) : (
+            <>
+              Visit <RightIcon />
+            </>
+          )}
         </Link>
       </Button>
       <Button
