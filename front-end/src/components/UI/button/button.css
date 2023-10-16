@@ -20,6 +20,13 @@
     height: 100%;
   }
 
+  & > :is(a, button) {
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
   &.disabled {
     opacity: 0.5 !important;
     cursor: not-allowed !important;
@@ -28,10 +35,12 @@
       filter: none !important;
     }
 
-    &:focus-visible {
-      outline: none !important;
-      border: none !important;
-      box-shadow: none !important;
+    & > :is(button, a) {
+      &:focus-visible {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
     }
   }
 
@@ -59,7 +68,7 @@
       filter: brightness(110%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-dark-1);
     }
   }
@@ -71,7 +80,7 @@
       filter: brightness(110%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-dark-2);
     }
   }
@@ -83,7 +92,7 @@
       filter: brightness(90%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-light-1);
     }
   }
@@ -95,7 +104,7 @@
       filter: brightness(90%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-light-2);
     }
   }
@@ -107,7 +116,7 @@
       filter: brightness(90%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-accent-1);
     }
   }
@@ -119,7 +128,7 @@
       filter: brightness(90%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-accent-2);
     }
   }
@@ -153,7 +162,7 @@
   &.stroke-dark-1 {
     border-color: var(--global-color-dark-1);
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-dark-1);
     }
   }
@@ -161,7 +170,7 @@
   &.stroke-dark-2 {
     border-color: var(--global-color-dark-2);
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-dark-2);
     }
   }
@@ -169,7 +178,7 @@
   &.stroke-light-1 {
     border-color: var(--global-color-light-1);
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-light-1);
     }
   }
@@ -177,7 +186,7 @@
   &.stroke-light-2 {
     border-color: var(--global-color-light-2);
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-light-2);
     }
   }
@@ -185,7 +194,7 @@
   &.stroke-accent-1 {
     border-color: var(--global-color-accent-1);
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-accent-1);
     }
   }
@@ -193,7 +202,7 @@
   &.stroke-accent-2 {
     border-color: var(--global-color-accent-2);
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--global-color-accent-2);
     }
   }
@@ -231,7 +240,7 @@
       filter: brightness(150%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--color-fg-1);
     }
   }
@@ -244,7 +253,7 @@
       filter: brightness(150%);
     }
 
-    &:focus-visible {
+    &:focus-within {
       box-shadow: var(--shadow) var(--color-fg-2);
     }
   }

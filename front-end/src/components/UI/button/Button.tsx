@@ -42,7 +42,7 @@ function Button({
       style={style}
       className={`${className} ${theme}-button background-${backgroundColor} foreground-${foregroundColor} stroke-${strokeColor} ${stoke} button-${size} ${type}
       ${disabled ? "disabled" : ""}`}
-      tabIndex={disabled ? -1 : 0}
+      // tabIndex={disabled ? -1 : 0}
       onClick={onClick}
     >
       {children}

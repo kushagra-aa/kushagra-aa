@@ -57,6 +57,7 @@ export default async function Work() {
                   <Link
                     className={styles.experience_org}
                     href={experience.website}
+                    target="_blank"
                   >
                     {experience.name}
                   </Link>
@@ -93,7 +94,9 @@ export default async function Work() {
                           key={project.name}
                         >
                           {project.link ? (
-                            <Link href={project.link}>{project.name}</Link>
+                            <Link href={project.link} target="_blank">
+                              {project.name}
+                            </Link>
                           ) : (
                             <p>{project.name}</p>
                           )}
