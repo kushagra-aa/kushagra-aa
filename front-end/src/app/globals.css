@@ -50,6 +50,18 @@ body {
     --color-fg-1-rgb: var(--global-color-dark-1-rgb);
     --color-fg-2-rgb: var(--global-color-dark-2-rgb);
   }
+
+  @media (width >= 1440px) {
+    --nav-width: 280px;
+    --main-width: calc(1440px - var(--nav-width));
+    --main-height: 100vh;
+    --nav-height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--color-bg-1);
+  }
 }
 
 .loader {
