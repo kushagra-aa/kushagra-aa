@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import LinksContainer from "@/components/linksRow/LinksContainer";
 import styles from "./page.module.css";
 import LinkRow from "@/components/linksRow/LinkRow";
@@ -27,7 +28,11 @@ export default async function Work() {
         <h1>Professional Info</h1>
       </div>
       <section className={styles.info}>
-        <div className={styles.info_ill} />
+        <div className={styles.info_ill}>
+          <div>
+            <Image src="/me-professional.png" alt="myself" fill sizes="100%" />
+          </div>
+        </div>
         <p className={styles.info_para}>
           Hello Visitor, I am
           <span className={styles.para_highlight}> Kushagra Agnihotri </span>
