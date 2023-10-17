@@ -14,6 +14,50 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 6rem var(--main-padding);
+
+  @media (width >= 1440px) {
+    min-height: calc(var(--main-height) - 10vh);
+  }
+}
+
+.hero_ill {
+  --size: 25rem;
+  --position: 3rem;
+
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  right: var(--position);
+  bottom: var(--position);
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 8px 8px 0 var(--global-color-dark-2-20);
+  animation: floating 1s linear infinite;
+}
+
+.hero_ill:hover {
+  animation: rotating 4s infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(-0.5rem);
+  }
+
+  50% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .hero > h2 {
@@ -56,13 +100,17 @@
   gap: 0.5rem;
 }
 
+.hero_cta2_outer {
+  background-color: var(--color-bg-1);
+}
+
 .hero_cta2 path {
   fill: var(--global-color-accent-2);
 }
 
 .hero > .arrow {
-  --height-1: 32.5rem;
-  --height-2: 33.5rem;
+  --height-1: 28.5rem;
+  --height-2: 30.5rem;
 
   position: absolute;
   top: 15.6rem;

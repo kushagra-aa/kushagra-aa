@@ -24,6 +24,7 @@ body {
   --nav-height: 100vh;
   --main-padding: 3.125rem;
 
+  position: relative;
   background-color: var(--color-bg-1);
   color: var(--color-fg-1);
   display: flex;
@@ -49,6 +50,18 @@ body {
     --color-bg-2-rgb: var(--global-color-light-2-rgb);
     --color-fg-1-rgb: var(--global-color-dark-1-rgb);
     --color-fg-2-rgb: var(--global-color-dark-2-rgb);
+  }
+
+  @media (width >= 1440px) {
+    --nav-width: 280px;
+    --main-width: calc(1440px - var(--nav-width));
+    --main-height: 100vh;
+    --nav-height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--color-bg-1);
   }
 }
 

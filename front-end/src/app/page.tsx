@@ -35,6 +35,7 @@ function HeroSection() {
         foregroundColor="accent-1"
         strokeColor="accent-1"
         stoke="stroke-1"
+        className={styles.hero_cta2_outer}
       >
         <Link className={styles.hero_cta2} href="/contact">
           Let&rsquo;s work together <SendIcon />
@@ -42,6 +43,9 @@ function HeroSection() {
       </Button>
       <div className={styles.arrow}>
         <Image src="/arrow.png" alt="telegram" fill sizes="100%" />
+      </div>
+      <div className={styles.hero_ill}>
+        <Image src="/hero-image.png" alt="hero_image" fill sizes="100%" />
       </div>
     </section>
   );

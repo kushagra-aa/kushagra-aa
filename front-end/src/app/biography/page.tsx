@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 import { CodeIcon, FolderOpenIcon, IdCardIcon } from "@/components/Icons";
 import LinksContainer from "@/components/linksRow/LinksContainer";
@@ -50,7 +51,11 @@ export default function Biography() {
             <span className={styles.story_highlight}> Flutter </span>.
           </p>
         </div>
-        <div className={styles.story_ill} />
+        <div className={styles.story_ill}>
+          <div>
+            <Image src="/me-personal.png" alt="myself" fill sizes="100%" />
+          </div>
+        </div>
       </div>
       <div className={styles.hobbies}>
         <h2>My Hobbies</h2>
