@@ -13,6 +13,10 @@
   border-radius: 0 0 0 100%;
   overflow: hidden;
 
+  @media (width >= 1440px) {
+    left: 1536px;
+  }
+
   & label {
     @extend %flex,
       %align-center,
