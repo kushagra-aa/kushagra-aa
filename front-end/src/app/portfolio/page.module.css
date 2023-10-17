@@ -1,5 +1,5 @@
 .main {
-  min-height: 100vh;
+  min-height: var(--main-height);
 }
 
 .main > .head {
