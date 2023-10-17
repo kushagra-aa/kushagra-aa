@@ -24,6 +24,7 @@ body {
   --nav-height: 100vh;
   --main-padding: 3.125rem;
 
+  position: relative;
   background-color: var(--color-bg-1);
   color: var(--color-fg-1);
   display: flex;
