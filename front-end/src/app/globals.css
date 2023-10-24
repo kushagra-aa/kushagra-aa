@@ -1,104 +1,18 @@
 @import url("./../styles/reset");
 @import url("./../styles/constants/colors");
-@import url("flex-grid");
-@import url("font");
-@import url("margin-padding");
-@import url("misc");
-@import url("positioning");
-@import url("size");
+@import url("./../styles/main");
+@import url("./../styles/responsive");
 
-::selection {
-  background-color: var(--global-color-accent-2);
-  color: var(--color-bg-1);
-}
+/* Screen Sizes */
 
-:is(a, button):focus-visible {
-  outline: 1px solid var(--global-color-accent-2);
-  border: 1px solid var(--color-fg-2);
-}
+/* 
+    mobile: 600px 
+    small: 900px 
+    med: 1250px 
+    big: 1440px 
+    */
 
 body {
-  --nav-width: 36vh;
-  --main-width: calc(100vw - var(--nav-width));
-  --main-height: 100vh;
-  --nav-height: 100vh;
-  --main-padding: 3.125rem;
-
-  position: relative;
-  background-color: var(--color-bg-1);
-  color: var(--color-fg-1);
-  display: flex;
-  align-items: flex-start;
-
-  &.dark-mode {
-    --color-bg-1: var(--global-color-dark-1);
-    --color-bg-2: var(--global-color-dark-2);
-    --color-fg-1: var(--global-color-light-1);
-    --color-fg-2: var(--global-color-light-2);
-    --color-bg-1-rgb: var(--global-color-dark-1-rgb);
-    --color-bg-2-rgb: var(--global-color-dark-2-rgb);
-    --color-fg-1-rgb: var(--global-color-light-1-rgb);
-    --color-fg-2-rgb: var(--global-color-light-2-rgb);
-  }
-
-  &.light-mode {
-    --color-bg-1: var(--global-color-light-1);
-    --color-bg-2: var(--global-color-light-2);
-    --color-fg-1: var(--global-color-dark-1);
-    --color-fg-2: var(--global-color-dark-2);
-    --color-bg-1-rgb: var(--global-color-light-1-rgb);
-    --color-bg-2-rgb: var(--global-color-light-2-rgb);
-    --color-fg-1-rgb: var(--global-color-dark-1-rgb);
-    --color-fg-2-rgb: var(--global-color-dark-2-rgb);
-  }
-
-  @media (width >= 1440px) {
-    --nav-width: 280px;
-    --main-width: calc(1440px - var(--nav-width));
-    --main-height: 100vh;
-    --nav-height: 100vh;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: var(--color-bg-1);
-  }
-}
-
-.loader {
-  position: absolute;
-  inset: 0;
-  z-index: 100;
-  width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  background: var(--color-bg-1);
-}
-
-.loader > svg {
-  animation: spinner 2s cubic-bezier(0.25, 0.48, 0.91, 0.58) infinite;
-
-  & #side > path {
-    fill: var(--color-fg-1);
-  }
-
-  & #mid > path {
-    fill: var(--global-color-accent-1);
-  }
-}
-
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  75% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  width: 100vw;
 }

@@ -44,7 +44,7 @@
 }
 
 .project_container > h1 {
-  font-size: var(--font-desktop-heading-1);
+  font-size: var(--font-size-heading-1);
   font-weight: 800;
   letter-spacing: 0.5rem;
   color: var(--color-fg-1);
@@ -59,7 +59,7 @@
 
 .project_description_details > p {
   width: 70%;
-  font-size: var(--font-desktop-para-2);
+  font-size: var(--font-size-para-2);
   font-style: normal;
   font-weight: 300;
   line-height: 2rem; /* 161% */
@@ -76,7 +76,7 @@
 }
 
 .project_details > :is(.project_visit, .project_github) {
-  font-size: var(--font-desktop-button-2);
+  font-size: var(--font-size-button-2);
   font-weight: 400;
   padding: 0.15rem;
 }
@@ -112,7 +112,7 @@
 }
 
 .project_dates > span {
-  font-size: var(--font-desktop-sub-heading-2);
+  font-size: var(--font-size-sub-heading-2);
   font-weight: 300;
   color: var(--color-fg-2);
 }
@@ -135,7 +135,7 @@
 
 :is(.project_tags_container, .project_tech_container, .project_with_container)
   > p {
-  font-size: var(--font-desktop-sub-heading-1);
+  font-size: var(--font-size-sub-heading-1);
   font-weight: 600;
   color: var(--color-fg-1);
 }
@@ -157,9 +157,31 @@
   padding: 0.125rem 0.65rem;
   background-color: var(--color-bg-1);
   color: var(--global-color-accent-1);
-  font-size: var(--font-desktop-button-3);
+  font-size: var(--font-size-button-3);
   font-weight: 300;
   text-transform: capitalize;
   text-decoration: none;
   white-space: nowrap;
+}
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .project_container > .project_description_details {
+    flex-direction: column-reverse;
+  }
+
+  .project_description_details > p {
+    width: 100%;
+  }
+
+  .project_container > .project_thumbnail {
+    --height: 15rem;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=600px) {
+  .project_container > .project_thumbnail {
+    --height: 10rem;
+  }
 }

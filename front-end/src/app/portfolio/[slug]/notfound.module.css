@@ -58,25 +58,25 @@
 }
 
 .not_found > h1 {
-  font-size: var(--font-desktop-display-2);
+  font-size: var(--font-size-display-2);
   font-weight: 800;
   letter-spacing: 0.5rem;
 }
 
 .not_found > .not_found_sub {
-  font-size: var(--font-desktop-heading-4);
+  font-size: var(--font-size-heading-4);
   font-weight: 500;
 }
 
 .not_found > .not_found_info {
-  font-size: var(--font-desktop-heading-6);
+  font-size: var(--font-size-heading-6);
   font-weight: 200;
 }
 
 .not_found_info > code {
   padding: 0.2rem 0.25rem;
   background: var(--color-bg-1);
-  font-size: var(--font-desktop-button-3);
+  font-size: var(--font-size-button-3);
   border-radius: 5px;
   margin: 0 0.3rem;
 }
@@ -98,4 +98,19 @@
 .not_found_actions > :is(.action) > a {
   display: grid;
   place-items: center;
+}
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .not_found {
+    flex-direction: column;
+  }
+
+  .not_found > .not_found_bg {
+    position: relative;
+  }
+
+  .not_found_text > .not_found_info {
+    text-align: center;
+  }
 }

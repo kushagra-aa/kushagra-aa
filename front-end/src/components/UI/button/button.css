@@ -46,17 +46,17 @@
 
   /* button size */
   &.button-small {
-    font-size: var(--font-desktop-button-3);
+    font-size: var(--font-size-button-3);
     padding: 0.5rem 1.75rem;
   }
 
   &.button-medium {
-    font-size: var(--font-desktop-button-2);
+    font-size: var(--font-size-button-2);
     padding: 0.5rem 2rem;
   }
 
   &.button-large {
-    font-size: var(--font-desktop-button-1);
+    font-size: var(--font-size-button-1);
     padding: 0.75rem 2rem;
   }
 

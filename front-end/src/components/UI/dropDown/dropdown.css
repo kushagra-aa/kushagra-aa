@@ -21,7 +21,7 @@
       outline: none;
       background-color: var(--bg);
       color: var(--fg);
-      font-size: var(--font-desktop-button-3);
+      font-size: var(--font-size-button-3);
       padding: 0.25rem 0.5rem;
       border-radius: var(--radius);
     }
@@ -60,7 +60,7 @@
       border: none;
       padding: 0.25rem;
       color: var(--fg);
-      font-size: var(--font-desktop-button-2);
+      font-size: var(--font-size-button-2);
       text-transform: capitalize;
 
       &.selected {

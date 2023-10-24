@@ -30,7 +30,7 @@ footer {
     gap: 1.5rem;
 
     & > p {
-      font-size: var(--font-desktop-sub-heading-1);
+      font-size: var(--font-size-sub-heading-1);
       font-weight: 600;
       color: var(--global-color-accent-1);
 
@@ -41,12 +41,14 @@ footer {
     }
 
     & > .socials {
+      --size: 3rem;
+
       display: flex;
       gap: 1rem;
 
       & > a {
-        width: 3rem;
-        height: 3rem;
+        width: var(--size);
+        height: var(--size);
         position: relative;
         transition: transform 250ms ease;
 
@@ -73,7 +75,47 @@ footer {
 
     & > p {
       font-weight: 100;
-      font-size: var(--font-desktop-sub-heading-2);
+      font-size: var(--font-size-sub-heading-2);
+    }
+  }
+
+  @media screen and (width <=1250px) {
+    background-color: var(--global-color-dark-2);
+    grid-template:
+      "lft rght" 1.5fr
+      "mid mid" 2.5fr
+      "btm btm" 1fr
+      /1fr 1fr;
+
+    & > :is(.left, .right) {
+      padding-top: 2rem;
+    }
+  }
+
+  @media screen and (width <=600px) {
+    background-color: var(--global-color-dark-2);
+    grid-template:
+      "lft rght" 1.5fr
+      "mid mid" 4fr
+      "btm btm" 1fr
+      /1fr 1fr;
+
+    & > :is(.left, .right) {
+      padding-top: 2rem;
+    }
+
+    & > .mid {
+      & > .socials {
+        --size: 2.75rem;
+
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }

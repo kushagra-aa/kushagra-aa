@@ -9,7 +9,7 @@
 
 .main > .head > h1 {
   color: var(--color-fg-1);
-  font-size: var(--font-desktop-display-2);
+  font-size: var(--font-size-display-2);
   font-weight: 700;
   letter-spacing: 0.75rem;
   text-align: center;
@@ -17,7 +17,7 @@
 
 .head > .sub {
   color: var(--color-fg-2);
-  font-size: var(--font-desktop-heading-3);
+  font-size: var(--font-size-heading-3);
   font-weight: 600;
   text-align: center;
 }
@@ -46,7 +46,7 @@
 }
 
 .filters_selects > p {
-  font-size: var(--font-desktop-button-1);
+  font-size: var(--font-size-button-1);
   font-weight: 300;
   text-transform: capitalize;
 }
@@ -67,4 +67,44 @@
   justify-content: center;
   justify-self: center;
   width: 30%;
+}
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .main > .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .main > .filters > .filters_search {
+    width: 100%;
+  }
+
+  .main > .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=600px) {
+  .main > .filters {
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .main > .filters > .filters_selects {
+    display: none;
+  }
+
+  .main > .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
