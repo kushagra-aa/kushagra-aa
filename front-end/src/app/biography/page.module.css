@@ -122,7 +122,7 @@
 }
 
 /* Mobile Page */
-@media screen and (width <=500px) {
+@media screen and (width <=600px) {
   .story {
     flex-direction: column-reverse;
     gap: 1rem;

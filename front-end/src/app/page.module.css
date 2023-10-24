@@ -336,7 +336,7 @@
 }
 
 /* Mobile Page */
-@media screen and (width <=500px) {
+@media screen and (width <=600px) {
   /* Hero Section */
   .hero {
     min-height: calc(var(--main-height) - 12vh);

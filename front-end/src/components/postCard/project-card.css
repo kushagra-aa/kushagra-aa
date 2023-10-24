@@ -120,7 +120,7 @@
   }
 
   /* Mobile Page */
-  @media screen and (width <=500px) {
+  @media screen and (width <=600px) {
     --card-height: 10rem;
 
     & > .project_info {

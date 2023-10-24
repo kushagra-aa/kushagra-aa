@@ -1,5 +1,5 @@
 /* 
-    mobile: 500px 
+    mobile: 600px 
     small: 900px 
     med: 1250px 
     big: 1440px 
@@ -35,7 +35,7 @@
 }
 
 /* Mobile Mode */
-@media screen and (width <=500px) {
+@media screen and (width <=600px) {
   :root {
     --font-size-nav: var(--font-mobile-nav);
     --font-size-display-1: var(--font-mobile-display-1);

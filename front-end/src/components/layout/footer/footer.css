@@ -92,7 +92,7 @@ footer {
     }
   }
 
-  @media screen and (width <=500px) {
+  @media screen and (width <=600px) {
     background-color: var(--global-color-dark-2);
     grid-template:
       "lft rght" 1.5fr

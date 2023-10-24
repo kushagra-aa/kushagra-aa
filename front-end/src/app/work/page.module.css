@@ -290,7 +290,7 @@
 }
 
 /* Mobile Page */
-@media screen and (width <=500px) {
+@media screen and (width <=600px) {
   .skill_category_container {
     width: 100%;
   }

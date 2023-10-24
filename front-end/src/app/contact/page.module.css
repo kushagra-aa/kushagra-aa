@@ -194,7 +194,7 @@
 }
 
 /* Mobile Page */
-@media screen and (width <=500px) {
+@media screen and (width <=600px) {
   .main > section > form {
     --input-width: 100%;
 

@@ -91,7 +91,7 @@
 }
 
 /* Mobile Page */
-@media screen and (width <=500px) {
+@media screen and (width <=600px) {
   .main > .filters {
     align-items: stretch;
     justify-content: center;
