@@ -298,7 +298,43 @@
   left: -5rem !important;
 }
 
-/* Mobile Page */
+/* Tablet Page */
+@media screen and (width <=900px) {
+  /* Hero Section */
+  .hero {
+    min-height: calc(var(--main-height) - 10vh);
+  }
+
+  .hero_ill {
+    display: none;
+  }
+
+  .hero > p {
+    width: 80%;
+  }
+
+  /* Projects Section */
+  .projects > .projects_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects_container > div {
+    display: none;
+  }
+
+  /* About Section */
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about > .about_ill {
+    display: none;
+  }
+}
+
 @media screen and (width <=500px) {
   /* Hero Section */
   .hero {

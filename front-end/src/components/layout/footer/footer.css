@@ -79,6 +79,19 @@ footer {
     }
   }
 
+  @media screen and (width <=1250px) {
+    background-color: var(--global-color-dark-2);
+    grid-template:
+      "lft rght" 1.5fr
+      "mid mid" 2.5fr
+      "btm btm" 1fr
+      /1fr 1fr;
+
+    & > :is(.left, .right) {
+      padding-top: 2rem;
+    }
+  }
+
   @media screen and (width <=500px) {
     background-color: var(--global-color-dark-2);
     grid-template:

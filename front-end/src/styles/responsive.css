@@ -1,3 +1,10 @@
+/* 
+    mobile: 500px 
+    small: 900px 
+    med: 1250px 
+    big: 1440px 
+    */
+
 /* Big Screen */
 @media (width >= 1440px) {
   body {
