@@ -2,3 +2,17 @@
 @import url("./../styles/constants/colors");
 @import url("./../styles/main");
 @import url("./../styles/responsive");
+
+/* Screen Sizes */
+
+/* 
+    mobile: 500px 
+    small: 900px 
+    med: 1250px 
+    big: 1440px 
+    */
+
+body {
+  height: 100vh;
+  width: 100vw;
+}

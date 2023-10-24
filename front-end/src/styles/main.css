@@ -16,15 +16,6 @@
 }
 
 :root {
-  /* Screen Sizes */
-
-  /* 
-    mobile: 500px 
-    small: 900px 
-    med: 1250px 
-    big: 1440px 
-    */
-
   /* Font Size */
 
   --font-size-nav: var(--font-desktop-nav);

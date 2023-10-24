@@ -76,13 +76,15 @@ nav {
       transition: background-color 0.2s ease-in-out;
 
       & > a {
+        --color: var(--color-fg-2);
+
         padding: 0.25rem 1rem;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 1rem;
         width: inherit;
-        color: var(--color-fg-2);
+        color: var(--color);
         font-size: var(--font-size-nav);
         font-weight: 300;
         text-decoration: none;
@@ -94,7 +96,7 @@ nav {
           height: 1.5rem;
 
           & path {
-            fill: var(--color-fg-2);
+            fill: var(--color);
           }
         }
       }
@@ -106,6 +108,56 @@ nav {
       &.active {
         & > a {
           border-color: var(--color-fg-2);
+        }
+      }
+    }
+  }
+
+  /* Mobile Nav */
+  @media screen and (width <=500px) {
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+    border-top: 1px solid var(--global-color-accent-2);
+    border-right: none;
+
+    & > .logo {
+      display: none;
+    }
+
+    & > .nav-items {
+      flex-direction: row;
+      justify-content: stretch;
+      margin-bottom: 0;
+      gap: 0.5rem;
+
+      & > .nav-item {
+        display: grid;
+        place-items: center;
+        width: 100%;
+
+        & > a {
+          width: max-content;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          & > svg {
+            width: 1rem;
+            height: 1rem;
+          }
+
+          &:active,
+          &:focus {
+            background-color: transparent;
+          }
+        }
+
+        &.active {
+          & > a {
+            --color: var(--global-color-accent-2);
+
+            border: none;
+          }
         }
       }
     }
