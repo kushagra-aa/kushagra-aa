@@ -36,6 +36,27 @@
   --font-size-button-3: var(--font-desktop-button-3);
 }
 
+@media screen and (width <=400px) {
+  :root {
+    --font-size-nav: var(--font-mobile-nav);
+    --font-size-display-1: var(--font-mobile-display-1);
+    --font-size-display-2: var(--font-mobile-display-2);
+    --font-size-heading-1: var(--font-mobile-heading-1);
+    --font-size-heading-2: var(--font-mobile-heading-2);
+    --font-size-heading-3: var(--font-mobile-heading-3);
+    --font-size-heading-4: var(--font-mobile-heading-4);
+    --font-size-heading-5: var(--font-mobile-heading-5);
+    --font-size-heading-6: var(--font-mobile-heading-6);
+    --font-size-sub-heading-1: var(--font-mobile-sub-heading-1);
+    --font-size-sub-heading-2: var(--font-mobile-sub-heading-2);
+    --font-size-para-1: var(--font-mobile-para-1);
+    --font-size-para-2: var(--font-mobile-para-2);
+    --font-size-button-1: var(--font-mobile-button-1);
+    --font-size-button-2: var(--font-mobile-button-2);
+    --font-size-button-3: var(--font-mobile-button-3);
+  }
+}
+
 body {
   --nav-width: 36vh;
   --main-width: calc(100vw - var(--nav-width));
