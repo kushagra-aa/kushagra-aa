@@ -163,3 +163,25 @@
   text-decoration: none;
   white-space: nowrap;
 }
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .project_container > .project_description_details {
+    flex-direction: column-reverse;
+  }
+
+  .project_description_details > p {
+    width: 100%;
+  }
+
+  .project_container > .project_thumbnail {
+    --height: 15rem;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=600px) {
+  .project_container > .project_thumbnail {
+    --height: 10rem;
+  }
+}

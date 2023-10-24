@@ -99,3 +99,18 @@
   display: grid;
   place-items: center;
 }
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .not_found {
+    flex-direction: column;
+  }
+
+  .not_found > .not_found_bg {
+    position: relative;
+  }
+
+  .not_found_text > .not_found_info {
+    text-align: center;
+  }
+}
