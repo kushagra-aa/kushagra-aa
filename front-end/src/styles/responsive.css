@@ -60,6 +60,6 @@
     --nav-height: 3.5rem;
     --main-width: 100vw;
     --main-height: calc(100vh - var(--nav-height));
-    --main-padding: 3.125rem;
+    --main-padding: 2rem;
   }
 }

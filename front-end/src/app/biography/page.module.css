@@ -105,3 +105,30 @@
   font-weight: 300;
   line-height: 2rem;
 }
+
+/* Mobile Page */
+@media screen and (width <=900px) {
+  .hobbies {
+    width: 90%;
+  }
+
+  .hobbies > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0 2.5rem;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=500px) {
+  .story {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .story > .story_ill {
+    width: 100%;
+  }
+}

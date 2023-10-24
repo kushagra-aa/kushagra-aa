@@ -76,3 +76,24 @@
   padding: 4px;
   transform: rotate(-45deg);
 }
+
+/* Small Laptop Page */
+@media screen and (width <=1250px) {
+  .link_row > .link_arrow {
+    display: none;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=900px) {
+  .link_row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .link_row > .link_button {
+    align-self: flex-start;
+  }
+}
