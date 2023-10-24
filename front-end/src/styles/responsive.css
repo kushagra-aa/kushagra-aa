@@ -1,0 +1,58 @@
+/* Mobile Mode */
+@media screen and (width <=500px) {
+  :root {
+    --font-size-nav: var(--font-mobile-nav);
+    --font-size-display-1: var(--font-mobile-display-1);
+    --font-size-display-2: var(--font-mobile-display-2);
+    --font-size-heading-1: var(--font-mobile-heading-1);
+    --font-size-heading-2: var(--font-mobile-heading-2);
+    --font-size-heading-3: var(--font-mobile-heading-3);
+    --font-size-heading-4: var(--font-mobile-heading-4);
+    --font-size-heading-5: var(--font-mobile-heading-5);
+    --font-size-heading-6: var(--font-mobile-heading-6);
+    --font-size-sub-heading-1: var(--font-mobile-sub-heading-1);
+    --font-size-sub-heading-2: var(--font-mobile-sub-heading-2);
+    --font-size-para-1: var(--font-mobile-para-1);
+    --font-size-para-2: var(--font-mobile-para-2);
+    --font-size-button-1: var(--font-mobile-button-1);
+    --font-size-button-2: var(--font-mobile-button-2);
+    --font-size-button-3: var(--font-mobile-button-3);
+  }
+
+  body {
+    --nav-width: 100vw;
+    --nav-height: 10rem;
+    --main-width: 100vw;
+    --main-height: calc(100vh - var(--nav-height));
+    --main-padding: 3.125rem;
+  }
+}
+
+/* Tablet Mode - Small Screen */
+@media screen and (width <=900px) {
+  body {
+    --nav-width: 30vw;
+  }
+}
+
+/* Small Laptop Mode - Med Screen */
+@media screen and (width <=1250px) {
+  body {
+    --nav-width: 25vw;
+  }
+}
+
+/* Big Screen */
+@media (width >= 1440px) {
+  body {
+    --nav-width: 280px;
+    --main-width: calc(1440px - var(--nav-width));
+    --main-height: 100vh;
+    --nav-height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--color-bg-1);
+  }
+}
