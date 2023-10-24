@@ -106,7 +106,7 @@
   line-height: 2rem;
 }
 
-/* Mobile Page */
+/* Tablet Page */
 @media screen and (width <=900px) {
   .hobbies {
     width: 90%;

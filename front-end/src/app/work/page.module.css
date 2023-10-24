@@ -244,3 +244,54 @@
   font-weight: 400;
   line-height: 2rem;
 }
+
+/* Small Laptop Page */
+@media screen and (width <=1250px) {
+  .experience_skills > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skill_categories_container {
+    width: 100%;
+  }
+
+  .skill_category_container {
+    width: 50%;
+  }
+}
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .main > .head {
+    padding: 0 var(--main-padding);
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .info > .info_ill {
+    width: fit-content;
+  }
+
+  .experiences_container > .experience_container {
+    --detials-width: 100%;
+  }
+
+  .experience_container:hover
+    > .experience_projects_skills_outer
+    > .experience_projects_skills {
+    opacity: 0;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=500px) {
+  .skill_category_container {
+    width: 100%;
+  }
+}
