@@ -98,6 +98,7 @@ export default function Portfolio() {
       </div>
       <div className={styles.filters}>
         <Search
+          className={styles.filters_search}
           value={filters.search}
           onSearch={onSearch}
           searchFor="Project Name, Description"

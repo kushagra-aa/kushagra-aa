@@ -1,0 +1,111 @@
+@import url("flex-grid");
+@import url("font");
+@import url("margin-padding");
+@import url("misc");
+@import url("positioning");
+@import url("size");
+
+::selection {
+  background-color: var(--global-color-accent-2);
+  color: var(--color-bg-1);
+}
+
+:is(a, button):focus-visible {
+  outline: 1px solid var(--global-color-accent-2);
+  border: 1px solid var(--color-fg-2);
+}
+
+:root {
+  /* Font Size */
+
+  --font-size-nav: var(--font-desktop-nav);
+  --font-size-display-1: var(--font-desktop-display-1);
+  --font-size-display-2: var(--font-desktop-display-2);
+  --font-size-heading-1: var(--font-desktop-heading-1);
+  --font-size-heading-2: var(--font-desktop-heading-2);
+  --font-size-heading-3: var(--font-desktop-heading-3);
+  --font-size-heading-4: var(--font-desktop-heading-4);
+  --font-size-heading-5: var(--font-desktop-heading-5);
+  --font-size-heading-6: var(--font-desktop-heading-6);
+  --font-size-sub-heading-1: var(--font-desktop-sub-heading-1);
+  --font-size-sub-heading-2: var(--font-desktop-sub-heading-2);
+  --font-size-para-1: var(--font-desktop-para-1);
+  --font-size-para-2: var(--font-desktop-para-2);
+  --font-size-button-1: var(--font-desktop-button-1);
+  --font-size-button-2: var(--font-desktop-button-2);
+  --font-size-button-3: var(--font-desktop-button-3);
+}
+
+body {
+  --nav-width: 36vh;
+  --nav-height: 100vh;
+  --main-width: calc(100vw - var(--nav-width));
+  --main-height: 100vh;
+  --main-padding: 3.125rem;
+
+  position: relative;
+  background-color: var(--color-bg-1);
+  color: var(--color-fg-1);
+  display: flex;
+  align-items: flex-start;
+
+  &.dark-mode {
+    --color-bg-1: var(--global-color-dark-1);
+    --color-bg-2: var(--global-color-dark-2);
+    --color-fg-1: var(--global-color-light-1);
+    --color-fg-2: var(--global-color-light-2);
+    --color-bg-1-rgb: var(--global-color-dark-1-rgb);
+    --color-bg-2-rgb: var(--global-color-dark-2-rgb);
+    --color-fg-1-rgb: var(--global-color-light-1-rgb);
+    --color-fg-2-rgb: var(--global-color-light-2-rgb);
+  }
+
+  &.light-mode {
+    --color-bg-1: var(--global-color-light-1);
+    --color-bg-2: var(--global-color-light-2);
+    --color-fg-1: var(--global-color-dark-1);
+    --color-fg-2: var(--global-color-dark-2);
+    --color-bg-1-rgb: var(--global-color-light-1-rgb);
+    --color-bg-2-rgb: var(--global-color-light-2-rgb);
+    --color-fg-1-rgb: var(--global-color-dark-1-rgb);
+    --color-fg-2-rgb: var(--global-color-dark-2-rgb);
+  }
+}
+
+.loader {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg-1);
+}
+
+.loader > svg {
+  animation: spinner 2s cubic-bezier(0.25, 0.48, 0.91, 0.58) infinite;
+
+  & #side > path {
+    fill: var(--color-fg-1);
+  }
+
+  & #mid > path {
+    fill: var(--global-color-accent-1);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
