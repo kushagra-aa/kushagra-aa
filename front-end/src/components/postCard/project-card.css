@@ -107,4 +107,38 @@
       }
     }
   }
+
+  /* Small Laptop Page */
+  @media screen and (width <=1250px) {
+    --card-height: 12rem;
+
+    & > .project_info {
+      & > :is(p) {
+        display: none;
+      }
+    }
+  }
+
+  /* Mobile Page */
+  @media screen and (width <=500px) {
+    --card-height: 10rem;
+
+    & > .project_info {
+      gap: 0.75rem;
+
+      & > h6 {
+        text-align: center;
+        width: 100%;
+      }
+
+      & > :is(p, .project_tech, .project_tags) {
+        display: none;
+      }
+
+      & > :is(.button, .link) {
+        display: inline-block;
+        padding: 0.25rem;
+      }
+    }
+  }
 }

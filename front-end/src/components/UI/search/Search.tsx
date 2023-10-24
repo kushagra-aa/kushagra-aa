@@ -8,11 +8,13 @@ import useDebounce from "@/hooks/useDebounce";
 
 export default function Search({
   onSearch,
+  className,
   value,
   searchFor,
   debounceTimeout,
 }: {
   value?: string;
+  className?: string;
   searchFor: string;
   onSearch: (val?: string) => void;
   debounceTimeout?: number;
@@ -45,7 +47,7 @@ export default function Search({
 
   return (
     <InputGroup
-      className="search"
+      className={`${className} search`}
       title=""
       hoverTitle={`Search in ${searchFor}`}
       inputName="search"

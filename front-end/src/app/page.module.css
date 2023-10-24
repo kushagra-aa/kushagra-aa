@@ -335,6 +335,7 @@
   }
 }
 
+/* Mobile Page */
 @media screen and (width <=500px) {
   /* Hero Section */
   .hero {
