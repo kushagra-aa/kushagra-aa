@@ -1,6 +1,6 @@
 .main > h1 {
   color: var(--color-fg-1);
-  font-size: var(--font-desktop-display-2);
+  font-size: var(--font-size-display-2);
   text-align: center;
 }
 
@@ -60,20 +60,20 @@
 
 .story_container > .story_sub {
   color: var(--global-color-accent-1);
-  font-size: var(--font-desktop-sub-heading-2);
+  font-size: var(--font-size-sub-heading-2);
   font-weight: 300;
 }
 
 .story_container > .story_head {
   margin: 0.5rem 0;
   color: var(--color-fg-2);
-  font-size: var(--font-desktop-heading-2);
+  font-size: var(--font-size-heading-2);
   font-weight: 700;
 }
 
 .story_container > .story_para {
   color: var(--color-fg-1);
-  font-size: var(--font-desktop-para-2);
+  font-size: var(--font-size-para-2);
   font-weight: 400;
   line-height: 2rem;
 }
@@ -89,7 +89,7 @@
 
 .hobbies > h2 {
   color: var(--global-color-accent-2);
-  font-size: var(--font-desktop-heading-2);
+  font-size: var(--font-size-heading-2);
   font-weight: 600;
 }
 
@@ -101,7 +101,7 @@
 
 .hobbies > ul > li {
   text-transform: capitalize;
-  font-size: var(--font-desktop-para-1);
+  font-size: var(--font-size-para-1);
   font-weight: 300;
   line-height: 2rem;
 }

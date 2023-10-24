@@ -83,7 +83,7 @@ nav {
         gap: 1rem;
         width: inherit;
         color: var(--color-fg-2);
-        font-size: var(--font-desktop-nav);
+        font-size: var(--font-size-nav);
         font-weight: 300;
         text-decoration: none;
         border-left: 4px solid transparent;

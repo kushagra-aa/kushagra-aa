@@ -9,7 +9,7 @@
 
 .main > .head > h1 {
   color: var(--color-fg-1);
-  font-size: var(--font-desktop-display-2);
+  font-size: var(--font-size-display-2);
   font-weight: 700;
   letter-spacing: 0.75rem;
   text-align: center;
@@ -17,7 +17,7 @@
 
 .head > .sub {
   color: var(--color-fg-2);
-  font-size: var(--font-desktop-heading-3);
+  font-size: var(--font-size-heading-3);
   font-weight: 600;
   text-align: center;
 }
@@ -46,7 +46,7 @@
 }
 
 .filters_selects > p {
-  font-size: var(--font-desktop-button-1);
+  font-size: var(--font-size-button-1);
   font-weight: 300;
   text-transform: capitalize;
 }

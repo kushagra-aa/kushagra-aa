@@ -30,7 +30,7 @@ footer {
     gap: 1.5rem;
 
     & > p {
-      font-size: var(--font-desktop-sub-heading-1);
+      font-size: var(--font-size-sub-heading-1);
       font-weight: 600;
       color: var(--global-color-accent-1);
 
@@ -73,7 +73,7 @@ footer {
 
     & > p {
       font-weight: 100;
-      font-size: var(--font-desktop-sub-heading-2);
+      font-size: var(--font-size-sub-heading-2);
     }
   }
 }

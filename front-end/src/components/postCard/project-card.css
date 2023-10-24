@@ -57,13 +57,13 @@
 
     & > h6 {
       text-align: center;
-      font-size: var(--font-desktop-heading-4);
+      font-size: var(--font-size-heading-4);
       font-weight: 600;
       color: var(--color-fg-1);
     }
 
     & > p {
-      font-size: var(--font-desktop-button-3);
+      font-size: var(--font-size-button-3);
       font-weight: 300;
       line-height: 1.5rem;
       color: var(--color-fg-2);
@@ -76,14 +76,14 @@
 
       & > p {
         text-transform: capitalize;
-        font-size: var(--font-desktop-button-3);
+        font-size: var(--font-size-button-3);
         font-weight: 200;
         color: var(--color-fg-1);
       }
 
       & > span {
         text-transform: capitalize;
-        font-size: var(--font-desktop-button-3);
+        font-size: var(--font-size-button-3);
         font-weight: 300;
         color: var(--global-color-accent-2);
       }

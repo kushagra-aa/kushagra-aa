@@ -9,14 +9,14 @@
 
 .main > .head > h1 {
   color: var(--color-fg-1);
-  font-size: var(--font-desktop-display-2);
+  font-size: var(--font-size-display-2);
   font-weight: 700;
   letter-spacing: 0.5rem;
 }
 
 .head > .sub {
   color: var(--color-fg-2);
-  font-size: var(--font-desktop-heading-4);
+  font-size: var(--font-size-heading-4);
   font-weight: 600;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .main form > p {
-  font-size: var(--font-desktop-sub-heading-1);
+  font-size: var(--font-size-sub-heading-1);
   font-weight: 200;
   color: var(--color-fg-1);
 }
@@ -54,7 +54,7 @@
 
 .contact_form_input_group {
   width: var(--input-width);
-  font-size: var(--font-desktop-sub-heading-2);
+  font-size: var(--font-size-sub-heading-2);
   font-weight: 600;
   color: var(--global-color-accent-1);
   display: flex;
@@ -68,7 +68,7 @@
   width: 100%;
   max-width: 100%;
   padding: 0.75rem;
-  font-size: var(--font-desktop-button-2);
+  font-size: var(--font-size-button-2);
   font-weight: 200;
   border-radius: 5px;
   background-color: var(--color-bg-2);
@@ -89,7 +89,7 @@
   width: var(--input-width);
   background-color: var(--global-color-accent-1);
   color: var(--color-bg-2);
-  font-size: var(--font-desktop-button-2);
+  font-size: var(--font-size-button-2);
   cursor: pointer;
 }
 
@@ -134,13 +134,13 @@
 
 .socials_container > h3 {
   grid-column: 1/3;
-  font-size: var(--font-desktop-heading-3);
+  font-size: var(--font-size-heading-3);
   font-weight: 600;
   color: var(--global-color-dark-1);
 }
 
 .socials_container > h4 {
-  font-size: var(--font-desktop-sub-heading-1);
+  font-size: var(--font-size-sub-heading-1);
   font-weight: 300;
   color: var(--global-color-accent-1);
 }

@@ -17,14 +17,14 @@
 .link_row > .link_sub {
   grid-row: 1/2;
   grid-column: 1/2;
-  font-size: var(--font-desktop-sub-heading-2);
+  font-size: var(--font-size-sub-heading-2);
   font-weight: 200;
 }
 
 .link_row > .link_title {
   grid-row: 2/3;
   grid-column: 1/2;
-  font-size: var(--font-desktop-heading-3);
+  font-size: var(--font-size-heading-3);
   font-weight: 600;
 }
 
