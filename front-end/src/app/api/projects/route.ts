@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
   try {
     const data: ProjectType[] = PROJECTS;
     return NextResponse.json({
-      message: "Posts found",
+      message: "Projects found",
       data,
     });
   } catch (error: any) {
