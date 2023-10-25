@@ -11,9 +11,12 @@ export async function GET(request: NextRequest) {
       (project: ProjectType) => project.slug === slug,
     );
     if (!data)
-      return NextResponse.json({
-        message: "Project Not Found",
-      });
+      return NextResponse.json(
+        {
+          message: "Project Not Found",
+        },
+        { status: 404 },
+      );
     return NextResponse.json({
       message: "Project found",
       data,
