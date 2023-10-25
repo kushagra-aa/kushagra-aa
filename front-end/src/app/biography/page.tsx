@@ -81,7 +81,8 @@ export default function Biography() {
           icon={<IdCardIcon />}
           subTitle="Are you HR?"
           title="A Compressed Resume for you"
-          link="/resume"
+          link="/resume.pdf"
+          target="_blank"
         />
         <LinkRow
           button="My Portfolio"
