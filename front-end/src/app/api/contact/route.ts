@@ -1,15 +1,29 @@
 /* eslint-disable import/prefer-default-export */
 import { NextRequest, NextResponse } from "next/server";
-import PROJECTS from "@/dummyData/projects.json";
-import ProjectType from "@/models/Project";
 
-// eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-unused-vars
-export async function GET(request: NextRequest) {
+type AddContactRequestType = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
+export async function POST(request: NextRequest) {
   try {
-    const data: ProjectType[] = PROJECTS;
+    const reqBody = await request.json();
+    const contactBody: AddContactRequestType =
+      reqBody as unknown as AddContactRequestType;
+    if (!contactBody.name || contactBody.name.length <= 0)
+      throw new Error("Please fill Name Field");
+    if (!contactBody.email || contactBody.email.length <= 0)
+      throw new Error("Please fill Email Field");
+    if (!contactBody.subject || contactBody.subject.length <= 0)
+      throw new Error("Please fill Subject Field");
+    if (!contactBody.message || contactBody.message.length <= 0)
+      throw new Error("Please fill Message Field");
+
     return NextResponse.json({
-      message: "Posts found",
-      data,
+      message: "Message Sent Successfully",
     });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 400 });
