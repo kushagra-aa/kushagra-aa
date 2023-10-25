@@ -5,61 +5,39 @@ import styles from "./page.module.css";
 import DropDown from "@/components/UI/dropDown/DropDown";
 import Search from "@/components/UI/search/Search";
 import ProjectCard from "@/components/postCard/ProjectCard";
-import PROJECTS from "../../dummyData/projects.json";
 import ProjectType from "@/models/Project";
 import Button from "@/components/UI/button/Button";
+import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
+import makeURLParams from "@/helpers/makeURLParams";
 
-type FiltersType = {
-  tech?: string;
-  tags?: string;
-  search?: string;
-  start: number;
-  end: number;
-};
+const getProjectsAPI = async (params: PortfolioFiltersType) => {
+  const response = await fetch(`/api/projects?${makeURLParams(params)}`).then(
+    (resp) => resp,
+  );
+  let data;
+  let projects: ProjectType[] = [];
+  let totalData = 0;
 
-const getProjectsAPI = async (params: FiltersType) => {
-  let projects = PROJECTS;
-  if (params.tech) {
-    const tech = params.tech.split(",");
-    projects = projects.filter((project) => {
-      const projectTech = project.tech.split(",");
-      return tech.some((t) => projectTech.includes(t));
-    });
+  if (response.status === 200) data = await response.json().then((d) => d);
+  if (data) {
+    projects = data.data as unknown as ProjectType[];
+    totalData = data.total_data;
   }
-  if (params.tags) {
-    const tags = params.tags.split(",");
-    projects = projects.filter((project) => {
-      const projectTags = project.tags.split(",");
-      return tags.some((t) => projectTags.includes(t));
-    });
-  }
-  if (params.search) {
-    projects = projects.filter(
-      (project) =>
-        project.name
-          .toLowerCase()
-          .includes(params.search?.toLowerCase() || "") ||
-        project.description
-          .toLowerCase()
-          .includes(params.search?.toLowerCase() || "") ||
-        project.short_description
-          .toLowerCase()
-          .includes(params.search?.toLowerCase() || ""),
-    );
-  }
+
   return {
     projects: projects.slice(params.start, params.end),
-    total_data: projects.length,
+    total_data: totalData,
   };
 };
 
-const defaultFiltersValue: FiltersType = {
+const defaultFiltersValue: PortfolioFiltersType = {
   start: 0,
   end: 6,
 };
 
 export default function Portfolio() {
-  const [filters, setFilters] = useState<FiltersType>(defaultFiltersValue);
+  const [filters, setFilters] =
+    useState<PortfolioFiltersType>(defaultFiltersValue);
   const [projects, setProjects] = useState<ProjectType[]>([]);
   const [total, setTotal] = useState(0);
   const handleTechChange = (value: string): void => {
@@ -72,7 +50,7 @@ export default function Portfolio() {
     setFilters((f) => ({ ...f, search: value }));
   };
 
-  const getProjects = async (params: FiltersType) => {
+  const getProjects = async (params: PortfolioFiltersType) => {
     await getProjectsAPI(params).then((resp) => {
       setProjects(resp.projects);
       setTotal(resp.total_data);
