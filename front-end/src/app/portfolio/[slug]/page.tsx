@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import PROJECTS from "../../../dummyData/projects.json";
 import ProjectType from "@/models/Project";
 import NotFound from "./NotFound";
 import styles from "./page.module.css";
@@ -10,7 +9,12 @@ import { formatDateStringToString } from "@/helpers/dateFormatter";
 
 const getProject = async (slug?: string) => {
   if (!slug) return undefined;
-  return PROJECTS.find((project: ProjectType) => project.slug === slug);
+  const url = `${process.env.URL}/api/projects/${slug}`;
+  const response = await fetch(url).then((resp) => resp);
+  let foundProject: ProjectType | undefined = undefined;
+  if (response.status === 200)
+    foundProject = await response.json().then((d) => d.data);
+  return foundProject;
 };
 
 async function Project({ params }: { params: { slug?: string } }) {
