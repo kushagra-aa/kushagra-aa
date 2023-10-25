@@ -10,6 +10,7 @@ type ProjectType = {
   github: string;
   started_at: string;
   completed_at: string;
+  featured?: boolean;
   with?: {
     name: string;
     link: string;

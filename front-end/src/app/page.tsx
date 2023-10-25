@@ -8,9 +8,28 @@ import {
   SendIcon,
   ThunderboltIcon,
 } from "@/components/Icons";
-import Projects from "@/dummyData/projects.json";
 import styles from "./page.module.css";
 import ProjectType from "@/models/Project";
+
+const getFeaturedProjects = async () => {
+  const response = await fetch(
+    `${process.env.URL}/api/projects?featured=true`,
+  ).then((resp) => resp);
+  let data;
+  let projects: ProjectType[] = [];
+  let totalData = 0;
+
+  if (response.status === 200) data = await response.json().then((d) => d);
+  if (data) {
+    projects = data.data as unknown as ProjectType[];
+    totalData = data.total_data;
+  }
+
+  return {
+    projects,
+    total_data: totalData,
+  };
+};
 
 function HeroSection() {
   return (
@@ -90,7 +109,7 @@ function FeaturedProjectCard({ project }: { project: ProjectType }) {
   );
 }
 
-function ProjectsSection() {
+function ProjectsSection({ projects }: { projects: ProjectType[] }) {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.projects_container}>
@@ -98,7 +117,7 @@ function ProjectsSection() {
         <div className={styles.projects_ill} />
         <div className={styles.projects_cards_container}>
           <div className={styles.projects_cards}>
-            {Projects.map((project) => (
+            {projects.map((project) => (
               <div key={project.slug} className={styles.project_card}>
                 <FeaturedProjectCard project={project} />
               </div>
@@ -125,11 +144,12 @@ function AboutSection() {
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  const { projects } = await getFeaturedProjects();
   return (
     <div className={styles.main}>
       <HeroSection />
-      <ProjectsSection />
+      <ProjectsSection projects={projects} />
       <AboutSection />
     </div>
   );

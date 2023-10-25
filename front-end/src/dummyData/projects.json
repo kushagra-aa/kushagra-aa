@@ -11,6 +11,7 @@
         "github": "https://github.com/kushagra-aa/kushagra-aa",
         "started_at": "12-08-2002",
         "completed_at": "12-08-2002",
+        "featured": true,
         "with": {
             "name": "UnOrg Vendor Solutions",
             "link": "https://www.unorg.in/"
@@ -44,11 +45,40 @@
         "link": "https://github.com/kushagra-aa/kushagra-aa",
         "github": "https://github.com/kushagra-aa/kushagra-aa",
         "started_at": "12-08-2002",
-        "completed_at": "12-08-2002"
+        "completed_at": "12-08-2002",
+        "featured": true
     },
     {
         "name": "Widdflix",
         "slug": "widdflix",
+        "picture": "/thumbnails/Widdflix Thumbnail.png",
+        "tags": "netflix,clone,web",
+        "tech": "ReactJS,js,html",
+        "description": "Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n",
+        "short_description": "Road Game is a 2D Web Game. Jump and Beware of the obstacles comings your way and set an amazing highscore ...",
+        "link": "https://github.com/kushagra-aa/kushagra-aa",
+        "github": "https://github.com/kushagra-aa/kushagra-aa",
+        "started_at": "12-08-2002",
+        "completed_at": "12-08-2002",
+        "featured": true
+    },
+    {
+        "name": "Red One",
+        "slug": "redone",
+        "picture": "/thumbnails/Widdflix Thumbnail.png",
+        "tags": "netflix,clone,web",
+        "tech": "ReactJS,js,html",
+        "description": "Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n        Road Game is a 2D Web Game. Jump and Beware of obstacles!me\n",
+        "short_description": "Road Game is a 2D Web Game. Jump and Beware of the obstacles comings your way and set an amazing highscore ...",
+        "link": "https://github.com/kushagra-aa/kushagra-aa",
+        "github": "https://github.com/kushagra-aa/kushagra-aa",
+        "started_at": "12-08-2002",
+        "completed_at": "12-08-2002",
+        "featured": true
+    },
+    {
+        "name": "Wrap It",
+        "slug": "wrap_it",
         "picture": "/thumbnails/Widdflix Thumbnail.png",
         "tags": "netflix,clone,web",
         "tech": "ReactJS,js,html",
