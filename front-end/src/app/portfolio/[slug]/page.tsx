@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectType from "@/models/Project";
@@ -7,9 +10,9 @@ import Button from "@/components/UI/button/Button";
 import { CaretRightIcon, RightIcon } from "@/components/Icons";
 import { formatDateStringToString } from "@/helpers/dateFormatter";
 
-const getProject = async (slug?: string) => {
+const getProjectAPI = async (slug?: string) => {
   if (!slug) return undefined;
-  const url = `${process.env.URL}/api/projects/${slug}`;
+  const url = `/api/projects/${slug}`;
   const response = await fetch(url).then((resp) => resp);
   let foundProject: ProjectType | undefined = undefined;
   if (response.status === 200)
@@ -17,9 +20,9 @@ const getProject = async (slug?: string) => {
   return foundProject;
 };
 
-async function Project({ params }: { params: { slug?: string } }) {
+function Project({ params }: { params: { slug?: string } }) {
+  const [project, setProject] = useState<ProjectType>();
   const { slug } = params;
-  const project = await getProject(slug);
   const projectDates = {
     start: formatDateStringToString(project?.started_at || "", {
       year: "numeric",
@@ -30,6 +33,18 @@ async function Project({ params }: { params: { slug?: string } }) {
       month: "short",
     }),
   };
+
+  const getProject = async () => {
+    await getProjectAPI(slug).then((resp) => {
+      setProject(resp);
+    });
+  };
+
+  useEffect(() => {
+    getProject();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   if (!project) return <NotFound slug={slug} />;
   return (
     <div className={styles.main}>
