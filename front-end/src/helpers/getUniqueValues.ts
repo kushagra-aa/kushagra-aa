@@ -1,3 +1,4 @@
+const checkRegex = /.*[A-Za-z].*/;
 const getUniqueValues = <Obj>(data: Obj[], key: keyof Obj): string[] => {
   const tagsSet = new Set<string>();
 
@@ -5,14 +6,14 @@ const getUniqueValues = <Obj>(data: Obj[], key: keyof Obj): string[] => {
     const value = item[key];
     if (Array.isArray(value)) {
       value.forEach((tag) => {
-        if (typeof tag === "string" && tag.trim() !== "") {
+        if (typeof tag === "string" && !checkRegex.test(tag.trim())) {
           tagsSet.add(tag.trim());
         }
       });
     } else if (typeof value === "string") {
       const individualTags = value.split(",");
       individualTags.forEach((tag) => {
-        if (tag.trim() !== "") {
+        if (checkRegex.test(tag.trim())) {
           tagsSet.add(tag.trim());
         }
       });
