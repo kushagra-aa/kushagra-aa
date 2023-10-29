@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import InputGroup from "@/components/UI/input/InputGroup";
 import styles from "./page.module.css";
@@ -9,6 +9,7 @@ import TextArea from "@/components/UI/input/TextArea";
 import Button from "@/components/UI/button/Button";
 import { SendIcon } from "@/components/Icons";
 import { Socials } from "@/models/Social";
+import { AddContactRequestType } from "@/types/addContactRequestType";
 
 const getSocialsAPI = async () => {
   const response = await fetch(`/api/socials`).then((resp) => resp);
@@ -17,13 +18,38 @@ const getSocialsAPI = async () => {
     socials = await response.json().then((d) => d.data);
   return socials;
 };
+const makeContactRequest = async (body: AddContactRequestType) => {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
+  return response;
+};
+
 export default function Contact() {
   const [socials, setSocials] = useState<Socials>();
+  const contactFormRef = useRef<HTMLFormElement>(null!);
+
+  const handleContactFromSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const contactRequestBody: AddContactRequestType = {
+      name: contactFormRef.current.full_name.value,
+      email: contactFormRef.current.email.value,
+      subject: contactFormRef.current.subject.value,
+      message: contactFormRef.current.message.value,
+    };
+    const resp = await makeContactRequest(contactRequestBody);
+    const data = await resp.json();
+    if (resp.status === 200) console.log("resp :>> ", resp);
+    else console.log("error :>> ", data.error);
+  };
+
   const getSocials = async () => {
     await getSocialsAPI().then((resp) => {
       setSocials(resp);
     });
   };
+
   useEffect(() => {
     getSocials();
   }, []);
@@ -36,7 +62,7 @@ export default function Contact() {
         <h1>Contact Me</h1>
       </div>
       <section>
-        <form>
+        <form ref={contactFormRef} onSubmit={handleContactFromSubmit}>
           <p>
             Fill up the <span>Details</span> and send a <span>Message</span>
           </p>
@@ -50,6 +76,7 @@ export default function Contact() {
               inputName="full_name"
               type="text"
               placeholder="Enter Your Name"
+              required
             />
           </InputGroup>
           <InputGroup
@@ -62,6 +89,7 @@ export default function Contact() {
               inputName="email"
               type="text"
               placeholder="Enter Your Email"
+              required
             />
           </InputGroup>
           <InputGroup
@@ -74,6 +102,7 @@ export default function Contact() {
               inputName="subject"
               type="text"
               placeholder="Enter Message Subject"
+              required
             />
           </InputGroup>
           <InputGroup
@@ -85,6 +114,7 @@ export default function Contact() {
               id="message"
               inputName="message"
               placeholder="Enter Message"
+              required
             />
           </InputGroup>
           <Button

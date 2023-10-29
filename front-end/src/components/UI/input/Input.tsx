@@ -11,6 +11,7 @@ function Input({
   placeholder,
   disabled,
   readOnly,
+  required,
   onChange,
   onClick,
   onKeyDown,
@@ -24,6 +25,7 @@ function Input({
   value?: string;
   disabled?: boolean;
   readOnly?: boolean;
+  required?: boolean;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
@@ -41,6 +43,7 @@ function Input({
       placeholder={placeholder}
       disabled={disabled}
       readOnly={readOnly}
+      required={required}
       onChange={(e) => {
         if (onChange) onChange(e);
       }}

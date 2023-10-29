@@ -1,12 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import { NextRequest, NextResponse } from "next/server";
-
-type AddContactRequestType = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
+import { AddContactRequestType } from "@/types/addContactRequestType";
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,7 +15,7 @@ export async function POST(request: NextRequest) {
       throw new Error("Please fill Subject Field");
     if (!contactBody.message || contactBody.message.length <= 0)
       throw new Error("Please fill Message Field");
-
+    console.log("reqBody :>> ", reqBody);
     return NextResponse.json({
       message: "Message Sent Successfully",
     });
