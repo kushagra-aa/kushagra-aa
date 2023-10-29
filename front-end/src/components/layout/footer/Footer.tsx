@@ -2,9 +2,21 @@ import Image from "next/image";
 import "./footer.css";
 import Link from "next/link";
 import Button from "@/components/UI/button/Button";
-import Socials from "@/dummyData/socials.json";
+import { Socials } from "@/models/Social";
 
-function Footer() {
+const getSocials = async () => {
+  const response = await fetch(`${process.env.URL}/api/socials`).then(
+    (resp) => resp,
+  );
+  let hobbies: Socials | undefined = undefined;
+  if (response.status === 200)
+    hobbies = await response.json().then((d) => d.data);
+  return hobbies;
+};
+
+async function Footer() {
+  const socials = await getSocials();
+
   return (
     <footer>
       <div className="left">
@@ -20,57 +32,70 @@ function Footer() {
         </Button>
       </div>
       <div className="mid">
-        <p>
-          L<span>et&apos;s connect!</span>
-        </p>
-        <div className="socials">
-          <a href={Socials.telegram.link} target="_blank" title="Telegram">
-            <Image
-              src={Socials.telegram.icon}
-              alt="telegram"
-              fill
-              sizes="100%"
-            />
-          </a>
-          <a href={Socials.instagram.link} target="_blank" title="Instagram">
-            <Image
-              src={Socials.instagram.icon}
-              alt="telegram"
-              fill
-              sizes="100%"
-            />
-          </a>
-          <a href={Socials.behance.link} target="_blank" title="Behance">
-            <Image
-              src={Socials.behance.icon}
-              alt="telegram"
-              fill
-              sizes="100%"
-            />
-          </a>
-          <a href={Socials.github.link} target="_blank" title="GitHub">
-            <Image src={Socials.github.icon} alt="telegram" fill sizes="100%" />
-          </a>
-          <a href={Socials.linkedin.link} target="_blank" title="LinkedIn">
-            <Image
-              src={Socials.linkedin.icon}
-              alt="telegram"
-              fill
-              sizes="100%"
-            />
-          </a>
-          <a href={Socials.whatsapp.link} target="_blank" title="WhatsApp">
-            <Image
-              src={Socials.whatsapp.icon}
-              alt="telegram"
-              fill
-              sizes="100%"
-            />
-          </a>
-          <a href={Socials.x.link} target="_blank" title="X">
-            <Image src={Socials.x.icon} alt="telegram" fill sizes="100%" />
-          </a>
-        </div>
+        {socials ? (
+          <>
+            <p>
+              L<span>et&apos;s connect!</span>
+            </p>
+            <div className="socials">
+              <a href={socials.telegram.link} target="_blank" title="Telegram">
+                <Image
+                  src={socials.telegram.icon}
+                  alt="telegram"
+                  fill
+                  sizes="100%"
+                />
+              </a>
+              <a
+                href={socials.instagram.link}
+                target="_blank"
+                title="Instagram"
+              >
+                <Image
+                  src={socials.instagram.icon}
+                  alt="telegram"
+                  fill
+                  sizes="100%"
+                />
+              </a>
+              <a href={socials.behance.link} target="_blank" title="Behance">
+                <Image
+                  src={socials.behance.icon}
+                  alt="telegram"
+                  fill
+                  sizes="100%"
+                />
+              </a>
+              <a href={socials.github.link} target="_blank" title="GitHub">
+                <Image
+                  src={socials.github.icon}
+                  alt="telegram"
+                  fill
+                  sizes="100%"
+                />
+              </a>
+              <a href={socials.linkedin.link} target="_blank" title="LinkedIn">
+                <Image
+                  src={socials.linkedin.icon}
+                  alt="telegram"
+                  fill
+                  sizes="100%"
+                />
+              </a>
+              <a href={socials.whatsapp.link} target="_blank" title="WhatsApp">
+                <Image
+                  src={socials.whatsapp.icon}
+                  alt="telegram"
+                  fill
+                  sizes="100%"
+                />
+              </a>
+              <a href={socials.x.link} target="_blank" title="X">
+                <Image src={socials.x.icon} alt="telegram" fill sizes="100%" />
+              </a>
+            </div>
+          </>
+        ) : null}
       </div>
       <div className="right">
         <Button

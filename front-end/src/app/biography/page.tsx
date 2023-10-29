@@ -4,7 +4,18 @@ import { CodeIcon, FolderOpenIcon, IdCardIcon } from "@/components/Icons";
 import LinksContainer from "@/components/linksRow/LinksContainer";
 import LinkRow from "@/components/linksRow/LinkRow";
 
-export default function Biography() {
+const getHobbies = async () => {
+  const response = await fetch(`${process.env.URL}/api/hobbies`).then(
+    (resp) => resp,
+  );
+  let hobbies: string[] | undefined = undefined;
+  if (response.status === 200)
+    hobbies = await response.json().then((d) => d.data);
+  return hobbies;
+};
+
+export default async function Biography() {
+  const hobbies = await getHobbies();
   return (
     <div className={styles.main}>
       <h1>Who Am I?</h1>
@@ -59,14 +70,7 @@ export default function Biography() {
       </div>
       <div className={styles.hobbies}>
         <h2>My Hobbies</h2>
-        <ul>
-          <li>photoshop</li>
-          <li>reading</li>
-          <li>illustrator</li>
-          <li>premier pro</li>
-          <li>music</li>
-          <li>gaming</li>
-        </ul>
+        <ul>{hobbies?.map((hobby) => <li key={hobby}>{hobby}</li>)}</ul>
       </div>
       <LinksContainer>
         <LinkRow
