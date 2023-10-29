@@ -5,13 +5,29 @@ import styles from "./page.module.css";
 import LinkRow from "@/components/linksRow/LinkRow";
 import { FolderOpenIcon, IdCardIcon, SendIcon } from "@/components/Icons";
 import { ExperienceType } from "@/models/Experience";
-import ExperiencesData from "@/dummyData/experiences.json";
-import SkillsCategoriesData from "@/dummyData/skills.json";
 import { SkillCategoryType } from "@/models/Skills";
 
+const getSkills = async () => {
+  const response = await fetch(`${process.env.URL}/api/skills`).then(
+    (resp) => resp,
+  );
+  let skills: SkillCategoryType[] = [];
+  if (response.status === 200)
+    skills = await response.json().then((d) => d.data);
+  return skills || [];
+};
+const getExperiences = async () => {
+  const response = await fetch(`${process.env.URL}/api/experiences`).then(
+    (resp) => resp,
+  );
+  let experiences: ExperienceType[] = [];
+  if (response.status === 200)
+    experiences = await response.json().then((d) => d.data);
+  return experiences || [];
+};
 const getData = async () => {
-  const skillCategories: SkillCategoryType[] = SkillsCategoriesData;
-  const experiences: ExperienceType[] = ExperiencesData;
+  const skillCategories: SkillCategoryType[] = await getSkills();
+  const experiences: ExperienceType[] = await getExperiences();
   return { skillCategories, experiences };
 };
 
@@ -141,7 +157,8 @@ export default async function Work() {
           icon={<IdCardIcon />}
           subTitle="Are you HR?"
           title="A Compressed Resume for you"
-          link="/resume"
+          link="/resume.pdf"
+          target="_blank"
         />
         <LinkRow
           button="My Portfolio"

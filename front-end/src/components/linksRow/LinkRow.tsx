@@ -8,12 +8,14 @@ export default function LinkRow({
   subTitle,
   title,
   link,
+  target = "",
 }: {
   subTitle: string;
   title: string;
   link: string;
   button: string;
   icon: React.ReactNode;
+  target?: string;
 }) {
   return (
     <div className="link_row">
@@ -26,7 +28,7 @@ export default function LinkRow({
         </span>
       </div>
       <Button className="link_button" size="small" type="link" theme="theme-2">
-        <Link href={link}>
+        <Link href={link} target={target}>
           {button}
           {icon}
         </Link>

@@ -47,6 +47,7 @@
         "argsIgnorePattern": "^_"
       }
     ],
+    "no-undef-init": "off",
     "react/require-default-props": "off"
   }
 }

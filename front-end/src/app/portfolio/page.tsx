@@ -5,61 +5,76 @@ import styles from "./page.module.css";
 import DropDown from "@/components/UI/dropDown/DropDown";
 import Search from "@/components/UI/search/Search";
 import ProjectCard from "@/components/postCard/ProjectCard";
-import PROJECTS from "../../dummyData/projects.json";
 import ProjectType from "@/models/Project";
 import Button from "@/components/UI/button/Button";
+import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
+import makeURLParams from "@/helpers/makeURLParams";
+import makeOptions from "@/helpers/makeOptions";
 
-type FiltersType = {
-  tech?: string;
-  tags?: string;
-  search?: string;
-  start: number;
-  end: number;
-};
+const getProjectsAPI = async (params: PortfolioFiltersType) => {
+  const response = await fetch(`/api/projects?${makeURLParams(params)}`).then(
+    (resp) => resp,
+  );
+  let data;
+  let projects: ProjectType[] = [];
+  let totalData = 0;
 
-const getProjectsAPI = async (params: FiltersType) => {
-  let projects = PROJECTS;
-  if (params.tech) {
-    const tech = params.tech.split(",");
-    projects = projects.filter((project) => {
-      const projectTech = project.tech.split(",");
-      return tech.some((t) => projectTech.includes(t));
-    });
+  if (response.status === 200) data = await response.json().then((d) => d);
+  if (data) {
+    projects = data.data as unknown as ProjectType[];
+    totalData = data.total_data;
   }
-  if (params.tags) {
-    const tags = params.tags.split(",");
-    projects = projects.filter((project) => {
-      const projectTags = project.tags.split(",");
-      return tags.some((t) => projectTags.includes(t));
-    });
-  }
-  if (params.search) {
-    projects = projects.filter(
-      (project) =>
-        project.name
-          .toLowerCase()
-          .includes(params.search?.toLowerCase() || "") ||
-        project.description
-          .toLowerCase()
-          .includes(params.search?.toLowerCase() || "") ||
-        project.short_description
-          .toLowerCase()
-          .includes(params.search?.toLowerCase() || ""),
-    );
-  }
+
   return {
     projects: projects.slice(params.start, params.end),
-    total_data: projects.length,
+    total_data: totalData,
+  };
+};
+const getTechTagsAPI = async () => {
+  const responseTech = await fetch(`/api/tech`).then((resp) => resp);
+  const responseTags = await fetch(`/api/tags`).then((resp) => resp);
+  let dataTech;
+  let dataTags;
+  let tech: string[] = [];
+  let tags: string[] = [];
+
+  if (responseTech.status === 200)
+    dataTech = await responseTech.json().then((d) => d);
+  if (dataTech) {
+    tech = dataTech.data;
+  }
+  if (responseTags.status === 200)
+    dataTags = await responseTags.json().then((d) => d);
+  if (dataTags) {
+    tags = dataTags.data;
+  }
+
+  return {
+    tech,
+    tags,
   };
 };
 
-const defaultFiltersValue: FiltersType = {
+const defaultFiltersValue: PortfolioFiltersType = {
   start: 0,
   end: 6,
 };
 
 export default function Portfolio() {
-  const [filters, setFilters] = useState<FiltersType>(defaultFiltersValue);
+  const [filters, setFilters] =
+    useState<PortfolioFiltersType>(defaultFiltersValue);
+  const [techOptions, setTechOptions] = useState<
+    {
+      value: string;
+      label: string;
+    }[]
+  >([]);
+  const [tagOptions, setTagOptions] = useState<
+    {
+      value: string;
+      label: string;
+    }[]
+  >([]);
   const [projects, setProjects] = useState<ProjectType[]>([]);
   const [total, setTotal] = useState(0);
   const handleTechChange = (value: string): void => {
@@ -72,10 +87,16 @@ export default function Portfolio() {
     setFilters((f) => ({ ...f, search: value }));
   };
 
-  const getProjects = async (params: FiltersType) => {
+  const getProjects = async (params: PortfolioFiltersType) => {
     await getProjectsAPI(params).then((resp) => {
       setProjects(resp.projects);
       setTotal(resp.total_data);
+    });
+  };
+  const getTechTags = async () => {
+    await getTechTagsAPI().then((resp) => {
+      setTechOptions(makeOptions(resp.tech));
+      setTagOptions(makeOptions(resp.tags));
     });
   };
 
@@ -83,6 +104,9 @@ export default function Portfolio() {
     setFilters((f) => ({ ...f, end: f.end + 6 }));
   };
 
+  useEffect(() => {
+    getTechTags();
+  }, []);
   useEffect(() => {
     getProjects(filters);
   }, [filters]);
@@ -111,13 +135,7 @@ export default function Portfolio() {
             name="tech"
             placeholder="Tech"
             className={styles.filter_dropdown}
-            options={[
-              { value: "css" },
-              { value: "html" },
-              { value: "js" },
-              { value: "ts" },
-              { value: "dart" },
-            ]}
+            options={techOptions}
             backgroundColor="light-2"
             value={filters.tech}
             onChange={handleTechChange}
@@ -131,13 +149,7 @@ export default function Portfolio() {
             name="tag"
             placeholder="Tag"
             className={styles.filter_dropdown}
-            options={[
-              { value: "game" },
-              { value: "app" },
-              { value: "android" },
-              { value: "website" },
-              { value: "desktop" },
-            ]}
+            options={tagOptions}
             backgroundColor="light-2"
             value={filters.tags}
             onChange={handleTagChange}

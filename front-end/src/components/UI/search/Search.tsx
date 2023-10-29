@@ -25,6 +25,7 @@ export default function Search({
   };
   const handleSearchClear = () => {
     onSearch(undefined);
+    setSearchValue("");
   };
   const handleSearchValueChange = (val: string) => {
     setSearchValue(val);
