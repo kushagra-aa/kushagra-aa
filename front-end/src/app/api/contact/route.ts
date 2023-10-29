@@ -15,7 +15,6 @@ export async function POST(request: NextRequest) {
       throw new Error("Please fill Subject Field");
     if (!contactBody.message || contactBody.message.length <= 0)
       throw new Error("Please fill Message Field");
-    console.log("reqBody :>> ", reqBody);
     return NextResponse.json({
       message: "Message Sent Successfully",
     });

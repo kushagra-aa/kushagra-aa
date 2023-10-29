@@ -38,10 +38,12 @@ export default function Contact() {
       subject: contactFormRef.current.subject.value,
       message: contactFormRef.current.message.value,
     };
+    // TODO: Add Toasts for the events
     const resp = await makeContactRequest(contactRequestBody);
+    // eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-unused-vars
     const data = await resp.json();
-    if (resp.status === 200) console.log("resp :>> ", resp);
-    else console.log("error :>> ", data.error);
+    // if (resp.status === 200) makeToast('success', data.message)
+    // else makeToast("error :>> ", data.error);
   };
 
   const getSocials = async () => {
