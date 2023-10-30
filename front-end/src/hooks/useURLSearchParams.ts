@@ -13,6 +13,7 @@ type SearchParamsType = {
 function useURLSearchParams(): [
   SearchParamsType,
   (obj: SearchParamsExpandedType | SearchParamsExpandedType[]) => void,
+  () => void,
 ] {
   const params = useSearchParams();
   const pathname = usePathname();
@@ -32,7 +33,11 @@ function useURLSearchParams(): [
     router.push(`${pathname}?${newParams}`);
   };
 
-  return [searchParams, setSearchParams];
+  const clearSearchParams = () => {
+    router.push(`${pathname}`);
+  };
+
+  return [searchParams, setSearchParams, clearSearchParams];
 }
 
 export default useURLSearchParams;
