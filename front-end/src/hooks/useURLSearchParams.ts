@@ -1,19 +1,30 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useMemo } from "react";
+import getSearchParamsAsObjects from "@/helpers/getSearchParamsAsObjects";
 
-function useURLSearchParams() {
+type SearchParamsExpandedType = {
+  key: string;
+  value: string;
+};
+type SearchParamsType = {
+  [key: string]: string;
+};
+
+function useURLSearchParams(): [
+  SearchParamsType,
+  (obj: SearchParamsExpandedType | SearchParamsExpandedType[]) => void,
+] {
   const params = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
 
-  const searchParams = (() => {
-    const paramsObject: { [key: string]: string } = {};
-    params.forEach((value, key) => {
-      paramsObject[key] = value;
-    });
-    return paramsObject;
-  })();
+  const searchParams = useMemo<SearchParamsType>(
+    () => getSearchParamsAsObjects(params),
+    [params],
+  );
+
   const setSearchParams = (
-    obj: { key: string; value: string } | { key: string; value: string }[],
+    obj: SearchParamsExpandedType | SearchParamsExpandedType[],
   ) => {
     const newParams = new URLSearchParams(params.toString());
     if (Array.isArray(obj)) obj.forEach((v) => newParams.set(v.key, v.value));
@@ -21,7 +32,7 @@ function useURLSearchParams() {
     router.push(`${pathname}?${newParams}`);
   };
 
-  return { searchParams, setSearchParams };
+  return [searchParams, setSearchParams];
 }
 
 export default useURLSearchParams;
