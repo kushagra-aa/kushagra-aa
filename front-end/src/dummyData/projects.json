@@ -459,7 +459,7 @@
         "github": "https://github.com/kushagra-aa/passwrdifi/",
         "started_at": "07-08-2022",
         "completed_at": "06-07-2023",
-        "featured": false
+        "featured": true
     },
     {
         "name": "Wame QR",
@@ -473,6 +473,6 @@
         "github": "https://github.com/kushagra-aa/wame-qr/",
         "started_at": "18-06-2023",
         "completed_at": "06-07-2023",
-        "featured": false
+        "featured": true
     }
 ]
