@@ -1,35 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/UI/button/Button";
-import {
-  CaretRightIcon,
-  InfoIcon,
-  RightIcon,
-  SendIcon,
-  ThunderboltIcon,
-} from "@/components/Icons";
+import { SendIcon, ThunderboltIcon } from "@/components/Icons";
 import styles from "./page.module.css";
-import ProjectType from "@/models/Project";
-
-const getFeaturedProjects = async () => {
-  const response = await fetch(
-    `${process.env.URL}/api/projects?featured=true`,
-  ).then((resp) => resp);
-  let data;
-  let projects: ProjectType[] = [];
-  let totalData = 0;
-
-  if (response.status === 200) data = await response.json().then((d) => d);
-  if (data) {
-    projects = data.data as unknown as ProjectType[];
-    totalData = data.total_data;
-  }
-
-  return {
-    projects,
-    total_data: totalData,
-  };
-};
+import FeaturedProjectsCards from "./FeaturedProjectsCards/FeaturedProjectsCards";
 
 function HeroSection() {
   return (
@@ -70,60 +44,13 @@ function HeroSection() {
   );
 }
 
-function FeaturedProjectCard({ project }: { project: ProjectType }) {
-  return (
-    <div className={styles.project_card_content}>
-      <Image src={project.picture} alt={project.name} fill sizes="100%" />
-      <Button
-        size="small"
-        type="link"
-        backgroundColor="dark-1"
-        foregroundColor="accent-2"
-      >
-        <Link className={styles.project_card_link} href={project.link}>
-          {project.tags.includes("game") ? (
-            <>
-              Play <CaretRightIcon />
-            </>
-          ) : (
-            <>
-              Visit <RightIcon />
-            </>
-          )}
-        </Link>
-      </Button>
-      <Button
-        size="small"
-        type="link"
-        backgroundColor="dark-2"
-        foregroundColor="accent-1"
-      >
-        <Link
-          className={styles.project_card_link}
-          href={`portfolio/${project.slug}`}
-        >
-          Details <InfoIcon />
-        </Link>
-      </Button>
-    </div>
-  );
-}
-
-function ProjectsSection({ projects }: { projects: ProjectType[] }) {
+function ProjectsSection() {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.projects_container}>
         <h2>What I&apos;ve made recently?</h2>
         <div className={styles.projects_ill} />
-        <div className={styles.projects_cards_container}>
-          <div className={styles.projects_cards}>
-            {projects.map((project) => (
-              <div key={project.slug} className={styles.project_card}>
-                <FeaturedProjectCard project={project} />
-              </div>
-            ))}
-          </div>
-        </div>
+        <FeaturedProjectsCards />
       </div>
     </section>
   );
@@ -145,11 +72,10 @@ function AboutSection() {
 }
 
 export default async function Home() {
-  const { projects } = await getFeaturedProjects();
   return (
     <div className={styles.main}>
       <HeroSection />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection />
       <AboutSection />
     </div>
   );

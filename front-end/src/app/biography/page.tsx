@@ -3,19 +3,9 @@ import styles from "./page.module.css";
 import { CodeIcon, FolderOpenIcon, IdCardIcon } from "@/components/Icons";
 import LinksContainer from "@/components/linksRow/LinksContainer";
 import LinkRow from "@/components/linksRow/LinkRow";
+import Hobbies from "./Hobbies";
 
-const getHobbies = async () => {
-  const response = await fetch(`${process.env.URL}/api/hobbies`).then(
-    (resp) => resp,
-  );
-  let hobbies: string[] | undefined = undefined;
-  if (response.status === 200)
-    hobbies = await response.json().then((d) => d.data);
-  return hobbies;
-};
-
-export default async function Biography() {
-  const hobbies = await getHobbies();
+export default function Biography() {
   return (
     <div className={styles.main}>
       <h1>Who Am I?</h1>
@@ -70,7 +60,7 @@ export default async function Biography() {
       </div>
       <div className={styles.hobbies}>
         <h2>My Hobbies</h2>
-        <ul>{hobbies?.map((hobby) => <li key={hobby}>{hobby}</li>)}</ul>
+        <Hobbies />
       </div>
       <LinksContainer>
         <LinkRow
