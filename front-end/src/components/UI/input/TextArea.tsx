@@ -7,12 +7,14 @@ function TextArea({
   cols,
   rows,
   placeholder,
+  required,
 }: {
   id: string;
   inputName: string;
   className?: string;
   cols?: number;
   rows?: number;
+  required?: boolean;
   placeholder?: string;
 }) {
   return (
@@ -23,6 +25,7 @@ function TextArea({
       cols={cols}
       rows={rows}
       placeholder={placeholder}
+      required={required}
     />
   );
 }

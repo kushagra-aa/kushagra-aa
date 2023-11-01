@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { CodeIcon, FolderOpenIcon, IdCardIcon } from "@/components/Icons";
 import LinksContainer from "@/components/linksRow/LinksContainer";
 import LinkRow from "@/components/linksRow/LinkRow";
+import Hobbies from "./Hobbies";
 
 export default function Biography() {
   return (
@@ -59,14 +60,7 @@ export default function Biography() {
       </div>
       <div className={styles.hobbies}>
         <h2>My Hobbies</h2>
-        <ul>
-          <li>photoshop</li>
-          <li>reading</li>
-          <li>illustrator</li>
-          <li>premier pro</li>
-          <li>music</li>
-          <li>gaming</li>
-        </ul>
+        <Hobbies />
       </div>
       <LinksContainer>
         <LinkRow
@@ -81,7 +75,8 @@ export default function Biography() {
           icon={<IdCardIcon />}
           subTitle="Are you HR?"
           title="A Compressed Resume for you"
-          link="/resume"
+          link="/resume.pdf"
+          target="_blank"
         />
         <LinkRow
           button="My Portfolio"
