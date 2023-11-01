@@ -18,7 +18,7 @@ export default function FeaturedProjectCard({
         backgroundColor="dark-1"
         foregroundColor="accent-2"
       >
-        <Link className="project_card_link" href={project.link}>
+        <Link className="project_card_link" href={project.link} target="_blank">
           {project.tags.includes("game") ? (
             <>
               Play <CaretRightIcon />
