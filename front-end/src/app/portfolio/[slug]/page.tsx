@@ -24,14 +24,20 @@ function Project({ params }: { params: { slug?: string } }) {
   const [project, setProject] = useState<ProjectType>();
   const { slug } = params;
   const projectDates = {
-    start: formatDateStringToString(project?.started_at || "", {
-      year: "numeric",
-      month: "short",
-    }),
-    end: formatDateStringToString(project?.completed_at || "", {
-      year: "numeric",
-      month: "short",
-    }),
+    start:
+      project?.started_at === "N/A"
+        ? "N/A"
+        : formatDateStringToString(project?.started_at || "", {
+            year: "numeric",
+            month: "short",
+          }),
+    end:
+      project?.completed_at === "N/A"
+        ? "N/A"
+        : formatDateStringToString(project?.completed_at || "", {
+            year: "numeric",
+            month: "short",
+          }),
   };
 
   const getProject = async () => {
@@ -54,24 +60,37 @@ function Project({ params }: { params: { slug?: string } }) {
         </div>
         <h1>{project.name}</h1>
         <div className={styles.project_description_details}>
-          <p>{project.description}</p>
+          {/* eslint-disable-next-line react/no-danger */}
+          <p dangerouslySetInnerHTML={{ __html: project.description }} />
           <div className={styles.project_details}>
-            <Button className={styles.project_visit} size="medium" type="link">
-              <Link target="_blank" href={project.link}>
-                {project.tags.includes("game") ? (
-                  <>
-                    Play <CaretRightIcon />
-                  </>
-                ) : (
-                  <>
-                    Visit <RightIcon />
-                  </>
-                )}
-              </Link>
-            </Button>
-            <Button className={styles.project_github} size="medium" type="link">
-              <Link href={project.github}>GitHub</Link>
-            </Button>
+            {project.link ? (
+              <Button
+                className={styles.project_visit}
+                size="medium"
+                type="link"
+              >
+                <Link target="_blank" href={project.link}>
+                  {project.tags.includes("game") ? (
+                    <>
+                      Play <CaretRightIcon />
+                    </>
+                  ) : (
+                    <>
+                      Visit <RightIcon />
+                    </>
+                  )}
+                </Link>
+              </Button>
+            ) : null}
+            {project.github ? (
+              <Button
+                className={styles.project_github}
+                size="medium"
+                type="link"
+              >
+                <Link href={project.github}>GitHub</Link>
+              </Button>
+            ) : null}
             <p className={styles.project_dates}>
               <span>{projectDates.start}</span>
               <span>-</span>
