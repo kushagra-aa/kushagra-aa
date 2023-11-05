@@ -125,6 +125,50 @@ export default function Portfolio() {
   return (
     <div className={styles.main}>
       <div className={styles.head}>
+        <div style={{ display: "block" }}>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("search", "hola");
+            }}
+          >
+            search
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("tech", "hola");
+            }}
+          >
+            tech
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("tags", "hola");
+            }}
+          >
+            tags
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("search", "hola");
+              hookFilters.set("tech", "hola");
+              hookFilters.set("tags", "hola");
+            }}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.clear();
+            }}
+          >
+            Clear
+          </button>
+        </div>
         <h1>Portfolio</h1>
         <p className={styles.sub}>
           Want to see my Creations
