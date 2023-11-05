@@ -249,14 +249,14 @@
         "github": "https://github.com/kushagra-aa/medium-clone/",
         "started_at": "25-03-2022",
         "completed_at": "09-04-2022",
-        "featured": true
+        "featured": false
     },
     {
         "name": "Contacts Book",
         "slug": "contacts_book",
         "picture": "/thumbnails/contacts-book-thumbnail.png",
         "tags": "web",
-        "tech": "reactjs, redux, tailwind",
+        "tech": "reactjs, redux, tailwindCSS",
         "description": "Basic Contact App Clone using React-Redux \nFunctionality to Add-Edit-Remove Contacts\n Contacts are stored in Local Storage \nBuilt with 🤍 For You!",
         "short_description": "Basic Contact App Clone using React-Redux.",
         "link": "https://contact-book-k.herokuapp.com/",
@@ -339,7 +339,7 @@
         "name": "Not Lorem",
         "slug": "not_lorem",
         "picture": "/thumbnails/not-lorem-thumbnail.png",
-        "tags": "vscode, api",
+        "tags": "vscode, extension, api",
         "tech": "vscode, typescript, axios",
         "description": "It is a Text Generator Extension For Visual Studio Code \nThis extension I've made during learning how to make extensions for VSCode \nBuilt with 🤍 For You!",
         "short_description": "It is a Text Generator Extension For Visual Studio Code.",
@@ -459,7 +459,7 @@
         "github": "https://github.com/kushagra-aa/passwrdifi/",
         "started_at": "07-08-2022",
         "completed_at": "06-07-2023",
-        "featured": true
+        "featured": false
     },
     {
         "name": "Wame QR",
@@ -474,5 +474,161 @@
         "started_at": "18-06-2023",
         "completed_at": "06-07-2023",
         "featured": true
+    },
+    {
+        "name": "Tool Box",
+        "slug": "toolbox",
+        "picture": "/thumbnails/toolbox-thumbnail.png",
+        "tags": "crossPlatform, mobile, desktop",
+        "tech": "flutter, dart",
+        "description": "It is a Cross Platform Utilities App. \nMade with Flutter. \nCan be used on: <ul><li>iOS</li><li>Windows</li><li>MacOS</li><li>Linux</li><li>Web</li></ul> \nBuilt with 🤍 For You!",
+        "short_description": "Cross Platform Utilities App.",
+        "link": "https://github.com/kushagra-aa/toolbox/",
+        "github": "https://github.com/kushagra-aa/toolbox/",
+        "started_at": "22-07-2023",
+        "completed_at": "06-08-2023",
+        "featured": true
+    },
+    {
+        "name": "DupliKates",
+        "slug": "duplikates",
+        "picture": "/thumbnails/duplikates-thumbnail.png",
+        "tags": "crossPlatform, mobile, clone",
+        "tech": "flutter, dart",
+        "description": "UI Clone of popular Applications \n<ul><li>BookMyShow</li><li>Facebook</li><li>Instagram</li><li>LinkedIn</li><li>Messenger</li><li>Snapchat</li><li>Telegram</li><li>WhatsApp</li><li>X</li></ul> \nIt is a Cross Platform App. \nMade with Flutter.  \nBuilt with 🤍 For You!",
+        "short_description": "UI Clones.",
+        "link": "https://github.com/kushagra-aa/duplikates/",
+        "github": "https://github.com/kushagra-aa/duplikates/",
+        "started_at": "06-08-2023",
+        "completed_at": "12-08-2023",
+        "featured": false
+    },
+    {
+        "name": "Calclutter",
+        "slug": "calcluttter",
+        "picture": "/thumbnails/calcluttter-thumbnail.png",
+        "tags": "crossPlatform, mobile, clone",
+        "tech": "flutter, dart",
+        "description": "A Basic Arithmetic Calculator.\nMy First Flutter Project:)\nBuilt with 🤍 For You!",
+        "short_description": "Flutter Calculator Application",
+        "link": "https://github.com/kushagra-aa/calcluttter/",
+        "github": "https://github.com/kushagra-aa/calcluttter/",
+        "started_at": "16-07-2023",
+        "completed_at": "16-07-2023",
+        "featured": false
+    },
+    {
+        "name": "Quizzz",
+        "slug": "quizzz",
+        "picture": "/thumbnails/quizzz-thumbnail.png",
+        "tags": "web",
+        "tech": "reactjs, tailwindCSS, firebase",
+        "description": "React JS Comprehension Quiz Platform \nBuilt with 🤍 For You!",
+        "short_description": "React JS Comprehension Quiz Platform",
+        "link": "https://quizzz-k.web.app/",
+        "github": "https://github.com/kushagra-aa/quizzz/",
+        "started_at": "17-01-2023",
+        "completed_at": "18-01-2023",
+        "featured": false
+    },
+    {
+        "name": "Hakker Man",
+        "slug": "hakker_man",
+        "picture": "/thumbnails/hakker-man-thumbnail.png",
+        "tags": "web",
+        "tech": "reactjs, lit, vite",
+        "description": "Lit Component used on react website \nBuilt with 🤍 For You!",
+        "short_description": "Lit Component used on react website",
+        "link": "https://kushagra-aa.github.io/hakker-man/",
+        "github": "https://github.com/kushagra-aa/hakker-man/",
+        "started_at": "25-09-2022",
+        "completed_at": "04-10-2022",
+        "featured": false
+    },
+    {
+        "name": "Wrap It",
+        "slug": "wrap_it",
+        "picture": "/thumbnails/wrap-it-thumbnail.png",
+        "tags": "vscode, extension",
+        "tech": "vscode, typescript",
+        "description": "A simple extension to do the frustrating task of wrapping tags. Easily wrap code in your chosen HTML tags for enhanced markup. \nTo use, select one or many chunks of code and press 'Alt + W' ('Option + W' for Mac). \n\nNo Wrap It: 4-5 steps. \nWrap IT: 2 simple steps. \n<ul><li>Quick Wrap: For quickly running your favorite Wrap It command.</li><li>Default Wrap: Wrap the selection(s) in the default tag.</li><li>Selected Wrap: Input the tag you want the Selection(s) in.</li><li>Fragment Wrap: Especially for us React Developers, Wrap the Selection(s) in a React Fragment(<></>).</li></ul> \nBuilt with 🤍 For You!",
+        "short_description": "Easily wrap code in your chosen HTML tags for enhanced markup.",
+        "link": "https://marketplace.visualstudio.com/items/kushagra-aa.wrap-it",
+        "github": "https://github.com/kushagra-aa/wrap-it/",
+        "started_at": "22-10-2023",
+        "completed_at": "23-10-2023",
+        "featured": true
+    },
+    {
+        "name": "Name The Game",
+        "slug": "name_the_game",
+        "picture": "/thumbnails/name-the-game-thumbnail.png",
+        "tags": "web",
+        "tech": "nextjs, firebase, materialUI",
+        "description": "Find games by describing them, and answer community's questions. \nThis project helps you find out the name of a game you cannot think of with the help of a community. Help and answer others also if you can. The purpose of this project is to help all the gaming audience out there to find out what is on their mind. \nBuilt with 🤍 For You!",
+        "short_description": "Find games by describing them, and answer community's questions.",
+        "link": "https://name-the-game.vercel.app/",
+        "github": "https://github.com/animeshsrivastava246/name-the-game/",
+        "started_at": "21-08-2023",
+        "completed_at": "02-10-2023",
+        "featured": false,
+        "with": {
+            "name": "Animesh Srivastava",
+            "link": "https://github.com/animeshsrivastava246/"
+        }
+    },
+    {
+        "name": "UBooks",
+        "slug": "ubooks",
+        "picture": "/thumbnails/u-books-thumbnail.png",
+        "tags": "web, api, oAuth",
+        "tech": "reactjs, typescript, postCSS",
+        "description": "Micro manage all of your team, keep an eye on every step of the process. \nA complex set of applications with different types of users, permissions, and items. \n<ul><li>Multiple User Types</li><li>Different Permissions</li><li>Various Warehouse</li><li>Interfaces for different teams of the organization</li><li>Form Validations and Data Tables</li></ul>\nSales-Operations managing application ecosystem.",
+        "short_description": "Sales-Operations managing application ecosystem.",
+        "link": "",
+        "github": "",
+        "started_at": "N/A",
+        "completed_at": "N/A",
+        "featured": false,
+        "with": {
+            "name": "UnOrg Vendor Solutions",
+            "link": "https://www.linkedin.com/company/unorg/"
+        }
+    },
+    {
+        "name": "One Post",
+        "slug": "one-post",
+        "picture": "/thumbnails/one-post-thumbnail.png",
+        "tags": "oAuth, api, backend",
+        "tech": "django, python, SQL",
+        "description": "Manage all your socials at one platform. \nCreate, schedule and publish posts on your social media business pages simultaneously. Get real-time insights, so you can focus on other areas of your business. \nFeatures:<ul><li>OAuth from various social Media Platforms<ul><li>instagram</li><li>facebook</li><li>linkedin</li><li>twitter</li></ul></li><li>Post Different types of content</li><li>Schedule The posts</li></ul> \nAll in One Social Media Platform.",
+        "short_description": "All in One Social Media Platform",
+        "link": "https://www.sasone.in/products/onepost",
+        "github": "",
+        "started_at": "N/A",
+        "completed_at": "N/A",
+        "featured": false,
+        "with": {
+            "name": "Rozgaar - SAS One",
+            "link": "https://www.linkedin.com/company/sasone/"
+        }
+    },
+    {
+        "name": "Stock One",
+        "slug": "stock-one",
+        "picture": "/thumbnails/stock-one-thumbnail.png",
+        "tags": "oAuth, api, backend",
+        "tech": "django, python, SQL",
+        "description": "one stop app for Managing your Teams, Sales, and Stock. \nDesigned to simplify your inventory/stock management and VIN allocation to create transparency among sales team. \nFeatures:<ul><li>Multiple User Types</li><li>Different Permissions</li><li>Various Warehouse and Showroom Locations</li></ul> \nstock-sales management app.",
+        "short_description": "stock-sales management app",
+        "link": "https://www.sasone.in/products/stockone",
+        "github": "",
+        "started_at": "N/A",
+        "completed_at": "N/A",
+        "featured": false,
+        "with": {
+            "name": "Rozgaar - SAS One",
+            "link": "https://www.linkedin.com/company/sasone/"
+        }
     }
 ]
