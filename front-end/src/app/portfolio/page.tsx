@@ -10,6 +10,7 @@ import Button from "@/components/UI/button/Button";
 import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
 import makeURLParams from "@/helpers/makeURLParams";
 import makeOptions from "@/helpers/makeOptions";
+import useFilters from "@/hooks/useFilters";
 
 const getProjectsAPI = async (params: PortfolioFiltersType) => {
   const response = await fetch(`/api/projects?${makeURLParams(params)}`).then(
@@ -77,6 +78,11 @@ export default function Portfolio() {
   >([]);
   const [projects, setProjects] = useState<ProjectType[]>([]);
   const [total, setTotal] = useState(0);
+
+  const { filters: hookFilters } = useFilters<keyof PortfolioFiltersType>({
+    refresh: () => {},
+  });
+
   const handleTechChange = (value: string): void => {
     setFilters((f) => ({ ...f, tech: value }));
   };
@@ -108,12 +114,61 @@ export default function Portfolio() {
     getTechTags();
   }, []);
   useEffect(() => {
+    hookFilters.set("end", filters.end.toString());
+    hookFilters.set("search", filters.search || "");
+    hookFilters.set("start", filters.start.toString());
+    hookFilters.set("tags", (filters.tags || []).toString());
+    hookFilters.set("tech", (filters.tech || []).toString());
     getProjects(filters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
-
   return (
     <div className={styles.main}>
       <div className={styles.head}>
+        <div style={{ display: "block" }}>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("search", "hola");
+            }}
+          >
+            search
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("tech", "hola");
+            }}
+          >
+            tech
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("tags", "hola");
+            }}
+          >
+            tags
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.set("search", "hola");
+              hookFilters.set("tech", "hola");
+              hookFilters.set("tags", "hola");
+            }}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              hookFilters.clear();
+            }}
+          >
+            Clear
+          </button>
+        </div>
         <h1>Portfolio</h1>
         <p className={styles.sub}>
           Want to see my Creations

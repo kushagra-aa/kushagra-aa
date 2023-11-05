@@ -34,18 +34,17 @@ function useURLSearchParams(): [
     obj: SearchParamsExpandedType | SearchParamsExpandedType[],
     config?: SetSearchParamsConfigType,
   ) => {
+    if (Array.isArray(obj) && obj.length <= 0) return;
     let newParams = new URLSearchParams("");
     if (!config?.clearPrevious)
       newParams = new URLSearchParams(params.toString());
     if (Array.isArray(obj)) obj.forEach((v) => newParams.set(v.key, v.value));
     else newParams.set(obj.key, obj.value);
-    router.push(`${pathname}?${newParams}`);
+    router.replace(`${pathname}?${newParams}`);
   };
 
   const clearSearchParams = () => {
-    console.log("Clear search params");
-    console.log("pathname :>> ", pathname);
-    router.push(`${pathname}`);
+    router.replace(`${pathname}`);
   };
 
   return [searchParams, setSearchParams, clearSearchParams];
