@@ -59,6 +59,9 @@ const getTechTagsAPI = async () => {
 const defaultFiltersValue: PortfolioFiltersType = {
   start: 0,
   end: 6,
+  search: undefined,
+  tags: undefined,
+  tech: undefined,
 };
 
 export default function Portfolio() {
@@ -131,8 +134,8 @@ export default function Portfolio() {
     else changeFilters.set("tags", value);
   };
   const onSearch = (value?: string): void => {
-    if (value === "" && filters.search) changeFilters.delete("search");
-    else if (value) changeFilters.set("search", value);
+    if (value === undefined || value === "") changeFilters.delete("search");
+    else changeFilters.set("search", value);
   };
 
   const getProjects = async (params: PortfolioFiltersType) => {

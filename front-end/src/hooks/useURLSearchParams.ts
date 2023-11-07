@@ -30,21 +30,24 @@ function useURLSearchParams(): [
     [params],
   );
 
+  const clearSearchParams = () => {
+    router.replace(`${pathname}`);
+  };
+
   const setSearchParams = (
     obj: SearchParamsExpandedType | SearchParamsExpandedType[],
     config?: SetSearchParamsConfigType,
   ) => {
-    if (Array.isArray(obj) && obj.length <= 0) return;
+    if (Array.isArray(obj) && obj.length <= 0) {
+      clearSearchParams();
+      return;
+    }
     let newParams = new URLSearchParams("");
     if (!config?.clearPrevious)
       newParams = new URLSearchParams(params.toString());
     if (Array.isArray(obj)) obj.forEach((v) => newParams.set(v.key, v.value));
     else newParams.set(obj.key, obj.value);
     router.replace(`${pathname}?${newParams}`);
-  };
-
-  const clearSearchParams = () => {
-    router.replace(`${pathname}`);
   };
 
   return [searchParams, setSearchParams, clearSearchParams];
