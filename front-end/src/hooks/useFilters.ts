@@ -8,10 +8,11 @@ export type ParamsConfigType = {
   as?: string;
   calculate?: (val: string) => string;
 };
+
 export type FilterConfigType<F, V> = {
   name: F;
-  getter: (val: V) => string;
-  setter: (val: string) => V;
+  getter?: (val: V) => string;
+  setter?: (val: string) => V;
   isSearchParam?: boolean;
 };
 
@@ -38,7 +39,7 @@ export default function useFilters<FiltersType>({
     const val = filters ? filters[name] : undefined;
     if (!val) return undefined;
     const filterConfig = filtersConfig.find((filter) => filter.name === name);
-    if (filterConfig === undefined) return val;
+    if (filterConfig === undefined || !filterConfig.getter) return val;
     return filterConfig.getter(val);
   };
   const getAllFilters = (): FiltersType => filters;
@@ -46,7 +47,8 @@ export default function useFilters<FiltersType>({
   const changeFilter = (name: keyof FiltersType, value: any) => {
     const filterConfig = filtersConfig.find((f) => f.name === name);
     let newValue = value;
-    if (filterConfig) newValue = filterConfig.setter(value);
+    if (filterConfig && filterConfig.setter)
+      newValue = filterConfig.setter(value);
     setFilters((fil) => ({ ...fil, [name]: newValue }) as FiltersType);
   };
 
@@ -78,7 +80,9 @@ export default function useFilters<FiltersType>({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
   useEffect(() => {
-    setFilters(() => searchParams as unknown as FiltersType);
+    setFilters(
+      () => ({ ...defaultFilters, ...searchParams }) as unknown as FiltersType,
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

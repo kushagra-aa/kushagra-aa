@@ -81,22 +81,10 @@ export default function Portfolio() {
     filtersConfig: [
       {
         name: "start",
-        getter: (val) => {
-          return val;
-        },
-        setter: (val) => {
-          return val;
-        },
         isSearchParam: false,
       },
       {
         name: "end",
-        getter: (val) => {
-          return val;
-        },
-        setter: (val) => {
-          return val;
-        },
         isSearchParam: false,
       },
       {
