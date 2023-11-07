@@ -2,7 +2,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 import getSearchParamsAsObjects from "@/helpers/getSearchParamsAsObjects";
 
-type SearchParamsExpandedType = {
+export type SearchParamsExpandedType = {
   key: string;
   value: string;
 };

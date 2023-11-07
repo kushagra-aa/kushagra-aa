@@ -1,10 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import useURLSearchParams from "./useURLSearchParams";
-
-type FilterType<F> = {
-  name: F;
-  value: string;
-};
+import useURLSearchParams, {
+  SearchParamsExpandedType,
+} from "./useURLSearchParams";
 
 export type ParamsConfigType = {
   name: string;
@@ -12,7 +9,16 @@ export type ParamsConfigType = {
   calculate?: (val: string) => string;
 };
 
+export type FilterConfigType<F, V> = {
+  name: F;
+  getter?: (val: V) => string;
+  setter?: (val: string) => V;
+  isSearchParam?: boolean;
+};
+
 export type UseFiltersPropsType<F> = {
+  defaultFilters: F;
+  filtersConfig: FilterConfigType<keyof F, any>[];
   resetAbleKeys?: F[];
   refresh: (
     paramsConfig: ParamsConfigType[],
@@ -20,42 +26,38 @@ export type UseFiltersPropsType<F> = {
   ) => void;
 };
 
-export default function useFilters<FilterKeysType extends string>({
+export default function useFilters<FiltersType>({
+  filtersConfig,
+  defaultFilters,
   refresh,
-}: UseFiltersPropsType<FilterKeysType>) {
-  const [filters, setFilters] = useState<FilterType<FilterKeysType>[]>([]);
+}: UseFiltersPropsType<FiltersType>) {
+  const [filters, setFilters] = useState<FiltersType>(defaultFilters);
   const [searchParams, setSearchParams, clearSearchParams] =
     useURLSearchParams();
 
-  const getFilters = (name: FilterKeysType): string | undefined =>
-    filters.find((filter) => filter.name === name)?.value;
+  const getFilters = (name: keyof FiltersType): any => {
+    const val = filters ? filters[name] : undefined;
+    if (!val) return undefined;
+    const filterConfig = filtersConfig.find((filter) => filter.name === name);
+    if (filterConfig === undefined || !filterConfig.getter) return val;
+    return filterConfig.getter(val);
+  };
+  const getAllFilters = (): FiltersType => filters;
 
-  const getAllFilters = (): { [key in FilterKeysType]: string } | undefined =>
-    filters.reduce(
-      (acc, obj) => {
-        acc[obj.name] = obj.value;
-        return acc;
-      },
-      {} as { [key in FilterKeysType]: string },
-    );
-
-  const changeFilter = (name: FilterKeysType, value: string) => {
-    setFilters((fil) => {
-      const foundFilter = fil.findIndex((filter) => filter.name === name);
-
-      if (foundFilter < 0) return [...fil, { name, value }];
-      return fil.map((filter) =>
-        filter.name === name ? { ...filter, value } : filter,
-      );
-    });
+  const changeFilter = (name: keyof FiltersType, value: any) => {
+    const filterConfig = filtersConfig.find((f) => f.name === name);
+    let newValue = value;
+    if (filterConfig && filterConfig.setter)
+      newValue = filterConfig.setter(value);
+    setFilters((fil) => ({ ...fil, [name]: newValue }) as FiltersType);
   };
 
-  const deleteFilter = (name: FilterKeysType) => {
-    setFilters((fil) => fil.filter((f) => f.name !== name));
+  const deleteFilter = (name: keyof FiltersType) => {
+    setFilters((fil) => ({ ...fil, [name]: undefined }) as FiltersType);
   };
 
   const clearFilters = () => {
-    setFilters(() => []);
+    setFilters(() => defaultFilters);
     clearSearchParams();
   };
 
@@ -64,21 +66,23 @@ export default function useFilters<FilterKeysType extends string>({
   };
 
   useEffect(() => {
-    setSearchParams(
-      filters.map((filter) => ({ key: filter.name, value: filter.value })),
-    );
+    const params: SearchParamsExpandedType[] = [];
+    Object.entries(filters || {}).forEach(([key, value]) => {
+      const filterConfig = filtersConfig.find((f) => f.name === key);
+      if (filterConfig?.isSearchParam && (value || value === 0))
+        params.push({
+          key,
+          value: value as string,
+        });
+    });
+    setSearchParams(params, { clearPrevious: true });
     refreshData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
   useEffect(() => {
-    setFilters(() => {
-      const newFilters: FilterType<FilterKeysType>[] = [];
-      // eslint-disable-next-line no-restricted-syntax
-      for (const [key, value] of Object.entries(searchParams)) {
-        newFilters.push({ name: key as FilterKeysType, value });
-      }
-      return newFilters;
-    });
+    setFilters(
+      () => ({ ...defaultFilters, ...searchParams }) as unknown as FiltersType,
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -94,5 +98,5 @@ export default function useFilters<FilterKeysType extends string>({
     [],
   );
 
-  return { filters: filterMethods, refreshData };
+  return { filters, changeFilters: filterMethods, refreshData };
 }

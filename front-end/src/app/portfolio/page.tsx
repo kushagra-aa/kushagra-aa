@@ -62,8 +62,6 @@ const defaultFiltersValue: PortfolioFiltersType = {
 };
 
 export default function Portfolio() {
-  const [filters, setFilters] =
-    useState<PortfolioFiltersType>(defaultFiltersValue);
   const [techOptions, setTechOptions] = useState<
     {
       value: string;
@@ -79,18 +77,62 @@ export default function Portfolio() {
   const [projects, setProjects] = useState<ProjectType[]>([]);
   const [total, setTotal] = useState(0);
 
-  const { filters: hookFilters } = useFilters<keyof PortfolioFiltersType>({
+  const { filters, changeFilters } = useFilters<PortfolioFiltersType>({
+    filtersConfig: [
+      {
+        name: "start",
+        isSearchParam: false,
+      },
+      {
+        name: "end",
+        isSearchParam: false,
+      },
+      {
+        name: "search",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+      {
+        name: "tags",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+      {
+        name: "tech",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+    ],
+    defaultFilters: defaultFiltersValue,
     refresh: () => {},
   });
 
   const handleTechChange = (value: string): void => {
-    setFilters((f) => ({ ...f, tech: value }));
+    if (value === "") changeFilters.delete("tech");
+    else changeFilters.set("tech", value);
   };
   const handleTagChange = (value: string): void => {
-    setFilters((f) => ({ ...f, tags: value }));
+    if (value === "") changeFilters.delete("tags");
+    else changeFilters.set("tags", value);
   };
   const onSearch = (value?: string): void => {
-    setFilters((f) => ({ ...f, search: value }));
+    if (value === "" && filters.search) changeFilters.delete("search");
+    else if (value) changeFilters.set("search", value);
   };
 
   const getProjects = async (params: PortfolioFiltersType) => {
@@ -107,18 +149,13 @@ export default function Portfolio() {
   };
 
   const handleLoadMore = () => {
-    setFilters((f) => ({ ...f, end: f.end + 6 }));
+    changeFilters.set("end", filters.end + 6);
   };
 
   useEffect(() => {
     getTechTags();
   }, []);
   useEffect(() => {
-    hookFilters.set("end", filters.end.toString());
-    hookFilters.set("search", filters.search || "");
-    hookFilters.set("start", filters.start.toString());
-    hookFilters.set("tags", (filters.tags || []).toString());
-    hookFilters.set("tech", (filters.tech || []).toString());
     getProjects(filters);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
@@ -129,7 +166,7 @@ export default function Portfolio() {
           <button
             type="button"
             onClick={() => {
-              hookFilters.set("search", "hola");
+              changeFilters.set("search", "hola");
             }}
           >
             search
@@ -137,7 +174,7 @@ export default function Portfolio() {
           <button
             type="button"
             onClick={() => {
-              hookFilters.set("tech", "hola");
+              changeFilters.set("tech", "hola");
             }}
           >
             tech
@@ -145,7 +182,7 @@ export default function Portfolio() {
           <button
             type="button"
             onClick={() => {
-              hookFilters.set("tags", "hola");
+              changeFilters.set("tags", "hola");
             }}
           >
             tags
@@ -153,9 +190,9 @@ export default function Portfolio() {
           <button
             type="button"
             onClick={() => {
-              hookFilters.set("search", "hola");
-              hookFilters.set("tech", "hola");
-              hookFilters.set("tags", "hola");
+              changeFilters.set("search", "hola");
+              changeFilters.set("tech", "hola");
+              changeFilters.set("tags", "hola");
             }}
           >
             All
@@ -163,7 +200,7 @@ export default function Portfolio() {
           <button
             type="button"
             onClick={() => {
-              hookFilters.clear();
+              changeFilters.clear();
             }}
           >
             Clear
