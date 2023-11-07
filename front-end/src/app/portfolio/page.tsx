@@ -10,6 +10,7 @@ import Button from "@/components/UI/button/Button";
 import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
 import makeURLParams from "@/helpers/makeURLParams";
 import makeOptions from "@/helpers/makeOptions";
+import useFilters from "@/hooks/useFilters";
 
 const getProjectsAPI = async (params: PortfolioFiltersType) => {
   const response = await fetch(`/api/projects?${makeURLParams(params)}`).then(
@@ -61,8 +62,6 @@ const defaultFiltersValue: PortfolioFiltersType = {
 };
 
 export default function Portfolio() {
-  const [filters, setFilters] =
-    useState<PortfolioFiltersType>(defaultFiltersValue);
   const [techOptions, setTechOptions] = useState<
     {
       value: string;
@@ -77,14 +76,75 @@ export default function Portfolio() {
   >([]);
   const [projects, setProjects] = useState<ProjectType[]>([]);
   const [total, setTotal] = useState(0);
+
+  const { filters, changeFilters } = useFilters<PortfolioFiltersType>({
+    filtersConfig: [
+      {
+        name: "start",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: false,
+      },
+      {
+        name: "end",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: false,
+      },
+      {
+        name: "search",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+      {
+        name: "tags",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+      {
+        name: "tech",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+    ],
+    defaultFilters: defaultFiltersValue,
+    refresh: () => {},
+  });
+
   const handleTechChange = (value: string): void => {
-    setFilters((f) => ({ ...f, tech: value }));
+    if (value === "") changeFilters.delete("tech");
+    else changeFilters.set("tech", value);
   };
   const handleTagChange = (value: string): void => {
-    setFilters((f) => ({ ...f, tags: value }));
+    if (value === "") changeFilters.delete("tags");
+    else changeFilters.set("tags", value);
   };
   const onSearch = (value?: string): void => {
-    setFilters((f) => ({ ...f, search: value }));
+    if (value === "" && filters.search) changeFilters.delete("search");
+    else if (value) changeFilters.set("search", value);
   };
 
   const getProjects = async (params: PortfolioFiltersType) => {
@@ -101,7 +161,7 @@ export default function Portfolio() {
   };
 
   const handleLoadMore = () => {
-    setFilters((f) => ({ ...f, end: f.end + 6 }));
+    changeFilters.set("end", filters.end + 6);
   };
 
   useEffect(() => {
@@ -114,6 +174,50 @@ export default function Portfolio() {
   return (
     <div className={styles.main}>
       <div className={styles.head}>
+        <div style={{ display: "block" }}>
+          <button
+            type="button"
+            onClick={() => {
+              changeFilters.set("search", "hola");
+            }}
+          >
+            search
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              changeFilters.set("tech", "hola");
+            }}
+          >
+            tech
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              changeFilters.set("tags", "hola");
+            }}
+          >
+            tags
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              changeFilters.set("search", "hola");
+              changeFilters.set("tech", "hola");
+              changeFilters.set("tags", "hola");
+            }}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              changeFilters.clear();
+            }}
+          >
+            Clear
+          </button>
+        </div>
         <h1>Portfolio</h1>
         <p className={styles.sub}>
           Want to see my Creations

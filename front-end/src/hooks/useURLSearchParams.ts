@@ -2,7 +2,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 import getSearchParamsAsObjects from "@/helpers/getSearchParamsAsObjects";
 
-type SearchParamsExpandedType = {
+export type SearchParamsExpandedType = {
   key: string;
   value: string;
 };
@@ -39,13 +39,11 @@ function useURLSearchParams(): [
       newParams = new URLSearchParams(params.toString());
     if (Array.isArray(obj)) obj.forEach((v) => newParams.set(v.key, v.value));
     else newParams.set(obj.key, obj.value);
-    router.push(`${pathname}?${newParams}`);
+    router.replace(`${pathname}?${newParams}`);
   };
 
   const clearSearchParams = () => {
-    console.log("Clear search params");
-    console.log("pathname :>> ", pathname);
-    router.push(`${pathname}`);
+    router.replace(`${pathname}`);
   };
 
   return [searchParams, setSearchParams, clearSearchParams];
