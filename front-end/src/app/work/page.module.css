@@ -94,14 +94,14 @@
 }
 
 .exp > .experiences_container {
+  --detials-width: 35%;
+
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .experiences_container > .experience_container {
-  --detials-width: 35%;
-
   position: relative;
   isolation: isolate;
   display: flex;
@@ -225,6 +225,20 @@
   gap: 1rem 2rem;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.skill_category_loader_container {
+  --color-bg: var(--color-bg-2-rgb);
+
+  animation: skeletal-pulsing var(--global-skeletal-pulsing-duration);
+  width: 46%;
+}
+
+.skill_category_loader_container > li {
+  list-style: none;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .skill_category_container {
