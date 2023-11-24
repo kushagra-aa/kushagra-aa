@@ -21,6 +21,8 @@
   }
 
   & > :is(a, button) {
+    cursor: pointer;
+
     &:focus-visible {
       outline: none;
       border: none;
@@ -36,6 +38,8 @@
     }
 
     & > :is(button, a) {
+      cursor: not-allowed !important;
+
       &:focus-visible {
         outline: none !important;
         border: none !important;
