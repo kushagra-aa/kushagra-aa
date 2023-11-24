@@ -69,6 +69,13 @@
   width: 30%;
 }
 
+.projects > .load_button_loading {
+  cursor: progress;
+  animation: var(--global-loading-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
 /* Tablet Page */
 @media screen and (width <=900px) {
   .main > .filters {

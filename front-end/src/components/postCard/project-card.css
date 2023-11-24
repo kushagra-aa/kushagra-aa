@@ -12,9 +12,13 @@
   overflow: hidden;
 
   & > .project_image {
+    --color-bg: var(--color-bg-2-rgb);
+
     width: var(--card-image-width);
     position: relative;
     transition: var(--hover-transition);
+    animation: skeletal-pulsing var(--global-skeletal-pulsing-duration)
+      var(--global-skeletal-pulsing-animation-config);
 
     & > img {
       object-fit: cover;
@@ -104,6 +108,69 @@
 
       & > :is(.button, .link) {
         display: inline-block;
+      }
+    }
+  }
+
+  &.project_card_loader {
+    & > .project_info {
+      & > h6 {
+        --color-bg: var(--color-bg-1-rgb);
+
+        width: 90%;
+        color: transparent;
+        animation: skeletal-pulsing var(--global-skeletal-pulsing-duration)
+          var(--global-skeletal-pulsing-animation-config);
+      }
+
+      & > p {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        margin: 1rem 0;
+
+        & > span {
+          --color-bg: var(--color-bg-1-rgb);
+
+          width: 90%;
+          height: 0.4rem;
+          animation: skeletal-pulsing var(--global-skeletal-pulsing-duration)
+            var(--global-skeletal-pulsing-animation-config);
+
+          &:last-of-type {
+            width: 40%;
+          }
+        }
+      }
+
+      & > :is(.project_tech, .project_tags) {
+        & > span {
+          --color-bg: var(--color-bg-1-rgb);
+
+          width: 3.5rem;
+          height: 100%;
+          animation: skeletal-pulsing var(--global-skeletal-pulsing-duration)
+            var(--global-skeletal-pulsing-animation-config);
+        }
+      }
+    }
+
+    &:hover {
+      --card-image-width: var(--card-height);
+      --card-info-width: var(--card-height);
+
+      & > .project_info {
+        align-items: flex-start;
+        gap: 0.25rem;
+
+        & > :is(p, .project_tags, .project_tech) {
+          display: flex;
+        }
+
+        & > :is(.button, .link) {
+          display: none;
+        }
       }
     }
   }
