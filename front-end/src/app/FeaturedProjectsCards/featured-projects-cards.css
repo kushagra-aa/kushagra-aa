@@ -39,8 +39,12 @@
 }
 
 .project_card_content > img {
+  --color-bg: var(--color-bg-1-rgb);
+
   z-index: -2;
   object-fit: cover;
+  animation: skeletal-pulsing var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
 }
 
 .project_card_content > *:not(img) {
