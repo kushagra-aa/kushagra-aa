@@ -42,6 +42,24 @@
   gap: 1rem;
 }
 
+.main
+  > section
+  > form.contact_form_loading
+  > :is(.contact_form_input_group, .contact_form_submit) {
+  cursor: progress;
+  animation: var(--global-loading-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.main
+  > section
+  > form.contact_form_loading
+  > :is(.contact_form_input_group, .contact_form_submit)
+  > :is(input, textarea, button) {
+  cursor: progress;
+}
+
 .main form > p {
   font-size: var(--font-size-sub-heading-1);
   font-weight: 200;

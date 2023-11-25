@@ -1,9 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import { NextRequest, NextResponse } from "next/server";
 import { AddContactRequestType } from "@/types/addContactRequestType";
+import delayFunction from "@/helpers/delayFunction";
+
+// !FORCED DELAY - Remove this when backend is ready
 
 export async function POST(request: NextRequest) {
   try {
+    await delayFunction(2);
     const reqBody = await request.json();
     const contactBody: AddContactRequestType =
       reqBody as unknown as AddContactRequestType;

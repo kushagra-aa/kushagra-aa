@@ -1,0 +1,21 @@
+@keyframes skeletal-pulsing {
+  0% {
+    border-radius: 0.125rem;
+    background-color: rgb(var(--color-bg, 25 37 54) / 80%);
+  }
+
+  100% {
+    border-radius: 0.125rem;
+    background-color: transparent;
+  }
+}
+
+@keyframes loading-pulsing {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ListItemLoader from "../../components/loaders/ListItemLoader/ListItemLoader";
 
 const getHobbiesAPI = async () => {
   const response = await fetch(`/api/hobbies`).then((resp) => resp);
@@ -12,9 +13,12 @@ const getHobbiesAPI = async () => {
 
 function Hobbies() {
   const [hobbies, setHobbies] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const getHobbies = async () => {
+    setIsLoading(true);
     await getHobbiesAPI().then((resp) => {
       setHobbies(resp || []);
+      setIsLoading(false);
     });
   };
 
@@ -22,7 +26,13 @@ function Hobbies() {
     getHobbies();
   }, []);
 
-  return <ul>{hobbies?.map((hobby) => <li key={hobby}>{hobby}</li>)}</ul>;
+  return (
+    <ul>
+      {isLoading
+        ? [1, 2, 3, 4, 5, 6]?.map((i) => <ListItemLoader key={i} />)
+        : hobbies?.map((hobby) => <li key={hobby}>{hobby}</li>)}
+    </ul>
+  );
 }
 
 export default Hobbies;

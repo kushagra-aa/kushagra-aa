@@ -1,0 +1,36 @@
+.experience_loader {
+  padding: 0 0.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: var(--detials-width);
+  height: 5rem;
+
+  & > .experience_loader_role,
+  .experience_loader_name,
+  .experience_loader_type,
+  .experience_loader_date {
+    --color-bg: var(--color-bg-2-rgb);
+
+    width: 100%;
+    height: 100%;
+    animation: skeletal-pulsing var(--global-skeletal-pulsing-duration)
+      var(--global-skeletal-pulsing-animation-config);
+  }
+
+  & > .experience_loader_name {
+    width: 95%;
+    height: 80%;
+  }
+
+  & > .experience_loader_type {
+    width: 50%;
+    height: 80%;
+  }
+
+  & > .experience_loader_date {
+    width: 45%;
+    height: 85%;
+  }
+}
