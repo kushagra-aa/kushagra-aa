@@ -1,5 +1,6 @@
 @import url("./../styles/reset");
 @import url("./../styles/constants/colors");
+@import url("./../styles/constants/animations");
 @import url("./../styles/main");
 @import url("./../styles/responsive");
 

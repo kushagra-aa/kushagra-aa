@@ -1,0 +1,96 @@
+.loader_thumbnail {
+  --color-bg: var(--color-bg-1-rgb);
+
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.loader_container > h1 {
+  display: grid;
+  place-items: center;
+}
+
+.loader_container > h1 > span {
+  --color-bg: var(--color-bg-1-rgb);
+
+  color: transparent;
+  width: 50%;
+  height: 3rem;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.loader_description_details > p {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.loader_description_details > p > span {
+  --color-bg: var(--color-bg-1-rgb);
+
+  width: 95%;
+  height: 1rem;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.loader_description_details > p > span:last-of-type {
+  width: 50%;
+}
+
+.loader_details > .loader_button {
+  --color-bg: var(--color-bg-1-rgb);
+
+  width: 100%;
+  height: 2rem;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.loader_dates > span {
+  --color-bg: var(--color-bg-1-rgb);
+
+  width: 100%;
+  height: 2rem;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.loader_dates > span:nth-child(2) {
+  width: 50%;
+  animation: none;
+}
+
+.loader_tags,
+.loader_tech {
+  width: 100%;
+  height: 100%;
+  align-items: center !important;
+}
+
+.loader_tag_card {
+  --color-bg: var(--color-bg-1-rgb);
+
+  height: 70%;
+  width: 40%;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}
+
+.loader_with_container > div {
+  --color-bg: var(--color-bg-1-rgb);
+
+  flex: 1;
+  height: 100%;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
+}

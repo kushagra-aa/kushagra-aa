@@ -23,6 +23,7 @@
 .hero_ill {
   --size: 25rem;
   --position: 3rem;
+  --color-bg: var(--color-bg-2-rgb);
 
   position: absolute;
   width: var(--size);
@@ -32,7 +33,10 @@
   border-radius: 100%;
   overflow: hidden;
   box-shadow: 0 8px 8px 0 var(--global-color-dark-2-20);
-  animation: floating 1s linear infinite;
+  animation:
+    floating 1s linear infinite,
+    skeletal-pulsing var(--global-skeletal-pulsing-duration)
+      var(--global-skeletal-pulsing-animation-config);
 }
 
 .hero_ill:hover {

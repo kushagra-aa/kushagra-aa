@@ -28,10 +28,13 @@ const makeContactRequest = async (body: AddContactRequestType) => {
 
 export default function Contact() {
   const [socials, setSocials] = useState<Socials>();
+  const [isFormLoading, setIsFormLoading] = useState(false);
   const contactFormRef = useRef<HTMLFormElement>(null!);
 
   const handleContactFromSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (isFormLoading) return;
+    setIsFormLoading(true);
     const contactRequestBody: AddContactRequestType = {
       name: contactFormRef.current.full_name.value,
       email: contactFormRef.current.email.value,
@@ -39,7 +42,10 @@ export default function Contact() {
       message: contactFormRef.current.message.value,
     };
     // TODO: Add Toasts for the events
-    const resp = await makeContactRequest(contactRequestBody);
+    const resp = await makeContactRequest(contactRequestBody).then((r) => {
+      setIsFormLoading(false);
+      return r;
+    });
     // eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-unused-vars
     const data = await resp.json();
     // if (resp.status === 200) makeToast('success', data.message)
@@ -64,7 +70,11 @@ export default function Contact() {
         <h1>Contact Me</h1>
       </div>
       <section>
-        <form ref={contactFormRef} onSubmit={handleContactFromSubmit}>
+        <form
+          className={isFormLoading ? styles.contact_form_loading : ""}
+          ref={contactFormRef}
+          onSubmit={handleContactFromSubmit}
+        >
           <p>
             Fill up the <span>Details</span> and send a <span>Message</span>
           </p>
@@ -120,7 +130,7 @@ export default function Contact() {
             />
           </InputGroup>
           <Button
-            className={styles.contact_form_submit}
+            className={`${styles.contact_form_submit}`}
             type="button"
             size="medium"
           >
