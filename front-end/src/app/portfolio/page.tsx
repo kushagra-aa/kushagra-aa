@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./page.module.css";
 import DropDown from "@/components/UI/dropDown/DropDown";
 import Search from "@/components/UI/search/Search";
 import ProjectCard from "@/components/postCard/ProjectCard";
@@ -11,6 +10,8 @@ import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
 import makeURLParams from "@/helpers/makeURLParams";
 import makeOptions from "@/helpers/makeOptions";
 import useFilters from "@/hooks/useFilters";
+import ProjectCardLoader from "@/components/postCard/ProjectCardLoader";
+import styles from "./page.module.css";
 
 const getProjectsAPI = async (params: PortfolioFiltersType) => {
   const response = await fetch(`/api/projects?${makeURLParams(params)}`).then(
@@ -79,6 +80,8 @@ export default function Portfolio() {
   >([]);
   const [projects, setProjects] = useState<ProjectType[]>([]);
   const [total, setTotal] = useState(0);
+  const [loaderCards, setLoaderCards] = useState([1, 2, 3, 4, 5, 6]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { filters, changeFilters } = useFilters<PortfolioFiltersType>({
     filtersConfig: [
@@ -126,22 +129,31 @@ export default function Portfolio() {
   });
 
   const handleTechChange = (value: string): void => {
+    setProjects([]);
+    setTotal(0);
     if (value === "") changeFilters.delete("tech");
     else changeFilters.set("tech", value);
   };
   const handleTagChange = (value: string): void => {
+    setProjects([]);
+    setTotal(0);
     if (value === "") changeFilters.delete("tags");
     else changeFilters.set("tags", value);
   };
   const onSearch = (value?: string): void => {
+    setProjects([]);
+    setTotal(0);
     if (value === undefined || value === "") changeFilters.delete("search");
     else changeFilters.set("search", value);
   };
 
   const getProjects = async (params: PortfolioFiltersType) => {
+    setLoaderCards([1, 2, 3, 4, 5, 6]);
     await getProjectsAPI(params).then((resp) => {
       setProjects(resp.projects);
       setTotal(resp.total_data);
+      setIsLoading(false);
+      setLoaderCards([]);
     });
   };
   const getTechTags = async () => {
@@ -153,6 +165,7 @@ export default function Portfolio() {
 
   const handleLoadMore = () => {
     changeFilters.set("end", filters.end + 6);
+    setIsLoading(true);
   };
 
   useEffect(() => {
@@ -162,6 +175,7 @@ export default function Portfolio() {
     getProjects(filters);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
+
   return (
     <div className={styles.main}>
       <div className={styles.head}>
@@ -259,12 +273,17 @@ export default function Portfolio() {
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
+        {loaderCards.map((i) => (
+          <ProjectCardLoader key={i} />
+        ))}
         {projects.length !== total ? (
           <Button
             type="button"
             size="large"
             theme="theme-2"
-            className={styles.load_button}
+            className={`${isLoading ? styles.load_button_loading : null} ${
+              styles.load_button
+            }`}
             onClick={handleLoadMore}
           >
             Load More

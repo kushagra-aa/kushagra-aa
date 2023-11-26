@@ -21,10 +21,14 @@
 
 .project_container > .project_thumbnail {
   --height: 16rem;
+  --color-bg: var(--color-bg-1-rgb);
 
   position: relative;
   height: var(--height);
   width: 100%;
+  animation: var(--global-skeletal-pulsing-animation)
+    var(--global-skeletal-pulsing-duration)
+    var(--global-skeletal-pulsing-animation-config);
 }
 
 .project_container > .project_thumbnail::after {

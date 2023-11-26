@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectType from "@/models/Project";
-import NotFound from "./NotFound";
+import NotFound from "./NotFound/NotFound";
 import styles from "./page.module.css";
 import Button from "@/components/UI/button/Button";
 import { CaretRightIcon, RightIcon } from "@/components/Icons";
 import { formatDateStringToString } from "@/helpers/dateFormatter";
+import Loader from "./Loader/Loader";
 
 const getProjectAPI = async (slug?: string) => {
   if (!slug) return undefined;
@@ -22,6 +23,7 @@ const getProjectAPI = async (slug?: string) => {
 
 function Project({ params }: { params: { slug?: string } }) {
   const [project, setProject] = useState<ProjectType>();
+  const [isLoading, setIsLoading] = useState(true);
   const { slug } = params;
   const projectDates = {
     start:
@@ -41,8 +43,10 @@ function Project({ params }: { params: { slug?: string } }) {
   };
 
   const getProject = async () => {
+    setIsLoading(true);
     await getProjectAPI(slug).then((resp) => {
       setProject(resp);
+      setIsLoading(false);
     });
   };
 
@@ -51,6 +55,7 @@ function Project({ params }: { params: { slug?: string } }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  if (isLoading) return <Loader />;
   if (!project) return <NotFound slug={slug} />;
   return (
     <div className={styles.main}>
