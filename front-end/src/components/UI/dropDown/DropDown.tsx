@@ -130,10 +130,12 @@ function DropDown({
   );
 
   useEffect(() => {
-    if (!multiple) setInputValue(value || "");
-    else setInputValue(value || "");
     setInputSearchValue(searchValue || "");
-  }, [multiple, search, searchValue, value]);
+  }, [searchValue]);
+  useEffect(() => {
+    setInputValue(value || "");
+    setInputDisplayValue(value || "");
+  }, [value]);
   useEffect(() => {
     setDropdownOptions(checkSelectedValues(options));
     // eslint-disable-next-line react-hooks/exhaustive-deps
