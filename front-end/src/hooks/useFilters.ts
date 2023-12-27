@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import useURLSearchParams, {
   SearchParamsExpandedType,
 } from "./useURLSearchParams";
+import isValidParam from "@/helpers/isValidParam";
 
 export type ParamsConfigType = {
   name: string;
@@ -20,10 +21,7 @@ export type UseFiltersPropsType<F> = {
   defaultFilters: F;
   filtersConfig: FilterConfigType<keyof F, any>[];
   resetAbleKeys?: F[];
-  refresh: (
-    paramsConfig: ParamsConfigType[],
-    extraParams?: object | undefined,
-  ) => void;
+  refresh: (f: F) => void;
 };
 
 export default function useFilters<FiltersType>({
@@ -32,6 +30,8 @@ export default function useFilters<FiltersType>({
   refresh,
 }: UseFiltersPropsType<FiltersType>) {
   const [filters, setFilters] = useState<FiltersType>(defaultFilters);
+  const [isInitialRender, setIsInitialRender] = useState(true);
+
   const [searchParams, setSearchParams, clearSearchParams] =
     useURLSearchParams();
 
@@ -43,6 +43,20 @@ export default function useFilters<FiltersType>({
     return filterConfig.getter(val);
   };
   const getAllFilters = (): FiltersType => filters;
+
+  const getFiltersFromParams = (
+    s: typeof searchParams,
+    d: FiltersType,
+  ): FiltersType => {
+    let initialFilters = { ...d };
+    filtersConfig.forEach((f) => {
+      const param = s[f.name as keyof typeof searchParams];
+      if (f.isSearchParam && isValidParam(param)) {
+        initialFilters = { ...initialFilters, [f.name]: param };
+      }
+    });
+    return initialFilters;
+  };
 
   const changeFilter = (name: keyof FiltersType, value: any) => {
     const filterConfig = filtersConfig.find((f) => f.name === name);
@@ -61,8 +75,8 @@ export default function useFilters<FiltersType>({
     clearSearchParams();
   };
 
-  const refreshData = () => {
-    refresh([{ name: "limit" }], { ...getAllFilters(), offset: 0 });
+  const refreshData = (f: FiltersType) => {
+    refresh(f);
   };
 
   useEffect(() => {
@@ -75,14 +89,15 @@ export default function useFilters<FiltersType>({
           value: value as string,
         });
     });
-    setSearchParams(params, { clearPrevious: true });
-    refreshData();
+    if (isInitialRender) setIsInitialRender(false);
+    else {
+      setSearchParams(params, { clearPrevious: true });
+      refreshData(filters);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
   useEffect(() => {
-    setFilters(
-      () => ({ ...defaultFilters, ...searchParams }) as unknown as FiltersType,
-    );
+    setFilters(getFiltersFromParams(searchParams, defaultFilters));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
