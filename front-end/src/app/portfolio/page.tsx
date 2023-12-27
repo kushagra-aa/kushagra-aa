@@ -83,6 +83,17 @@ export default function Portfolio() {
   const [loaderCards, setLoaderCards] = useState([1, 2, 3, 4, 5, 6]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const getProjects = async (params: PortfolioFiltersType) => {
+    setLoaderCards([1, 2, 3, 4, 5, 6]);
+    setIsLoading(true);
+    await getProjectsAPI(params).then((resp) => {
+      setProjects(resp.projects);
+      setTotal(resp.total_data);
+      setIsLoading(false);
+      setLoaderCards([]);
+    });
+  };
+
   const { filters, changeFilters } = useFilters<PortfolioFiltersType>({
     filtersConfig: [
       {
@@ -125,7 +136,7 @@ export default function Portfolio() {
       },
     ],
     defaultFilters: defaultFiltersValue,
-    refresh: () => {},
+    refresh: getProjects,
   });
 
   const handleTechChange = (value: string): void => {
@@ -147,15 +158,6 @@ export default function Portfolio() {
     else changeFilters.set("search", value);
   };
 
-  const getProjects = async (params: PortfolioFiltersType) => {
-    setLoaderCards([1, 2, 3, 4, 5, 6]);
-    await getProjectsAPI(params).then((resp) => {
-      setProjects(resp.projects);
-      setTotal(resp.total_data);
-      setIsLoading(false);
-      setLoaderCards([]);
-    });
-  };
   const getTechTags = async () => {
     await getTechTagsAPI().then((resp) => {
       setTechOptions(makeOptions(resp.tech));
@@ -165,64 +167,15 @@ export default function Portfolio() {
 
   const handleLoadMore = () => {
     changeFilters.set("end", filters.end + 6);
-    setIsLoading(true);
   };
 
   useEffect(() => {
     getTechTags();
   }, []);
-  useEffect(() => {
-    getProjects(filters);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters]);
 
   return (
     <div className={styles.main}>
       <div className={styles.head}>
-        <div style={{ display: "block" }}>
-          <button
-            type="button"
-            onClick={() => {
-              changeFilters.set("search", "hola");
-            }}
-          >
-            search
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              changeFilters.set("tech", "hola");
-            }}
-          >
-            tech
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              changeFilters.set("tags", "hola");
-            }}
-          >
-            tags
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              changeFilters.set("search", "hola");
-              changeFilters.set("tech", "hola");
-              changeFilters.set("tags", "hola");
-            }}
-          >
-            All
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              changeFilters.clear();
-            }}
-          >
-            Clear
-          </button>
-        </div>
         <h1>Portfolio</h1>
         <p className={styles.sub}>
           Want to see my Creations
