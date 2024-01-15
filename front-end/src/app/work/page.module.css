@@ -259,6 +259,11 @@
   line-height: 2rem;
 }
 
+.skill_category_container > ul > li > a {
+  text-decoration: none;
+  color: var(--color-fg-1);
+}
+
 /* Small Laptop Page */
 @media screen and (width <=1250px) {
   .experience_skills > ul {

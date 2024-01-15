@@ -9,6 +9,7 @@ import Button from "@/components/UI/button/Button";
 import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
 import makeURLParams from "@/helpers/makeURLParams";
 import makeOptions from "@/helpers/makeOptions";
+import useFilters from "@/hooks/useFilters";
 import ProjectCardLoader from "@/components/postCard/ProjectCardLoader";
 import styles from "./page.module.css";
 
@@ -59,11 +60,12 @@ const getTechTagsAPI = async () => {
 const defaultFiltersValue: PortfolioFiltersType = {
   start: 0,
   end: 6,
+  search: undefined,
+  tags: undefined,
+  tech: undefined,
 };
 
 export default function Portfolio() {
-  const [filters, setFilters] =
-    useState<PortfolioFiltersType>(defaultFiltersValue);
   const [techOptions, setTechOptions] = useState<
     {
       value: string;
@@ -81,24 +83,9 @@ export default function Portfolio() {
   const [loaderCards, setLoaderCards] = useState([1, 2, 3, 4, 5, 6]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleTechChange = (value: string): void => {
-    setProjects([]);
-    setTotal(0);
-    setFilters((f) => ({ ...f, tech: value, end: 6 }));
-  };
-  const handleTagChange = (value: string): void => {
-    setProjects([]);
-    setTotal(0);
-    setFilters((f) => ({ ...f, tags: value, end: 6 }));
-  };
-  const onSearch = (value?: string): void => {
-    setProjects([]);
-    setTotal(0);
-    setFilters((f) => ({ ...f, search: value, end: 6 }));
-  };
-
   const getProjects = async (params: PortfolioFiltersType) => {
     setLoaderCards([1, 2, 3, 4, 5, 6]);
+    setIsLoading(true);
     await getProjectsAPI(params).then((resp) => {
       setProjects(resp.projects);
       setTotal(resp.total_data);
@@ -106,6 +93,71 @@ export default function Portfolio() {
       setLoaderCards([]);
     });
   };
+
+  const { filters, changeFilters } = useFilters<PortfolioFiltersType>({
+    filtersConfig: [
+      {
+        name: "start",
+        isSearchParam: false,
+      },
+      {
+        name: "end",
+        isSearchParam: false,
+      },
+      {
+        name: "search",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+      {
+        name: "tags",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+      {
+        name: "tech",
+        getter: (val) => {
+          return val;
+        },
+        setter: (val) => {
+          return val;
+        },
+        isSearchParam: true,
+      },
+    ],
+    defaultFilters: defaultFiltersValue,
+    refresh: getProjects,
+  });
+
+  const handleTechChange = (value: string): void => {
+    setProjects([]);
+    setTotal(0);
+    if (value === "") changeFilters.delete("tech");
+    else changeFilters.set("tech", value);
+  };
+  const handleTagChange = (value: string): void => {
+    setProjects([]);
+    setTotal(0);
+    if (value === "") changeFilters.delete("tags");
+    else changeFilters.set("tags", value);
+  };
+  const onSearch = (value?: string): void => {
+    setProjects([]);
+    setTotal(0);
+    if (value === undefined || value === "") changeFilters.delete("search");
+    else changeFilters.set("search", value);
+  };
+
   const getTechTags = async () => {
     await getTechTagsAPI().then((resp) => {
       setTechOptions(makeOptions(resp.tech));
@@ -114,16 +166,12 @@ export default function Portfolio() {
   };
 
   const handleLoadMore = () => {
-    setIsLoading(true);
-    setFilters((f) => ({ ...f, end: f.end + 6 }));
+    changeFilters.set("end", filters.end + 6);
   };
 
   useEffect(() => {
     getTechTags();
   }, []);
-  useEffect(() => {
-    getProjects(filters);
-  }, [filters]);
 
   return (
     <div className={styles.main}>

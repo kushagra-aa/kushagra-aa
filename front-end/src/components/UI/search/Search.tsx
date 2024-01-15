@@ -20,8 +20,10 @@ export default function Search({
   debounceTimeout?: number;
 }) {
   const [searchValue, setSearchValue] = useState("");
+  const [visibleSearchValue, setVisibleSearchValue] = useState("");
+
   const handleSearch = () => {
-    onSearch(value);
+    onSearch(visibleSearchValue);
   };
   const handleSearchClear = () => {
     onSearch(undefined);
@@ -29,6 +31,7 @@ export default function Search({
   };
   const handleSearchValueChange = (val: string) => {
     setSearchValue(val);
+    setVisibleSearchValue(val);
   };
 
   useDebounce(
@@ -42,9 +45,9 @@ export default function Search({
   );
 
   useEffect(() => {
-    setSearchValue(value || "");
+    setVisibleSearchValue(value || "");
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [value]);
 
   return (
     <InputGroup
@@ -66,7 +69,7 @@ export default function Search({
         inputName="search"
         id="search"
         type="text"
-        value={searchValue || ""}
+        value={visibleSearchValue || ""}
         onChange={(e) => {
           handleSearchValueChange(e.target.value);
         }}

@@ -105,9 +105,13 @@ function Project({ params }: { params: { slug?: string } }) {
               <p>Tags:</p>
               <div className={styles.project_tags}>
                 {project.tags.split(",").map((t) => (
-                  <span className={styles.project_tag_card} key={t}>
+                  <Link
+                    className={styles.project_tag_card}
+                    href={`/portfolio?tags=${t}`}
+                    key={t}
+                  >
                     {t}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -115,9 +119,13 @@ function Project({ params }: { params: { slug?: string } }) {
               <p>Tech:</p>
               <div className={styles.project_tech}>
                 {project.tech.split(",").map((t) => (
-                  <span className={styles.project_tag_card} key={t}>
+                  <Link
+                    className={styles.project_tag_card}
+                    href={`/portfolio?tech=${t}`}
+                    key={t}
+                  >
                     {t}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
