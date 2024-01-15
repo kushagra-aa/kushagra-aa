@@ -1,7 +1,4 @@
 {
-    "extends": [
-        "stylelint-config-standard"
-    ],
     "rules": {
         "declaration-block-no-duplicate-properties": true,
         "no-descending-specificity": null,

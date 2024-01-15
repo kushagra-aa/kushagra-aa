@@ -16,10 +16,13 @@
     "eslint.workingDirectories": [
         {
             "directory": "front-end"
+        },
+        {
+            "directory": "admin-end"
         }
     ],
-    "stylelint.configFile": "front-end/.stylelintrc",
-    "prettier.configPath": "front-end/.prettierrc",
+    "stylelint.configFile": ".stylelintrc",
+    "prettier.configPath": ".prettierrc",
     "editor.formatOnSave": true,
     "scss.validate": false,
     "css.validate": false,
