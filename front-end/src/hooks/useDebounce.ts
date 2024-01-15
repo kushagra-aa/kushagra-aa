@@ -5,26 +5,33 @@ function useDebounce(
   dependencies: unknown[],
   timeout?: number,
 ) {
+  const [isInitialMount, setIsInitialMount] = useState(true);
   const [debounceTimeout, setDebounceTimeout] = useState<
     string | number | NodeJS.Timeout | null
   >(null);
+
   useEffect(() => {
-    if (!timeout) callback();
-    if (debounceTimeout) {
-      clearTimeout(debounceTimeout);
+    if (!isInitialMount) {
+      if (!timeout) {
+        callback(); // Call immediately if no timeout
+      } else {
+        if (debounceTimeout) clearTimeout(debounceTimeout); // Clear any existing timeout
+
+        const newDebounceTimeout = setTimeout(callback, timeout); // Set new timeout
+        setDebounceTimeout(newDebounceTimeout);
+      }
     }
 
-    const newDebounceTimeout = setTimeout(callback, timeout); // Set the debounce delay (in milliseconds)
+    setIsInitialMount(false); // Mark as not initial mount
 
-    setDebounceTimeout(newDebounceTimeout);
     // Cleanup the timeout when the component unmounts
     return () => {
       if (debounceTimeout) {
-        clearTimeout(debounceTimeout);
+        clearTimeout(debounceTimeout); // Cleanup on unmount
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [...dependencies]);
+  }, [...dependencies, timeout]);
 }
 
 export default useDebounce;

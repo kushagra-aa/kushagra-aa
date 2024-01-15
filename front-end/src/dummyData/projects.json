@@ -1,5 +1,19 @@
 [
   {
+    "name": "View Tube",
+    "slug": "view_tube",
+    "picture": "/thumbnails/view-tube-thumbnail.png",
+    "tags": "web, clone",
+    "tech": "nextjs, firebase, tailwindcss",
+    "description": "Enjoy a seamless video streaming experience with View Tube, a feature-rich (YouTube) clone.\n Built with 🤍 For You!\n<h5>Features</h5>\n<ul><li>Explore a diverse collection of videos through intuitive search and category browsing.</li>\n<li>Dive into your favorite channels and discover new content creators.</li>\n<li>Keep track of your watch history to revisit videos you've enjoyed.</li>\n<li>Immerse yourself in a personalized viewing experience with recommended videos tailored to your interests.</li></ul>",
+    "short_description": "Enjoy a seamless video streaming experience with View Tube, a feature-rich (YouTube) clone.",
+    "link": "https://view-tube-eight.vercel.app/",
+    "github": "https://github.com/kushagra-aa/view-tube/",
+    "started_at": "01-12-2023",
+    "completed_at": "25-12-2023",
+    "featured": true
+  },
+  {
     "name": "Wrap It",
     "slug": "wrap_it",
     "picture": "/thumbnails/wrap-it-thumbnail.png",
@@ -57,7 +71,7 @@
     "github": "https://github.com/kushagra-aa/toolbox/",
     "started_at": "22-07-2023",
     "completed_at": "06-08-2023",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Calclutter",

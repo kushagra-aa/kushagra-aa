@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { SkillCategoryType } from "@/models/Skills";
 import styles from "./page.module.css";
 import ListItemLoader from "@/components/loaders/ListItemLoader/ListItemLoader";
@@ -41,7 +42,9 @@ function Skills() {
             <h3>{category.name}</h3>
             <ul>
               {category.list.map((skill) => (
-                <li key={skill}>{skill}</li>
+                <li key={skill}>
+                  <Link href={`/portfolio?tech=${skill}`}>{skill}</Link>
+                </li>
               ))}
             </ul>
           </div>
