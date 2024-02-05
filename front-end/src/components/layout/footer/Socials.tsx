@@ -32,25 +32,12 @@ function Socials() {
             L<span>et&apos;s connect!</span>
           </p>
           <div className="socials">
-            <a href={socials.telegram.link} target="_blank" title="Telegram">
-              <Image
-                src={socials.telegram.icon}
-                alt="telegram"
-                fill
-                sizes="100%"
-              />
+            <a href={socials.mail.link} target="_blank" title="Mail">
+              <Image src={socials.mail.icon} alt="mail" fill sizes="100%" />
             </a>
-            <a href={socials.instagram.link} target="_blank" title="Instagram">
+            <a href={socials.linkedin.link} target="_blank" title="LinkedIn">
               <Image
-                src={socials.instagram.icon}
-                alt="telegram"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.behance.link} target="_blank" title="Behance">
-              <Image
-                src={socials.behance.icon}
+                src={socials.linkedin.icon}
                 alt="telegram"
                 fill
                 sizes="100%"
@@ -64,9 +51,20 @@ function Socials() {
                 sizes="100%"
               />
             </a>
-            <a href={socials.linkedin.link} target="_blank" title="LinkedIn">
+            <a href={socials.instagram.link} target="_blank" title="Instagram">
               <Image
-                src={socials.linkedin.icon}
+                src={socials.instagram.icon}
+                alt="telegram"
+                fill
+                sizes="100%"
+              />
+            </a>
+            <a href={socials.x.link} target="_blank" title="X">
+              <Image src={socials.x.icon} alt="X" fill sizes="100%" />
+            </a>
+            <a href={socials.telegram.link} target="_blank" title="Telegram">
+              <Image
+                src={socials.telegram.icon}
                 alt="telegram"
                 fill
                 sizes="100%"
@@ -79,9 +77,6 @@ function Socials() {
                 fill
                 sizes="100%"
               />
-            </a>
-            <a href={socials.x.link} target="_blank" title="X">
-              <Image src={socials.x.icon} alt="telegram" fill sizes="100%" />
             </a>
           </div>
         </>

@@ -143,32 +143,28 @@
   width: 100%;
   padding: 0.75rem 0.5rem;
   background-color: var(--global-color-light-2);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem 0;
 }
 
 .socials_container > h3 {
-  grid-column: 1/3;
   font-size: var(--font-size-heading-3);
   font-weight: 600;
   color: var(--global-color-dark-1);
 }
 
-.socials_container > h4 {
-  font-size: var(--font-size-sub-heading-1);
-  font-weight: 300;
-  color: var(--global-color-accent-1);
-}
-
-.socials_container > :is(.socials, .message) {
+.socials_container > :is(.socials) {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.socials_container > :is(.socials, .message) > a {
+.socials_container > :is(.socials) > a {
   --size: 3.5rem;
 
   position: relative;
@@ -177,7 +173,7 @@
   transition: transform 250ms ease;
 }
 
-.socials_container > :is(.socials, .message) > a:hover {
+.socials_container > :is(.socials) > a:hover {
   transform: translateY(-10px);
 }
 
@@ -219,7 +215,7 @@
     width: 100%;
   }
 
-  .socials_container > :is(.socials, .message) > a {
+  .socials_container > :is(.socials) > a {
     --size: 3rem;
   }
 }
