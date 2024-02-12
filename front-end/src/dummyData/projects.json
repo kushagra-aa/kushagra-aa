@@ -1,5 +1,19 @@
 [
   {
+    "name": "REMifyy",
+    "slug": "remifyy",
+    "picture": "/thumbnails/remifyy-thumbnail.png",
+    "tags": "vscode, extension",
+    "tech": "vscode, typescript",
+    "description": "Tired of manually converting CSS units? Say goodbye to pixel fatigue with REMifyy!\nThis handy extension takes the sting out of unit conversions, letting you focus on what matters: beautiful, pixel-perfect code. Simply select your pixel values, choose your target unit (rem or em), and voilà! REMifyy instantly transforms them, saving you precious time and mental energy.\nNo more juggling calculators or memorizing conversion rates. REMifyy does the heavy lifting for you, so you can keep your workflow flowing smoothly. Whether you're a seasoned pro or just starting out, REMifyy makes CSS unit conversion a breeze.\nGive your fingers a break and let REMifyy take charge of your unit conversions. Download it today and experience the joy of effortless CSS!\nBuilt with 🤍 For You!",
+    "short_description": "Select, Choose, and voilà! REMifyy ",
+    "link": "https://github.com/kushagra-aa/remifyy/",
+    "github": "https://github.com/kushagra-aa/remifyy/",
+    "started_at": "12-05-2022",
+    "completed_at": "12-05-2022",
+    "featured": true
+  },
+  {
     "name": "Alps Assignment",
     "slug": "alps_assignment",
     "picture": "/thumbnails/alps-assignment-thumbnail.png",
@@ -309,20 +323,6 @@
     "github": "https://github.com/kushagra-aa/red-one/",
     "started_at": "15-05-2022",
     "completed_at": "15-05-2022",
-    "featured": false
-  },
-  {
-    "name": "By Food",
-    "slug": "by_food",
-    "picture": "/thumbnails/by-food-thumbnail.png",
-    "tags": "web",
-    "tech": "django, python, css",
-    "description": "By Food is a Django Application, A Food Ordering Web Application \nBuilt with 🤍 For You!",
-    "short_description": "By Food is a Django Application, A Food Ordering Web Application.",
-    "link": "https://github.com/kushagra-aa/by-food/",
-    "github": "https://github.com/kushagra-aa/by-food/",
-    "started_at": "12-05-2022",
-    "completed_at": "12-05-2022",
     "featured": false
   },
   {
