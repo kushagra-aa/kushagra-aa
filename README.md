@@ -6,7 +6,7 @@
 
 - 🔭 I’m currently working on [Myself:)](https://github.com/kushagra-aa/kushagra-aa/)
 
-- ⚡ I’ve recently made [Wrap IT](https://github.com/kushagra-aa/wrap-it/)
+- ⚡ I’ve recently made [Wrap IT](https://github.com/kushagra-aa/wrap-it/) &  [REMifyy](https://github.com/kushagra-aa/remifyy/)
 
 - 🌱 I’m currently learning **NEXT.js**
 
