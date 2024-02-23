@@ -1,4 +1,16 @@
 {
+    "stackoverflow": {
+        "link": "https://stackoverflow.com/users/14001385/kushagra-aa",
+        "icon": "/Icon=stackoverflow.png"
+    },
+    "hashnode": {
+        "link": "https://kushagra-aa.hashnode.dev/",
+        "icon": "/Icon=hashnode.png"
+    },
+    "youtube": {
+        "link": "https://www.youtube.com/channel/UC0Lodn6tkhzf5ZEeD4fYaGg",
+        "icon": "/Icon=youtube.png"
+    },
     "telegram": {
         "link": "https://t.me/kushagraa_a",
         "icon": "/Icon=telegram.png"
@@ -33,6 +45,6 @@
     },
     "call": {
         "link": "tel:+918299446479",
-        "icon": "/Icon=call.png"
+        "icon": "/Icon=phone.png"
     }
 }

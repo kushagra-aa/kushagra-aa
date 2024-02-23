@@ -1,5 +1,61 @@
 [
   {
+    "name": "REMifyy",
+    "slug": "remifyy",
+    "picture": "/thumbnails/remifyy-thumbnail.png",
+    "tags": "vscode, extension",
+    "tech": "vscode, typescript",
+    "description": "Tired of manually converting CSS units? Say goodbye to pixel fatigue with REMifyy!\nThis handy extension takes the sting out of unit conversions, letting you focus on what matters: beautiful, pixel-perfect code. Simply select your pixel values, choose your target unit (rem or em), and voilà! REMifyy instantly transforms them, saving you precious time and mental energy.\nNo more juggling calculators or memorizing conversion rates. REMifyy does the heavy lifting for you, so you can keep your workflow flowing smoothly. Whether you're a seasoned pro or just starting out, REMifyy makes CSS unit conversion a breeze.\nGive your fingers a break and let REMifyy take charge of your unit conversions. Download it today and experience the joy of effortless CSS!\nBuilt with 🤍 For You!",
+    "short_description": "Select, Choose, and voilà! REMifyy ",
+    "link": "https://github.com/kushagra-aa/remifyy/",
+    "github": "https://github.com/kushagra-aa/remifyy/",
+    "started_at": "12-05-2022",
+    "completed_at": "12-05-2022",
+    "featured": true
+  },
+  {
+    "name": "Alps Assignment",
+    "slug": "alps_assignment",
+    "picture": "/thumbnails/alps-assignment-thumbnail.png",
+    "tags": "web, backend, zoho",
+    "tech": "reactjs, typescript, expressjs",
+    "description": "A Backend Heavy FullStack Project. Integrating JSON and ZohoCreator API\nBuilt with 🤍 For You!\nFeatures:\n<ul><li>Zoho Creator API Integration.</li><li>Keep track of Leave Requests.</li><li>Minimal UI.</li></ul>",
+    "short_description": "A Backend Heavy FullStack Project. Integrating JSON and ZohoCreator API",
+    "link": "https://github.com/kushagra-aa/alps_assignment/",
+    "github": "https://github.com/kushagra-aa/alps_assignment/",
+    "started_at": "05-02-2024",
+    "completed_at": "03-02-2024",
+    "featured": true
+  },
+  {
+    "name": "TToe",
+    "slug": "ttoe",
+    "picture": "/thumbnails/ttoe-thumbnail.png",
+    "tags": "web, game",
+    "tech": "angular, typeScript, scss",
+    "description": "Angular TicTacToe Game.\nBuilt with 🤍 For You!\nFeatures:\n<ul><li>2 Players game.</li><li>Minimal UI.</li></ul>",
+    "short_description": "Angular TicTacToe Game.",
+    "link": "https://github.com/kushagra-aa/ttoe/",
+    "github": "https://github.com/kushagra-aa/ttoe/",
+    "started_at": "24-01-2024",
+    "completed_at": "24-01-2024",
+    "featured": false
+  },
+  {
+    "name": "Project Aranya",
+    "slug": "project_aranya",
+    "picture": "/thumbnails/project-aranya-thumbnail.png",
+    "tags": "web, googlesheets",
+    "tech": "javaScript, css, html",
+    "description": "A Clean and minimal UI for a Real Estate Website.\nBuilt with 🤍 For You!\nFeatures:\n<ul><li>Contact Form API Integration.</li><li>Google Sheets API Integration, the contact form submits a copy of data to a google.</li><li>Keep track of Your Leads and Contact Requests.</li><li>Minimal UI.</li></ul>",
+    "short_description": "A Clean and minimal UI for a Real Estate Website.",
+    "link": "https://kushagra-aa.github.io/project_aranya/",
+    "github": "https://github.com/kushagra-aa/project_aranya/",
+    "started_at": "20-01-2024",
+    "completed_at": "22-01-2024",
+    "featured": false
+  },
+  {
     "name": "View Tube",
     "slug": "view_tube",
     "picture": "/thumbnails/view-tube-thumbnail.png",
@@ -267,20 +323,6 @@
     "github": "https://github.com/kushagra-aa/red-one/",
     "started_at": "15-05-2022",
     "completed_at": "15-05-2022",
-    "featured": false
-  },
-  {
-    "name": "By Food",
-    "slug": "by_food",
-    "picture": "/thumbnails/by-food-thumbnail.png",
-    "tags": "web",
-    "tech": "django, python, css",
-    "description": "By Food is a Django Application, A Food Ordering Web Application \nBuilt with 🤍 For You!",
-    "short_description": "By Food is a Django Application, A Food Ordering Web Application.",
-    "link": "https://github.com/kushagra-aa/by-food/",
-    "github": "https://github.com/kushagra-aa/by-food/",
-    "started_at": "12-05-2022",
-    "completed_at": "12-05-2022",
     "featured": false
   },
   {
