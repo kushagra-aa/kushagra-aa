@@ -107,7 +107,7 @@
         "location": "lucknow",
         "type": "fulltime",
         "start": "dec 2022",
-        "end": "present",
+        "end": "oct 2023",
         "skills": [
             "reactJS",
             "typeScript",
@@ -134,6 +134,61 @@
                     "Inventory Management",
                     "Customers Management"
                 ]
+            }
+        ]
+    },
+    {
+        "name": "Aerosync",
+        "website": "https://www.arosync.com/",
+        "role": "Freelance Software Developer",
+        "location": "remote",
+        "type": "freelance",
+        "start": "dec 2023",
+        "end": "may 2024",
+        "skills": [
+            "reactJS",
+            "typeScript",
+            "javaScript",
+            "nodeJs",
+            "expressJs",
+            "RESTful API",
+            "python",
+            "django"
+        ],
+        "projects": [
+            {
+                "name": "Bhanu Classes",
+                "points": [
+                    "ReactJS",
+                    "Custom Users",
+                    "Admin Authorization",
+                    "Multiple Applications"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Solvative",
+        "website": "https://solvative.com/",
+        "role": "Javascript Developer",
+        "location": "Remote",
+        "type": "fulltime",
+        "start": "may 2024",
+        "end": "present",
+        "skills": [
+            "reactJS",
+            "typeScript",
+            "javaScript",
+            "SCSS",
+            "ESLint",
+            "RESTful API",
+            "nodejs",
+            "jest"
+        ],
+        "projects": [
+            {
+                "name": "Client(Top Secret🤫)",
+                "points": []
             }
         ]
     }
