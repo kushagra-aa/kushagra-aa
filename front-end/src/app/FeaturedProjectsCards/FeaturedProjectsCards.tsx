@@ -38,7 +38,7 @@ function FeaturedProjectsCards() {
     <div className="projects_cards_container">
       <div className="projects_cards">
         {projects.map((project) => (
-          <div key={project.slug} className="project_card">
+          <div key={project.slug} className="featured_project_card">
             <FeaturedProjectCard project={project} />
           </div>
         ))}

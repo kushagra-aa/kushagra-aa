@@ -6,6 +6,7 @@
 .pnp.js
 
 **/yarn.lock
+**/pnpm-lock.yaml
 
 # testing
 */coverage
@@ -20,6 +21,7 @@
 # misc
 .DS_Store
 *.pem
+desktop.ini
 
 # debug
 npm-debug.log*
