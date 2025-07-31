@@ -92,6 +92,37 @@ main {
   background: var(--color-bg-1);
 }
 
+.loader-combined-icon {
+  position: relative;
+  height: 200px;
+  width: 200px;
+
+  & > svg {
+    position: absolute;
+    animation: spinner 3s cubic-bezier(0.25, 0.48, 0.91, 0.58) infinite;
+
+    & > #side > path {
+      fill: var(--global-color-accent-2);
+    }
+
+    & > #mid {
+      fill: var(--global-color-dark-1);
+    }
+
+    &:nth-of-type(2) {
+      animation-name: spinner-reverse;
+
+      & #side > path {
+        fill: var(--global-color-dark-2);
+      }
+
+      & #mid > path {
+        fill: var(--global-color-accent-1);
+      }
+    }
+  }
+}
+
 .loader > svg {
   animation: spinner 2s cubic-bezier(0.25, 0.48, 0.91, 0.58) infinite;
 
@@ -115,5 +146,19 @@ main {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }

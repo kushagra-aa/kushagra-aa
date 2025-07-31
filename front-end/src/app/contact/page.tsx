@@ -1,23 +1,15 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import { FormEvent, useRef, useState } from "react";
 import InputGroup from "@/components/UI/input/InputGroup";
-import styles from "./page.module.css";
 import Input from "@/components/UI/input/Input";
 import TextArea from "@/components/UI/input/TextArea";
 import Button from "@/components/UI/button/Button";
 import { SendIcon } from "@/components/Icons";
-import { Socials } from "@/models/Social";
 import { AddContactRequestType } from "@/types/addContactRequestType";
+import Socials from "@/components/Socials";
+import styles from "./page.module.css";
 
-const getSocialsAPI = async () => {
-  const response = await fetch(`/api/socials`).then((resp) => resp);
-  let socials: Socials | undefined = undefined;
-  if (response.status === 200)
-    socials = await response.json().then((d) => d.data);
-  return socials;
-};
 const makeContactRequest = async (body: AddContactRequestType) => {
   const response = await fetch("/api/contact", {
     method: "POST",
@@ -27,7 +19,6 @@ const makeContactRequest = async (body: AddContactRequestType) => {
 };
 
 export default function Contact() {
-  const [socials, setSocials] = useState<Socials>();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const contactFormRef = useRef<HTMLFormElement>(null!);
 
@@ -52,15 +43,6 @@ export default function Contact() {
     // else makeToast("error :>> ", data.error);
   };
 
-  const getSocials = async () => {
-    await getSocialsAPI().then((resp) => {
-      setSocials(resp);
-    });
-  };
-
-  useEffect(() => {
-    getSocials();
-  }, []);
   return (
     <div className={styles.main}>
       <div className={styles.head}>
@@ -143,87 +125,7 @@ export default function Contact() {
       </section>
       <div className={styles.socials_container}>
         <h3>Other means to Connect</h3>
-        {socials ? (
-          <div className={styles.socials}>
-            <a href={socials.mail.link} target="_blank" title="EMail">
-              <Image src={socials.mail.icon} alt="mail" fill sizes="100%" />
-            </a>
-            <a href={socials.call.link} target="_blank" title="Mobile No.">
-              <Image src={socials.call.icon} alt="call" fill sizes="100%" />
-            </a>
-            <a href={socials.linkedin.link} target="_blank" title="LinkedIn">
-              <Image
-                src={socials.linkedin.icon}
-                alt="linkedin"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a
-              href={socials.stackoverflow.link}
-              target="_blank"
-              title="StackOverflow"
-            >
-              <Image
-                src={socials.stackoverflow.icon}
-                alt="stackoverflow"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.hashnode.link} target="_blank" title="HashNode">
-              <Image
-                src={socials.hashnode.icon}
-                alt="hashnode"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.youtube.link} target="_blank" title="YouTube">
-              <Image
-                src={socials.youtube.icon}
-                alt="youtube"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.instagram.link} target="_blank" title="Instagram">
-              <Image
-                src={socials.instagram.icon}
-                alt="instagram"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.behance.link} target="_blank" title="Behance">
-              <Image
-                src={socials.behance.icon}
-                alt="behance"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.x.link} target="_blank" title="X">
-              <Image src={socials.x.icon} alt="x" fill sizes="100%" />
-            </a>
-            <a href={socials.telegram.link} target="_blank" title="Telegram">
-              <Image
-                src={socials.telegram.icon}
-                alt="telegram"
-                fill
-                sizes="100%"
-              />
-            </a>
-            <a href={socials.whatsapp.link} target="_blank" title="WhatsApp">
-              <Image
-                src={socials.whatsapp.icon}
-                alt="whatsapp"
-                fill
-                sizes="100%"
-              />
-            </a>
-          </div>
-        ) : null}
+        <Socials />
       </div>
     </div>
   );

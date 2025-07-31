@@ -1,0 +1,34 @@
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.socials > a {
+  --size: 3.5rem;
+
+  position: relative;
+  height: var(--size);
+  width: var(--size);
+  transition: transform 250ms ease;
+}
+
+.socials > a:hover {
+  transform: translateY(-10px);
+}
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .socials {
+    order: 2;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=600px) {
+  .socials > a {
+    --size: 3rem;
+  }
+}

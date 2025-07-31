@@ -65,7 +65,7 @@ function AboutSection() {
         I help people bring their ideas to life. Powered by Designs, Code and
         coffee, A lot of code and coffee.
       </p>
-      <div className={styles.about_ill} />
+      {/* <div className={styles.about_ill} /> */}
       <Image src="/HeartVector.png" alt="" fill sizes="100%" />
     </section>
   );
@@ -75,8 +75,8 @@ export default async function Home() {
   return (
     <div className={styles.main}>
       <HeroSection />
-      <ProjectsSection />
       <AboutSection />
+      <ProjectsSection />
     </div>
   );
 }
