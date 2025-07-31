@@ -28,7 +28,7 @@ function Footer() {
           strokeColor="accent-1"
           stoke="stroke-1"
         >
-          <Link href="/resume.pdf" target="_blank">
+          <Link href="/resume/fs.pdf" target="_blank">
             my resume
           </Link>
         </Button>

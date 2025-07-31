@@ -1,50 +1,50 @@
 {
     "stackoverflow": {
         "link": "https://stackoverflow.com/users/14001385/kushagra-aa",
-        "icon": "/Icon=stackoverflow.png"
+        "icon": "/Icon=stackoverflow.webp"
     },
     "hashnode": {
         "link": "https://kushagra-aa.hashnode.dev/",
-        "icon": "/Icon=hashnode.png"
+        "icon": "/Icon=hashnode.webp"
     },
     "youtube": {
-        "link": "https://www.youtube.com/channel/UC0Lodn6tkhzf5ZEeD4fYaGg",
-        "icon": "/Icon=youtube.png"
+        "link": "https://www.youtube.com/@kushagra-pyjs",
+        "icon": "/Icon=youtube.webp"
     },
     "telegram": {
         "link": "https://t.me/kushagraa_a",
-        "icon": "/Icon=telegram.png"
+        "icon": "/Icon=telegram.webp"
     },
     "instagram": {
         "link": "https://www.instagram.com/kushagra.pyjs/",
-        "icon": "/Icon=instagram.png"
+        "icon": "/Icon=instagram.webp"
     },
     "behance": {
         "link": "https://www.behance.net/kushagra-aa",
-        "icon": "/Icon=behance.png"
+        "icon": "/Icon=behance.webp"
     },
     "github": {
         "link": "https://github.com/kushagra-aa",
-        "icon": "/Icon=github.png"
+        "icon": "/Icon=github.webp"
     },
     "linkedin": {
         "link": "https://www.linkedin.com/in/kushagra-aa/",
-        "icon": "/Icon=linkedin.png"
+        "icon": "/Icon=linkedin.webp"
     },
     "whatsapp": {
         "link": "https://wa.me/918299446479",
-        "icon": "/Icon=whatsapp.png"
+        "icon": "/Icon=whatsapp.webp"
     },
     "x": {
-        "link": "https://twitter.com/kushagraa_aa",
-        "icon": "/Icon=x.png"
+        "link": "https://x.com/kushagra_pyjs",
+        "icon": "/Icon=x.webp"
     },
     "mail": {
         "link": "mailto:kushagraagnihotri24@gmail.com",
-        "icon": "/Icon=mail.png"
+        "icon": "/Icon=mail.webp"
     },
     "call": {
         "link": "tel:+918299446479",
-        "icon": "/Icon=phone.png"
+        "icon": "/Icon=phone.webp"
     }
 }

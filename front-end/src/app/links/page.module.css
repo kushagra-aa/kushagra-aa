@@ -1,0 +1,69 @@
+.main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.main > .head {
+  margin: 1rem auto;
+  width: fit-content;
+  text-align: center;
+}
+
+.main > .head > h1 {
+  color: var(--color-fg-1);
+  font-size: var(--font-size-display-2);
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+}
+
+.head > :is(.sub, .sub_sub) {
+  color: var(--color-fg-2);
+  font-size: var(--font-size-heading-4);
+  font-weight: 600;
+}
+
+.head > :is(.sub_sub) {
+  color: var(--color-fg-1);
+}
+
+.head > .sub_sub {
+  font-size: var(--font-size-heading-3);
+}
+
+.main > section > h2 {
+  font-size: var(--font-size-heading-2);
+}
+
+.head > .sub > span {
+  color: var(--global-color-accent-2);
+}
+
+.main > section {
+  padding: 1rem var(--main-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.main > section > .socials {
+  gap: 2rem;
+}
+
+/* Tablet Page */
+@media screen and (width <=900px) {
+  .main > section > .socials {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Page */
+@media screen and (width <=600px) {
+  .main > section > .socials {
+    gap: 1rem;
+  }
+}
