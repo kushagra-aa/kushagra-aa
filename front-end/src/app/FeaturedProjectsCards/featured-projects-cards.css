@@ -1,5 +1,5 @@
 .projects_cards_container {
-  grid-column: 2/3;
+  grid-column: 1/3;
   grid-row: 2/4;
   padding: 0.5rem;
   display: flex;
@@ -10,10 +10,10 @@
 .projects_cards_container > .projects_cards {
   position: relative;
   height: calc(var(--card-size) * 2);
-  width: calc(var(--card-size) * 2);
+  width: calc(var(--card-size) * 3);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   overflow: hidden;
   isolation: isolate;
 }
@@ -29,7 +29,7 @@
   position: relative;
   transition:
     width var(--transition-time) ease-in-out,
-    position var(--transition-time) ease-in-out;
+    transform var(--transition-time) ease-in-out;
   height: var(--card-size);
   width: var(--card-size);
   display: flex;
@@ -73,7 +73,7 @@
   position: absolute;
   top: 0;
   z-index: 10;
-  width: calc(var(--card-size) * 2);
+  width: calc(var(--card-size) * 3);
 }
 
 .featured_project_card:hover > .project_card_content > *:not(img) {
@@ -86,14 +86,30 @@
   left: 0;
   z-index: -1;
   height: var(--card-size);
-  width: calc(var(--card-size) * 2);
+  width: calc(var(--card-size) * 3);
   background-color: var(--global-color-dark-1-40);
 }
 
-.featured_project_card:nth-child(odd):hover > .project_card_content {
-  left: 0;
+/* Hover effect for Left Cards (1st and 4th) - expand to the right */
+.featured_project_card:nth-of-type(1):hover > .project_card_content,
+.featured_project_card:nth-of-type(4):hover > .project_card_content {
+  transform: translateX(
+    0
+  ); /* No translation needed - expand right from current position */
 }
 
-.featured_project_card:nth-child(even):hover > .project_card_content {
-  right: 0;
+/* Hover effect for Middle Cards (2nd and 5th) - expand in both directions (centered) */
+.featured_project_card:nth-of-type(2):hover > .project_card_content,
+.featured_project_card:nth-of-type(5):hover > .project_card_content {
+  transform: translateX(
+    calc(-1 * var(--card-size))
+  ); /* Move left by one card width to center the expansion */
+}
+
+/* Hover effect for Right Cards (3rd and 6th) - expand to the left */
+.featured_project_card:nth-of-type(3):hover > .project_card_content,
+.featured_project_card:nth-of-type(6):hover > .project_card_content {
+  transform: translateX(
+    calc(-2 * var(--card-size))
+  ); /* Move left by two card widths */
 }
