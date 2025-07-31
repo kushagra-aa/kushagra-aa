@@ -43,4 +43,8 @@ export const makeFullRedirectURL = (
   platform: string,
   endpoints: string[] = [],
 ) =>
-  `${URL_MAP[platform]}/${endpoints.map((e) => (e === PERSONAL_IDENTIFIER ? `${SOCIAL_USERNAME_MAP[platform]}` : `${e}`)).join("/")}`;
+  `${URL_MAP[platform]}/${endpoints
+    .map((e) =>
+      e === PERSONAL_IDENTIFIER ? `${SOCIAL_USERNAME_MAP[platform]}` : `${e}`,
+    )
+    .join("/")}`;

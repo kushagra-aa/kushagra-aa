@@ -1,7 +1,8 @@
 "use client";
+
+import { useEffect } from "react";
 import { LogoFull, LogoIcon } from "@/components/Logo";
 import { decodeUrlParams, makeFullRedirectURL } from "@/helpers/urlConfig";
-import { useEffect } from "react";
 
 type RedirectPageParamsType = {
   params: {

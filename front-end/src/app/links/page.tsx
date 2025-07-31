@@ -12,7 +12,7 @@ function LinksPage() {
         <h1>Contact Me</h1>
       </div>
       <section>
-        <h2>Let's Connect</h2>
+        <h2>Let&apos;s Connect</h2>
         <Socials className={styles.socials} />
       </section>
     </div>
