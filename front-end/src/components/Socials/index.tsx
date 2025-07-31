@@ -1,7 +1,8 @@
 "use client";
-import { Socials as SocialsType } from "@/models/Social";
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { Socials as SocialsType } from "@/models/Social";
 import styles from "./index.module.css";
 
 const getSocialsAPI = async () => {
