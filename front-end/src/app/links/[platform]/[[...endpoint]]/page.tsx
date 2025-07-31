@@ -43,11 +43,4 @@ function LinksRedirectPage({ params }: RedirectPageParamsType) {
   );
 }
 
-export async function generateMetadata({ params }: RedirectPageParamsType) {
-  return {
-    title: `Rerouting to ${params.platform}/${params.endpoint?.map((e) => e + "/")}`,
-    robots: "noindex, nofollow",
-  };
-}
-
 export default LinksRedirectPage;
