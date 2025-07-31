@@ -1,12 +1,26 @@
 [
   {
+    "name": "Dr. Text",
+    "slug": "dr_text",
+    "picture": "/thumbnails/dr-text-thumbnail.webp",
+    "tags": "vscode, extension",
+    "tech": "vscode, typescript, mocha",
+    "description": "This extension aims to augment the built-in text editing prowess of VS Code, tackling those little frustrations and saving you precious time.\nAs a fellow enthusiast of multi-cursor, I felt the need for more focused tools to streamline common tasks.\nMore features are on the way!\nDownload it today and experience the joy of effortless Text Editing!\nBuilt with 🤍 For You!",
+    "short_description": "Effortlessly Clean, Analyze, and Transform Your Text.",
+    "link": "https://marketplace.visualstudio.com/items?itemName=kushagra-aa.dr-text",
+    "github": "https://github.com/kushagra-aa/dr-text/",
+    "started_at": "06-06-2024",
+    "completed_at": "20-04-2025",
+    "featured": true
+  },
+  {
     "name": "REMifyy",
     "slug": "remifyy",
-    "picture": "/thumbnails/remifyy-thumbnail.png",
+    "picture": "/thumbnails/remifyy-thumbnail.webp",
     "tags": "vscode, extension",
     "tech": "vscode, typescript",
     "description": "Tired of manually converting CSS units? Say goodbye to pixel fatigue with REMifyy!\nThis handy extension takes the sting out of unit conversions, letting you focus on what matters: beautiful, pixel-perfect code. Simply select your pixel values, choose your target unit (rem or em), and voilà! REMifyy instantly transforms them, saving you precious time and mental energy.\nNo more juggling calculators or memorizing conversion rates. REMifyy does the heavy lifting for you, so you can keep your workflow flowing smoothly. Whether you're a seasoned pro or just starting out, REMifyy makes CSS unit conversion a breeze.\nGive your fingers a break and let REMifyy take charge of your unit conversions. Download it today and experience the joy of effortless CSS!\nBuilt with 🤍 For You!",
-    "short_description": "Select, Choose, and voilà! REMifyy ",
+    "short_description": "Select, Choose, and voilà! REMifyy",
     "link": "https://github.com/kushagra-aa/remifyy/",
     "github": "https://github.com/kushagra-aa/remifyy/",
     "started_at": "12-05-2022",
@@ -16,7 +30,7 @@
   {
     "name": "Alps Assignment",
     "slug": "alps_assignment",
-    "picture": "/thumbnails/alps-assignment-thumbnail.png",
+    "picture": "/thumbnails/alps-assignment-thumbnail.webp",
     "tags": "web, backend, zoho",
     "tech": "reactjs, typescript, expressjs",
     "description": "A Backend Heavy FullStack Project. Integrating JSON and ZohoCreator API\nBuilt with 🤍 For You!\nFeatures:\n<ul><li>Zoho Creator API Integration.</li><li>Keep track of Leave Requests.</li><li>Minimal UI.</li></ul>",
@@ -30,7 +44,7 @@
   {
     "name": "TToe",
     "slug": "ttoe",
-    "picture": "/thumbnails/ttoe-thumbnail.png",
+    "picture": "/thumbnails/ttoe-thumbnail.webp",
     "tags": "web, game",
     "tech": "angular, typeScript, scss",
     "description": "Angular TicTacToe Game.\nBuilt with 🤍 For You!\nFeatures:\n<ul><li>2 Players game.</li><li>Minimal UI.</li></ul>",
@@ -44,7 +58,7 @@
   {
     "name": "Project Aranya",
     "slug": "project_aranya",
-    "picture": "/thumbnails/project-aranya-thumbnail.png",
+    "picture": "/thumbnails/project-aranya-thumbnail.webp",
     "tags": "web, googlesheets",
     "tech": "javaScript, css, html",
     "description": "A Clean and minimal UI for a Real Estate Website.\nBuilt with 🤍 For You!\nFeatures:\n<ul><li>Contact Form API Integration.</li><li>Google Sheets API Integration, the contact form submits a copy of data to a google.</li><li>Keep track of Your Leads and Contact Requests.</li><li>Minimal UI.</li></ul>",
@@ -58,7 +72,7 @@
   {
     "name": "View Tube",
     "slug": "view_tube",
-    "picture": "/thumbnails/view-tube-thumbnail.png",
+    "picture": "/thumbnails/view-tube-thumbnail.webp",
     "tags": "web, clone",
     "tech": "nextjs, firebase, tailwindcss",
     "description": "Enjoy a seamless video streaming experience with View Tube, a feature-rich (YouTube) clone.\n Built with 🤍 For You!\n<h5>Features</h5>\n<ul><li>Explore a diverse collection of videos through intuitive search and category browsing.</li>\n<li>Dive into your favorite channels and discover new content creators.</li>\n<li>Keep track of your watch history to revisit videos you've enjoyed.</li>\n<li>Immerse yourself in a personalized viewing experience with recommended videos tailored to your interests.</li></ul>",
@@ -72,7 +86,7 @@
   {
     "name": "Wrap It",
     "slug": "wrap_it",
-    "picture": "/thumbnails/wrap-it-thumbnail.png",
+    "picture": "/thumbnails/wrap-it-thumbnail.webp",
     "tags": "vscode, extension",
     "tech": "vscode, typescript",
     "description": "A simple extension to do the frustrating task of wrapping tags. Easily wrap code in your chosen HTML tags for enhanced markup. \nTo use, select one or many chunks of code and press 'Alt + W' ('Option + W' for Mac). \n\nNo Wrap It: 4-5 steps. \nWrap IT: 2 simple steps. \n<ul><li>Quick Wrap: For quickly running your favorite Wrap It command.</li><li>Default Wrap: Wrap the selection(s) in the default tag.</li><li>Selected Wrap: Input the tag you want the Selection(s) in.</li><li>Fragment Wrap: Especially for us React Developers, Wrap the Selection(s) in a React Fragment(<></>).</li></ul> \nBuilt with 🤍 For You!",
@@ -86,7 +100,7 @@
   {
     "name": "Name The Game",
     "slug": "name_the_game",
-    "picture": "/thumbnails/name-the-game-thumbnail.png",
+    "picture": "/thumbnails/name-the-game-thumbnail.webp",
     "tags": "web",
     "tech": "nextjs, firebase, materialUI",
     "description": "Find games by describing them, and answer community's questions. \nThis project helps you find out the name of a game you cannot think of with the help of a community. Help and answer others also if you can. The purpose of this project is to help all the gaming audience out there to find out what is on their mind. \nBuilt with 🤍 For You!",
@@ -104,7 +118,7 @@
   {
     "name": "DupliKates",
     "slug": "duplikates",
-    "picture": "/thumbnails/duplikates-thumbnail.png",
+    "picture": "/thumbnails/duplikates-thumbnail.webp",
     "tags": "crossPlatform, mobile, clone",
     "tech": "flutter, dart",
     "description": "UI Clone of popular Applications \n<ul><li>BookMyShow</li><li>Facebook</li><li>Instagram</li><li>LinkedIn</li><li>Messenger</li><li>Snapchat</li><li>Telegram</li><li>WhatsApp</li><li>X</li></ul> \nIt is a Cross Platform App. \nMade with Flutter.  \nBuilt with 🤍 For You!",
@@ -118,7 +132,7 @@
   {
     "name": "Tool Box",
     "slug": "toolbox",
-    "picture": "/thumbnails/toolbox-thumbnail.png",
+    "picture": "/thumbnails/toolbox-thumbnail.webp",
     "tags": "crossPlatform, mobile, desktop",
     "tech": "flutter, dart",
     "description": "It is a Cross Platform Utilities App. \nMade with Flutter. \nCan be used on: <ul><li>iOS</li><li>Windows</li><li>MacOS</li><li>Linux</li><li>Web</li></ul> \nBuilt with 🤍 For You!",
@@ -132,7 +146,7 @@
   {
     "name": "Calclutter",
     "slug": "calcluttter",
-    "picture": "/thumbnails/calcluttter-thumbnail.png",
+    "picture": "/thumbnails/calcluttter-thumbnail.webp",
     "tags": "crossPlatform, mobile, clone",
     "tech": "flutter, dart",
     "description": "A Basic Arithmetic Calculator.\nMy First Flutter Project:)\nBuilt with 🤍 For You!",
@@ -146,7 +160,7 @@
   {
     "name": "Passwrdifi",
     "slug": "passwrdifi",
-    "picture": "/thumbnails/passwrdifi-thumbnail.png",
+    "picture": "/thumbnails/passwrdifi-thumbnail.webp",
     "tags": "web, api, utility",
     "tech": "svelte, tailwindCSS, vite",
     "description": "Generate Strong and Secure Passwords. \nQuickly generate random passwords that are strong and unique. \nCreate a password using your own string for a personalized touch. \nControl password Length \nBuilt with 🤍 For You!",
@@ -160,7 +174,7 @@
   {
     "name": "Wame QR",
     "slug": "wame_qr",
-    "picture": "/thumbnails/wame-qr-thumbnail.png",
+    "picture": "/thumbnails/wame-qr-thumbnail.webp",
     "tags": "web, utility",
     "tech": "astro, tailwindCSS, reactjs",
     "description": "It is a feature-rich tool designed to simplify the generation of QR codes for various purposes. \nBuilt with 🤍 For You!",
@@ -174,7 +188,7 @@
   {
     "name": "Quizzz",
     "slug": "quizzz",
-    "picture": "/thumbnails/quizzz-thumbnail.png",
+    "picture": "/thumbnails/quizzz-thumbnail.webp",
     "tags": "web",
     "tech": "reactjs, tailwindCSS, firebase",
     "description": "React JS Comprehension Quiz Platform \nBuilt with 🤍 For You!",
@@ -188,7 +202,7 @@
   {
     "name": "Hakker Man",
     "slug": "hakker_man",
-    "picture": "/thumbnails/hakker-man-thumbnail.png",
+    "picture": "/thumbnails/hakker-man-thumbnail.webp",
     "tags": "web",
     "tech": "reactjs, lit, vite",
     "description": "Lit Component used on react website \nBuilt with 🤍 For You!",
@@ -202,7 +216,7 @@
   {
     "name": "Better Tube",
     "slug": "better_tube",
-    "picture": "/thumbnails/better-tube-thumbnail.png",
+    "picture": "/thumbnails/better-tube-thumbnail.webp",
     "tags": "web",
     "tech": "svelte, css, vite",
     "description": "SevelteJS Website with scroll effect and css animations. \nMade with SvelteJS, JavaScript, CSS, ViteJS \nBuilt with 🤍 For You!",
@@ -216,7 +230,7 @@
   {
     "name": "APIs",
     "slug": "apis_by_k",
-    "picture": "/thumbnails/apis-thumbnail.png",
+    "picture": "/thumbnails/apis-thumbnail.webp",
     "tags": "api, backend",
     "tech": "django, python, djangorest",
     "description": " Rest APIs For Some Projects. \nBuilt with 🤍 For You!",
@@ -230,7 +244,7 @@
   {
     "name": "My Social",
     "slug": "my_social",
-    "picture": "/thumbnails/my-social-thumbnail.png",
+    "picture": "/thumbnails/my-social-thumbnail.webp",
     "tags": "web, api, oAuth",
     "tech": "nextjs, reactjs, javascript",
     "description": "My Social is clone of Facebook, this is a Social Application that is built on NextJS and uses Firebase for Database and Facebook Authentication. \nBuilt with 🤍 For You!",
@@ -244,7 +258,7 @@
   {
     "name": "Clock",
     "slug": "clock",
-    "picture": "/thumbnails/clock-thumbnail.png",
+    "picture": "/thumbnails/clock-thumbnail.webp",
     "tags": "desktopapp",
     "tech": "javaScript, css, tauri",
     "description": "A Clock Desktop Application made with Vite, HTML, CSS, JavaScript and Tauri.\nBuilt with 🤍 For You!",
@@ -258,7 +272,7 @@
   {
     "name": "Stop W",
     "slug": "stop_w",
-    "picture": "/thumbnails/stop-w-thumbnail.png",
+    "picture": "/thumbnails/stop-w-thumbnail.webp",
     "tags": "desktopapp",
     "tech": "javaScript, css, tauri",
     "description": "A Stopwatch Desktop Application made with HTML, CSS, JavaScript and Tauri.\nBuilt with 🤍 For You!",
@@ -272,7 +286,7 @@
   {
     "name": "I Tweet",
     "slug": "i_tweet",
-    "picture": "/thumbnails/i-tweet-thumbnail.png",
+    "picture": "/thumbnails/i-tweet-thumbnail.webp",
     "tags": "web, clone, oAuth",
     "tech": "nextjs, tailwindCSS, typeScript",
     "description": "I Tweet is a Twitter Clone. It has Twitter Login, comments, retweet and dark mode. It is made with NextJS, TypeScript, Sanity and TailwindCSS. \nBuilt with 🤍 For You! \nHosted On netlify",
@@ -286,7 +300,7 @@
   {
     "name": "Calc",
     "slug": "calc",
-    "picture": "/thumbnails/calc-thumbnail.png",
+    "picture": "/thumbnails/calc-thumbnail.webp",
     "tags": "desktopapp",
     "tech": "javaScript, css, tauri",
     "description": "A Calculator Desktop Application made with HTML, CSS, JavaScript and Tauri. \n Has Different Color Themes and Dark Mode Support \nClear Button, Backspace Button \nBuilt with 🤍 For You!",
@@ -300,7 +314,7 @@
   {
     "name": "By Food",
     "slug": "by-food",
-    "picture": "/thumbnails/by-food-thumbnail.png",
+    "picture": "/thumbnails/by-food-thumbnail.webp",
     "tags": "desktopapp",
     "tech": "javaScript, css, tauri",
     "description": "A Calculator Desktop Application made with HTML, CSS, JavaScript and Tauri. \n Has Different Color Themes and Dark Mode Support \nClear Button, Backspace Button \nBuilt with 🤍 For You!",
@@ -314,7 +328,7 @@
   {
     "name": "Red One",
     "slug": "red_one",
-    "picture": "/thumbnails/red-one-thumbnail.png",
+    "picture": "/thumbnails/red-one-thumbnail.webp",
     "tags": "web, theme, vscode",
     "tech": "vscode, json",
     "description": "It is \"Red\" Color Based Theme For Visual Studio Code\n This theme I've made during learning how to make themes for VSCode \nMade with 🤍 For You!",
@@ -328,7 +342,7 @@
   {
     "name": "MD Mine",
     "slug": "md_mine",
-    "picture": "/thumbnails/md-mine-thumbnail.png",
+    "picture": "/thumbnails/md-mine-thumbnail.webp",
     "tags": "desktopapp",
     "tech": "reactjs, vitejs, electronjs",
     "description": "A markdown editor, desktop Application using ElectronJS, ReactJS.\nBuilt with 🤍 For You!",
@@ -342,7 +356,7 @@
   {
     "name": "ChatsApp",
     "slug": "chatsapp",
-    "picture": "/thumbnails/chats-app-thumbnail.png",
+    "picture": "/thumbnails/chats-app-thumbnail.webp",
     "tags": "web, clone, oAuth",
     "tech": "nextjs, firebase, stylescomponents",
     "description": "ChatsApp is clone of WhatsApp, this is a Chating Application that is built on NextJS and uses Firebase for Database and Google Authentication.\nUsers can enter the mail address for there friends and start chatting\nOther user needs to be LoggedIn in other to chat\nBuilt with 🤍 For You!",
@@ -356,7 +370,7 @@
   {
     "name": "Influu",
     "slug": "influu",
-    "picture": "/thumbnails/influu-thumbnail.png",
+    "picture": "/thumbnails/influu-thumbnail.webp",
     "tags": "web, clone, oAuth",
     "tech": "nextjs, firebase, recoiljs",
     "description": "InFluu is clone of Instagram, this is a Simple Social Application that is built on NextJS and uses Firebase for Database and Google Authentication.\nBuilt with 🤍 For You!\nHosted On vercel",
@@ -370,7 +384,7 @@
   {
     "name": "Contacts Book",
     "slug": "contacts_book",
-    "picture": "/thumbnails/contacts-book-thumbnail.png",
+    "picture": "/thumbnails/contacts-book-thumbnail.webp",
     "tags": "web",
     "tech": "reactjs, redux, tailwindCSS",
     "description": "Basic Contact App Clone using React-Redux \nFunctionality to Add-Edit-Remove Contacts\n Contacts are stored in Local Storage \nBuilt with 🤍 For You!",
@@ -384,7 +398,7 @@
   {
     "name": "My Medium",
     "slug": "my_medium",
-    "picture": "/thumbnails/my-medium-thumbnail.png",
+    "picture": "/thumbnails/my-medium-thumbnail.webp",
     "tags": "web, clone, blog",
     "tech": "nextjs, tailwindCSS, sanityio",
     "description": "My Medium is clone of Medium, this is a blogging Web-Application that is built on NextJS and uses Sanity for content management\nHosted On vercel\nBuilt with 🤍 For You!",
@@ -398,7 +412,7 @@
   {
     "name": "Road Game",
     "slug": "road_game",
-    "picture": "/thumbnails/road-game-thumbnail.png",
+    "picture": "/thumbnails/road-game-thumbnail.webp",
     "tags": "web, game, 2d",
     "tech": "reactjs, javascript, css",
     "description": "Road Game is a 2D Web Game. Jump and Beware of obstacles! \nIt's also a PWA (can be installed on your device) \nHosted On netlify \nBuilt with 🤍 For You!",
@@ -412,7 +426,7 @@
   {
     "name": "Not Lorem",
     "slug": "not_lorem",
-    "picture": "/thumbnails/not-lorem-thumbnail.png",
+    "picture": "/thumbnails/not-lorem-thumbnail.webp",
     "tags": "vscode, extension, api",
     "tech": "vscode, typescript, axios",
     "description": "It is a Text Generator Extension For Visual Studio Code \nThis extension I've made during learning how to make extensions for VSCode \nBuilt with 🤍 For You!",
@@ -426,7 +440,7 @@
   {
     "name": "Code Key",
     "slug": "code_key",
-    "picture": "/thumbnails/code-key-thumbnail.png",
+    "picture": "/thumbnails/code-key-thumbnail.webp",
     "tags": "web, utility",
     "tech": "reactjs, javascript, css",
     "description": "Code Key is React Application.\nA visitor can view the keyCode for the key clicked by user.\nHosted On netlify\nBuilt with 🤍 For You!",
@@ -440,7 +454,7 @@
   {
     "name": "Book It",
     "slug": "book_it",
-    "picture": "/thumbnails/book-it-thumbnail.png",
+    "picture": "/thumbnails/book-it-thumbnail.webp",
     "tags": "web, api",
     "tech": "django, python, css",
     "description": "Book It is a Web Application a Room Rental System, where a user can register and login, and add their place for a paying guest to find(if they are seller). or a buyer/PG can find places near them \nA Redefined House Hunting Web Application \nBuilt with 🤍 For You!",
@@ -454,7 +468,7 @@
   {
     "name": "Know The Place",
     "slug": "know_the_place",
-    "picture": "/thumbnails/know-the-place-thumbnail.png",
+    "picture": "/thumbnails/know-the-place-thumbnail.webp",
     "tags": "web, maps, api",
     "tech": "reactjs, javaScript, materialUI",
     "description": "Know The Place a Travel Buddy Web Application \nA user can view Places near their location. \nRestaurants, Hotels and Attractions \nUses google maps api \nMaps api not working because of some billing issues \nHosted On Netlify \nBuilt with 🤍 For You!",
@@ -468,7 +482,7 @@
   {
     "name": "Widdflix",
     "slug": "widdflix",
-    "picture": "/thumbnails/widdflix-thumbnail.png",
+    "picture": "/thumbnails/widdflix-thumbnail.webp",
     "tags": "web, clone",
     "tech": "reactjs, javascript, firebase",
     "description": "Widd Flix is a Web Application, a Netflix - IMDB - TMDB Clone. \nA user can view details about their favorite Movies & TV Series. \nIt uses TMDB's API for the Movies data. \nHosted On firebase \nBuilt with 🤍 For You!",
@@ -482,7 +496,7 @@
   {
     "name": "Books",
     "slug": "books",
-    "picture": "/thumbnails/books-thumbnail.png",
+    "picture": "/thumbnails/books-thumbnail.webp",
     "tags": "web",
     "tech": "reactjs, javaScript, css",
     "description": "Book Store Website \nMade using ReactJS \nBuilt with 🤍 For You!",
@@ -496,7 +510,7 @@
   {
     "name": "Games",
     "slug": "games",
-    "picture": "/thumbnails/games-thumbnail.png",
+    "picture": "/thumbnails/games-thumbnail.webp",
     "tags": "clone, web",
     "tech": "nextjs, javaScript, css",
     "description": "A UI Clone of game.tv \nHosted On vercel \nMade using next.js \nBuilt with 🤍 For You!",
@@ -510,7 +524,7 @@
   {
     "name": "Video Games",
     "slug": "video_games",
-    "picture": "/thumbnails/video-games-thumbnail.png",
+    "picture": "/thumbnails/video-games-thumbnail.webp",
     "tags": "web, api, oAuth",
     "tech": "angular, typeScript, scss",
     "description": "Video Game is a Web Application. A user can view details about their favorite video games. It uses Rawg's API for the game data. \n It has Google OAuth. \nMade using Angular \nBuilt with 🤍 For You!",
@@ -524,7 +538,7 @@
   {
     "name": "TTToe",
     "slug": "tttoe",
-    "picture": "/thumbnails/tttoe-thumbnail.png",
+    "picture": "/thumbnails/tttoe-thumbnail.webp",
     "tags": "web, game, 2d",
     "tech": "javaScript, css, html",
     "description": "A Tic Tac Toe Game, which uses AI as your opponents Made using vanilla JavaScript \nThis game has different Game modes, and player types. \nBuilt with 🤍 For You!",
@@ -538,7 +552,7 @@
   {
     "name": "Stone Paper Scissors",
     "slug": "stone_paper_scissors",
-    "picture": "/thumbnails/stone-paper-scissors-thumbnail.png",
+    "picture": "/thumbnails/stone-paper-scissors-thumbnail.webp",
     "tags": "web, game, 2d",
     "tech": "javaScript, css, html",
     "description": "Rock Papper Scissors Game, Made using vanilla JavaScript \nBuilt with 🤍 For You!",
@@ -552,7 +566,7 @@
   {
     "name": "Birthday",
     "slug": "birthday",
-    "picture": "/thumbnails/birthday-thumbnail.png",
+    "picture": "/thumbnails/birthday-thumbnail.webp",
     "tags": "web",
     "tech": "javaScript, css, html",
     "description": "A Simple website that will wish you your birthday, once you enter your name",
@@ -566,7 +580,7 @@
   {
     "name": "Wakk It",
     "slug": "wakk_it",
-    "picture": "/thumbnails/wakk-it-thumbnail.png",
+    "picture": "/thumbnails/wakk-it-thumbnail.webp",
     "tags": "web, game, 2d",
     "tech": "javaScript, css, html",
     "description": "A Simple Wak-A-Mole Game, Made using vanilla JavaScript \nBuilt with 🤍 For You!",
@@ -580,7 +594,7 @@
   {
     "name": "Short URLs",
     "slug": "shorturls",
-    "picture": "/thumbnails/short-urls-thumbnail.png",
+    "picture": "/thumbnails/short-urls-thumbnail.webp",
     "tags": "web",
     "tech": "django, python, css",
     "description": "A Fast URL Shortener, \nIt shortens The given URL using UUID. \nMade using JavaScript and Django \nBuilt with 🤍 For You!",
@@ -594,7 +608,7 @@
   {
     "name": "En Dictionary",
     "slug": "en_dictionary",
-    "picture": "/thumbnails/en-dictionary-thumbnail.png",
+    "picture": "/thumbnails/en-dictionary-thumbnail.webp",
     "tags": "web, api",
     "tech": "django, python, css",
     "description": "A Fast Dictionary for English language, \nIt shows The Meaning,Synonym and Antonym of the searched word. \nshows nothing if no synonyms or antonyms found \nMade using PyDictonary and Django (of course) \nBuilt with 🤍 For You!",
@@ -608,7 +622,7 @@
   {
     "name": "Mult Lists",
     "slug": "mult_lists",
-    "picture": "/thumbnails/mult-lists-thumbnail.png",
+    "picture": "/thumbnails/mult-lists-thumbnail.webp",
     "tags": "web, scrapeing",
     "tech": "django, python, css",
     "description": "Fast craigslists web scrapper \nA much cooler Interface to Craigslists \nScrape away right here faster! \nBuilt with 🤍 For You!",
@@ -622,7 +636,7 @@
   {
     "name": "Do It",
     "slug": "do_it",
-    "picture": "/thumbnails/do-it-thumbnail.png",
+    "picture": "/thumbnails/do-it-thumbnail.webp",
     "tags": "web",
     "tech": "django, python, css",
     "description": "",
@@ -636,7 +650,7 @@
   {
     "name": "UBooks",
     "slug": "ubooks",
-    "picture": "/thumbnails/u-books-thumbnail.png",
+    "picture": "/thumbnails/u-books-thumbnail.webp",
     "tags": "web, api, oAuth",
     "tech": "reactjs, typescript, postCSS",
     "description": "Micro manage all of your team, keep an eye on every step of the process. \nA complex set of applications with different types of users, permissions, and items. \n<ul><li>Multiple User Types</li><li>Different Permissions</li><li>Various Warehouse</li><li>Interfaces for different teams of the organization</li><li>Form Validations and Data Tables</li></ul>\nSales-Operations managing application ecosystem.",
@@ -654,7 +668,7 @@
   {
     "name": "One Post",
     "slug": "one-post",
-    "picture": "/thumbnails/one-post-thumbnail.png",
+    "picture": "/thumbnails/one-post-thumbnail.webp",
     "tags": "oAuth, api, backend",
     "tech": "django, python, SQL",
     "description": "Manage all your socials at one platform. \nCreate, schedule and publish posts on your social media business pages simultaneously. Get real-time insights, so you can focus on other areas of your business. \nFeatures:<ul><li>OAuth from various social Media Platforms<ul><li>instagram</li><li>facebook</li><li>linkedin</li><li>twitter</li></ul></li><li>Post Different types of content</li><li>Schedule The posts</li></ul> \nAll in One Social Media Platform.",
@@ -672,7 +686,7 @@
   {
     "name": "Stock One",
     "slug": "stock-one",
-    "picture": "/thumbnails/stock-one-thumbnail.png",
+    "picture": "/thumbnails/stock-one-thumbnail.webp",
     "tags": "oAuth, api, backend",
     "tech": "django, python, SQL",
     "description": "one stop app for Managing your Teams, Sales, and Stock. \nDesigned to simplify your inventory/stock management and VIN allocation to create transparency among sales team. \nFeatures:<ul><li>Multiple User Types</li><li>Different Permissions</li><li>Various Warehouse and Showroom Locations</li></ul> \nstock-sales management app.",
