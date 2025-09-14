@@ -4,13 +4,13 @@
 
 ✨Developing to solve problems, FullStack and Beyond 💫
 
-- 🔭 I’m currently working on [Myself:)](https://github.com/kushagra-aa/kushagra-aa/)
+- 🔭 I’m currently working on [Hired To Be](https://github.com/kushagra-aa/hired-to-be/)
 
-- ⚡ I’ve recently made [Wrap IT](https://github.com/kushagra-aa/wrap-it/) &  [REMifyy](https://github.com/kushagra-aa/remifyy/)
+- ⚡ I’ve recently made [Wrap IT](https://github.com/kushagra-aa/wrap-it/) &  [Dr. Text](https://github.com/kushagra-aa/dr-text/)
 
-- 🌱 I’m currently learning **NEXT.js**
+- 🌱 I’m currently learning **React Native**
 
-- 💬 Ask me about **JS, TS, HTML, CSS, ReactJS, Dart, Flutter**
+- 💬 Let's Talk about **JS, TS, HTML, CSS, ReactJS, Express.js, Hono, Dart, Flutter**
   
 - 👉🏻Latest Projects
   - 👉 [Toolbox](https://github.com/kushagra-aa/toolbox/)
@@ -25,7 +25,7 @@
 ---
 
 <h3 align="left">Connect with me:</h3>
-<a href="https://twitter.com/kushagraa_aa" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@9.19.1/icons/x.svg" alt="kushagraa_aa" height="30" width="40"/></a>
+<a href="https://twitter.com/kushagra_pyjs" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@9.19.1/icons/x.svg" alt="kushagraa_aa" height="30" width="40"/></a>
 <a href="https://linkedin.com/in/kushagra-aa" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@9.19.1/icons/linkedin.svg" alt="kushagra-agnihotri-6903311ba" height="30" width="40" /></a>
 <a href="https://stackoverflow.com/users/14001385/kushagra-aa" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@9.19.1/icons/stackoverflow.svg" alt="kushagra-aa" height="30" width="40" /></a>
 <a href="https://instagram.com/kushagra.pyjs" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@9.19.1/icons/instagram.svg" alt="kushagra-aa" height="30" width="40" /></a>
