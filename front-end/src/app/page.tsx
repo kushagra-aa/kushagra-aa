@@ -18,7 +18,7 @@ function HeroSection() {
         backgroundColor="accent-1"
         foregroundColor="dark-2"
       >
-        <Link className={styles.hero_cta1} href="/portfolio">
+        <Link className={styles.hero_cta1} href="/#projects">
           Checkout my work <ThunderboltIcon />
         </Link>
       </Button>
@@ -73,7 +73,7 @@ function AboutSection() {
 
 export default async function Home() {
   return (
-    <div className={styles.main}>
+    <div className={`${styles.main} main`}>
       <HeroSection />
       <AboutSection />
       <ProjectsSection />

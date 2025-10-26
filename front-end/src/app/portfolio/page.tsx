@@ -1,16 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Button from "@/components/UI/button/Button";
 import DropDown from "@/components/UI/dropDown/DropDown";
 import Search from "@/components/UI/search/Search";
 import ProjectCard from "@/components/postCard/ProjectCard";
-import ProjectType from "@/models/Project";
-import Button from "@/components/UI/button/Button";
-import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
-import makeURLParams from "@/helpers/makeURLParams";
-import makeOptions from "@/helpers/makeOptions";
-import useFilters from "@/hooks/useFilters";
 import ProjectCardLoader from "@/components/postCard/ProjectCardLoader";
+import makeOptions from "@/helpers/makeOptions";
+import makeURLParams from "@/helpers/makeURLParams";
+import useFilters from "@/hooks/useFilters";
+import ProjectType from "@/models/Project";
+import { PortfolioFiltersType } from "@/types/portfolioFiltersType";
 import styles from "./page.module.css";
 
 const getProjectsAPI = async (params: PortfolioFiltersType) => {
@@ -67,12 +67,6 @@ const defaultFiltersValue: PortfolioFiltersType = {
 
 export default function Portfolio() {
   const [techOptions, setTechOptions] = useState<
-    {
-      value: string;
-      label: string;
-    }[]
-  >([]);
-  const [tagOptions, setTagOptions] = useState<
     {
       value: string;
       label: string;
@@ -145,12 +139,6 @@ export default function Portfolio() {
     if (value === "") changeFilters.delete("tech");
     else changeFilters.set("tech", value);
   };
-  const handleTagChange = (value: string): void => {
-    setProjects([]);
-    setTotal(0);
-    if (value === "") changeFilters.delete("tags");
-    else changeFilters.set("tags", value);
-  };
   const onSearch = (value?: string): void => {
     setProjects([]);
     setTotal(0);
@@ -161,7 +149,6 @@ export default function Portfolio() {
   const getTechTags = async () => {
     await getTechTagsAPI().then((resp) => {
       setTechOptions(makeOptions(resp.tech));
-      setTagOptions(makeOptions(resp.tags));
     });
   };
 
@@ -201,20 +188,6 @@ export default function Portfolio() {
             backgroundColor="light-2"
             value={filters.tech}
             onChange={handleTechChange}
-            debounceTimeout={1000}
-            search
-            autoSearch
-            multiple
-          />
-          <DropDown
-            id="tag"
-            name="tag"
-            placeholder="Tag"
-            className={styles.filter_dropdown}
-            options={tagOptions}
-            backgroundColor="light-2"
-            value={filters.tags}
-            onChange={handleTagChange}
             debounceTimeout={1000}
             search
             autoSearch

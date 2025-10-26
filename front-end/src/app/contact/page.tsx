@@ -1,47 +1,17 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
-import InputGroup from "@/components/UI/input/InputGroup";
-import Input from "@/components/UI/input/Input";
-import TextArea from "@/components/UI/input/TextArea";
-import Button from "@/components/UI/button/Button";
+import Image from "next/image";
+import { useRef } from "react";
 import { SendIcon } from "@/components/Icons";
-import { AddContactRequestType } from "@/types/addContactRequestType";
 import Socials from "@/components/Socials";
+import Button from "@/components/UI/button/Button";
+import Input from "@/components/UI/input/Input";
+import InputGroup from "@/components/UI/input/InputGroup";
+import TextArea from "@/components/UI/input/TextArea";
 import styles from "./page.module.css";
 
-const makeContactRequest = async (body: AddContactRequestType) => {
-  const response = await fetch("/api/contact", {
-    method: "POST",
-    body: JSON.stringify(body),
-  });
-  return response;
-};
-
 export default function Contact() {
-  const [isFormLoading, setIsFormLoading] = useState(false);
   const contactFormRef = useRef<HTMLFormElement>(null!);
-
-  const handleContactFromSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (isFormLoading) return;
-    setIsFormLoading(true);
-    const contactRequestBody: AddContactRequestType = {
-      name: contactFormRef.current.full_name.value,
-      email: contactFormRef.current.email.value,
-      subject: contactFormRef.current.subject.value,
-      message: contactFormRef.current.message.value,
-    };
-    // TODO: Add Toasts for the events
-    const resp = await makeContactRequest(contactRequestBody).then((r) => {
-      setIsFormLoading(false);
-      return r;
-    });
-    // eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-unused-vars
-    const data = await resp.json();
-    // if (resp.status === 200) makeToast('success', data.message)
-    // else makeToast("error :>> ", data.error);
-  };
 
   return (
     <div className={styles.main}>
@@ -53,9 +23,11 @@ export default function Contact() {
       </div>
       <section>
         <form
-          className={isFormLoading ? styles.contact_form_loading : ""}
+          className=""
           ref={contactFormRef}
-          onSubmit={handleContactFromSubmit}
+          action="https://formspree.io/f/xgvpejga"
+          method="POST"
+          // onSubmit={handleContactFromSubmit}
         >
           <p>
             Fill up the <span>Details</span> and send a <span>Message</span>
@@ -122,6 +94,11 @@ export default function Contact() {
             </button>
           </Button>
         </form>
+        <div className={styles.contact_ill}>
+          <div>
+            <Image src="/contact.png" alt="contact" fill sizes="100%" />
+          </div>
+        </div>
       </section>
       <div className={styles.socials_container}>
         <h3>Other means to Connect</h3>

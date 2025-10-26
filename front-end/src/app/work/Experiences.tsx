@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import ExperiencesLoader from "@/components/loaders/ExperiencesLoader/ExperiencesLoader";
 import { ExperienceType } from "@/models/Experience";
 import styles from "./page.module.css";
-import ExperiencesLoader from "@/components/loaders/ExperiencesLoader/ExperiencesLoader";
 
 const getExperiencesAPI = async () => {
   const response = await fetch(`/api/experiences`).then((resp) => resp);
@@ -67,30 +68,32 @@ function Experiences() {
             </div>
             <div className={styles.experience_projects_skills_outer}>
               <div className={styles.experience_projects_skills}>
-                <div className={styles.experience_projects}>
-                  <h5>projects</h5>
-                  <ul>
-                    {experience.projects.map((project) => (
-                      <li
-                        className={styles.experience_project}
-                        key={project.name}
-                      >
-                        {project.link ? (
-                          <Link href={project.link} target="_blank">
-                            {project.name}
-                          </Link>
-                        ) : (
-                          <p>{project.name}</p>
-                        )}
-                        <ul className={styles.experience_project_points}>
-                          {project.points.map((point) => (
-                            <li key={point}>{point}</li>
-                          ))}
-                        </ul>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {experience.projects && experience.projects.length > 0 && (
+                  <div className={styles.experience_projects}>
+                    <h5>projects</h5>
+                    <ul>
+                      {experience.projects.map((project) => (
+                        <li
+                          className={styles.experience_project}
+                          key={project.name}
+                        >
+                          {project.link ? (
+                            <Link href={project.link} target="_blank">
+                              {project.name}
+                            </Link>
+                          ) : (
+                            <p>{project.name}</p>
+                          )}
+                          <ul className={styles.experience_project_points}>
+                            {project.points.map((point) => (
+                              <li key={point}>{point}</li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className={styles.experience_skills}>
                   <h5>skills</h5>
                   <ul>
@@ -104,6 +107,11 @@ function Experiences() {
           </div>
         ))
       )}
+      <div className={styles.work_ill}>
+        <div>
+          <Image src="/work.png" alt="work" fill sizes="100%" />
+        </div>
+      </div>
     </div>
   );
 }

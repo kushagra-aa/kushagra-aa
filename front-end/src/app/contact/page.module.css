@@ -31,8 +31,37 @@
   justify-content: flex-start;
 }
 
+.contact_ill {
+  width: 40%;
+  display: grid;
+  place-items: center;
+}
+
+.contact_ill > div {
+  --height: 300px;
+  --width: 250px;
+
+  position: relative;
+  height: var(--height);
+  width: var(--width);
+  overflow: hidden;
+  filter: saturate(70%);
+  animation: floating 6s infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(-0.5rem);
+  }
+
+  50% {
+    transform: translateY(0.5rem);
+  }
+}
+
 .main > section > form {
-  --input-width: 70%;
+  --input-width: 90%;
 
   width: 60%;
   display: flex;
@@ -158,6 +187,11 @@
 
 /* Tablet Page */
 @media screen and (width <=900px) {
+  .contact_ill > div {
+    --width: 150px;
+    --height: 200px;
+  }
+
   .main > section > form {
     --input-width: 100%;
 
@@ -180,6 +214,10 @@
 
 /* Mobile Page */
 @media screen and (width <=600px) {
+  .contact_ill {
+    display: none;
+  }
+
   .main > section > form {
     --input-width: 100%;
 

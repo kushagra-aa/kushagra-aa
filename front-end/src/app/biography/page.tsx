@@ -17,7 +17,7 @@ export default function Biography() {
             Once upon a time, there was a
             <span className={styles.story_highlight}> boy </span>, a very
             <span className={styles.story_highlight}> curious </span>
-            one. He saw a piece of tech that was used to
+            one. He saw a piece of tech that was used to{" "}
             <span className={styles.story_highlight}>
               play games, watch movies,{" "}
             </span>
@@ -49,7 +49,7 @@ export default function Biography() {
             and I love that. Now I am trying to branch out and learn
             <span className={styles.story_highlight}> Mobile Applications</span>
             . That&apos;s why at the moment I&apos;m focusing on learning
-            <span className={styles.story_highlight}> Flutter </span>.
+            <span className={styles.story_highlight}> React Native </span>.
           </p>
         </div>
         <div className={styles.story_ill}>

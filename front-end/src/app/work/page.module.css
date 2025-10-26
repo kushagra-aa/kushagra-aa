@@ -96,6 +96,8 @@
 .exp > .experiences_container {
   --detials-width: 35%;
 
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -103,7 +105,6 @@
 
 .experiences_container > .experience_container {
   position: relative;
-  isolation: isolate;
   display: flex;
   width: 100%;
 }
@@ -142,13 +143,47 @@
 
 .experience_container > .experience_projects_skills_outer {
   position: relative;
-  isolation: isolate;
   width: calc(100% - var(--detials-width));
+}
+
+.work_ill {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  display: grid;
+  place-items: center;
+}
+
+.work_ill > div {
+  --height: 350px;
+  --width: 300px;
+
+  position: relative;
+  height: var(--height);
+  width: var(--width);
+  overflow: hidden;
+  filter: saturate(70%);
+  animation: floating 6s infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(-0.5rem);
+  }
+
+  50% {
+    transform: translateY(0.5rem);
+  }
 }
 
 .experience_projects_skills_outer > .experience_projects_skills {
   position: absolute;
   left: -25%;
+  z-index: 2;
   display: flex;
   opacity: 0;
   width: 100%;
@@ -219,19 +254,22 @@
 }
 
 .skill_categories_container {
-  width: 50%;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1rem 2rem;
+  --skill-category-container-width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem 2rem;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .skill_category_loader_container {
   --color-bg: var(--color-bg-2-rgb);
 
   animation: skeletal-pulsing var(--global-skeletal-pulsing-duration);
-  width: 46%;
+  width: var(--skill-category-container-width);
 }
 
 .skill_category_loader_container > li {
@@ -242,7 +280,11 @@
 }
 
 .skill_category_container {
-  width: 46%;
+  width: var(--skill-category-container-width);
+  height: 100%;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg-2);
+  border-radius: 15px;
 }
 
 .skill_category_container > h3 {
@@ -266,17 +308,14 @@
 
 /* Small Laptop Page */
 @media screen and (width <=1250px) {
+  .work_ill > div {
+    --height: 300px;
+    --width: 250px;
+  }
+
   .experience_skills > ul {
     display: flex;
     flex-direction: column;
-  }
-
-  .skill_categories_container {
-    width: 100%;
-  }
-
-  .skill_category_container {
-    width: 50%;
   }
 }
 
@@ -297,6 +336,10 @@
     width: fit-content;
   }
 
+  .work_ill {
+    display: none;
+  }
+
   .experiences_container > .experience_container {
     --detials-width: 100%;
   }
@@ -306,11 +349,19 @@
     > .experience_projects_skills {
     opacity: 0;
   }
+
+  .skill_categories_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Mobile Page */
 @media screen and (width <=600px) {
   .skill_category_container {
     width: 100%;
+  }
+
+  .skill_categories_container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

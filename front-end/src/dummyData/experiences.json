@@ -2,34 +2,18 @@
     {
         "name": "trendAI Intelligence Technology",
         "website": "https://www.linkedin.com/company/trendai-intelligence/about/",
-        "role": "UI/UX Intern",
+        "role": "UI Developer Intern",
         "location": "online",
         "type": "internship",
         "start": "may 2021",
-        "end": "aug 2021",
+        "end": "nov 2021",
         "skills": [
             "figma",
-            "adobe illustrator",
-            "adobe photoshop",
-            "adobe premierPro"
+            "CSS",
+            "javaScript",
+            "HTML"
         ],
-        "projects": [
-            {
-                "name": "Texzine",
-                "points": [
-                    "UI/UX Designing",
-                    "Wordpress Development",
-                    "Usage Testing"
-                ]
-            },
-            {
-                "name": "Trend AI",
-                "points": [
-                    "Logo Design",
-                    "Video Editing"
-                ]
-            }
-        ]
+        "projects": []
     },
     {
         "name": "Tamasha.live",
@@ -142,7 +126,7 @@
         "website": "https://www.arosync.com/",
         "role": "Freelance Software Developer",
         "location": "remote",
-        "type": "freelance",
+        "type": "contract",
         "start": "dec 2023",
         "end": "may 2024",
         "skills": [
@@ -151,6 +135,7 @@
             "javaScript",
             "nodeJs",
             "expressJs",
+            "nestJS",
             "RESTful API",
             "python",
             "django"
@@ -163,6 +148,15 @@
                     "Custom Users",
                     "Admin Authorization",
                     "Multiple Applications"
+                ]
+            },
+            {
+                "name": "Absolute Vietnam",
+                "points": [
+                    "NestJS",
+                    "Client Facing",
+                    "EMail Service",
+                    "Auth"
                 ]
             }
         ]
@@ -187,8 +181,22 @@
         ],
         "projects": [
             {
-                "name": "Client(Top Secret🤫)",
-                "points": []
+                "name": "Samsung US Ecommerce",
+                "points": [
+                    "Ecommerce App",
+                    "NextJS",
+                    "TypeScript",
+                    "Unit Testing"
+                ]
+            },
+            {
+                "name": "SparkPlug",
+                "points": [
+                    "IOT App",
+                    "NextJS",
+                    "TypeScript",
+                    "CMSs Integration"
+                ]
             }
         ]
     }

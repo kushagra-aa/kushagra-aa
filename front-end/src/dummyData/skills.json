@@ -9,60 +9,91 @@
         ]
     },
     {
+        "name": "backend",
+        "list": [
+            "Node.js",
+            "ExpressJS",
+            "Hono",
+            "NestJS",
+            "Django",
+            "Firebase"
+        ]
+    },
+    {
         "name": "web development",
         "list": [
             "TypeScript",
             "ReactJS",
+            "NextJS",
             "HTML",
             "CSS",
-            "SCSS",
-            "PostCSS",
-            "NextJS"
-        ]
-    },
-    {
-        "name": "backend",
-        "list": [
-            "ExpressJS",
-            "Node.js",
-            "Django",
-            "Firebase",
-            "SanityIO"
-        ]
-    },
-    {
-        "name": "database",
-        "list": [
-            "MySQL",
-            "MongoDB",
-            "SQLlite"
+            "PostCSS"
         ]
     },
     {
         "name": "tools",
         "list": [
+            "Zustand",
+            "Zod",
+            "ShadCN/UI",
+            "Tailwind CSS",
+            "TanStack",
+            "ViteJS",
+            "Redux",
+            "MUI"
+        ]
+    },
+    {
+        "name": "others",
+        "list": [
             "Git",
             "VSCode",
-            "Figma",
             "PostMan",
+            "Figma",
+            "Cloudflare",
             "Vercel",
-            "Tailwind CSS",
-            "Bootstrap",
-            "Zustand",
-            "Redux",
-            "MUI",
-            "ViteJS",
+            "Pnpm WorkSpaces",
             "Yarn"
+        ]
+    },
+    {
+        "name": "database",
+        "list": [
+            "Supabase",
+            "Drizzle",
+            "PostgreSQL",
+            "MySQL",
+            "Prisma",
+            "MongoDB",
+            "SQLlite"
+        ]
+    },
+    {
+        "name": "concepts",
+        "list": [
+            "RESTful APIs",
+            "GraphQL",
+            "OAuth",
+            "JWT",
+            "Webhooks",
+            "Authentication",
+            "Authorization",
+            "OOPs",
+            "Mono Repos",
+            "Containerization",
+            "Testing"
         ]
     },
     {
         "name": "learning",
         "list": [
-            "Angular",
-            "Flutter",
+            "Docker",
+            "Kubernetes",
+            "CI/CD",
+            "React Native",
+            "Expo",
             "Android Studio",
-            "Astro",
-            "Svelte"
+            "Flutter"
         ]
     }
 ]

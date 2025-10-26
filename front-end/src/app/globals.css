@@ -13,6 +13,14 @@
     big: 1440px 
     */
 
+html,
+body,
+main,
+.main,
+section {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   width: 100vw;

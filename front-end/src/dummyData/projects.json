@@ -1,5 +1,19 @@
 [
   {
+    "name": "Hired To Be",
+    "slug": "hired_to_be",
+    "picture": "/thumbnails/base-thumbnail.webp",
+    "tags": "monorepo, web, api",
+    "tech": "hono, react, typescript",
+    "description": "<b>HiredToBe</b> - It is WIP. \nA job hunt tracker that helps you stay organized, motivated, and one step closer to your next offer. \nBuilt with 🤍 For You!",
+    "short_description": "A job hunt tracker.",
+    "link": "https://hiredtobe.kushagra-pyjs.workers.dev/",
+    "github": "https://github.com/kushagra-aa/hired-to-be/",
+    "started_at": "12-09-2025",
+    "completed_at": "01-11-2025",
+    "featured": true
+  },
+  {
     "name": "Dr. Text",
     "slug": "dr_text",
     "picture": "/thumbnails/dr-text-thumbnail.webp",
@@ -39,7 +53,7 @@
     "github": "https://github.com/kushagra-aa/alps_assignment/",
     "started_at": "05-02-2024",
     "completed_at": "03-02-2024",
-    "featured": true
+    "featured": false
   },
   {
     "name": "TToe",
@@ -81,7 +95,7 @@
     "github": "https://github.com/kushagra-aa/view-tube/",
     "started_at": "01-12-2023",
     "completed_at": "25-12-2023",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Wrap It",
@@ -169,7 +183,7 @@
     "github": "https://github.com/kushagra-aa/passwrdifi/",
     "started_at": "07-08-2022",
     "completed_at": "06-07-2023",
-    "featured": false
+    "featured": true
   },
   {
     "name": "Wame QR",
