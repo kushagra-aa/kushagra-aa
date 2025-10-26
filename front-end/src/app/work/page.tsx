@@ -5,6 +5,7 @@ import LinkRow from "@/components/linksRow/LinkRow";
 import { FolderOpenIcon, IdCardIcon, SendIcon } from "@/components/Icons";
 import Experiences from "./Experiences";
 import Skills from "./Skills";
+import Certifications from "./Certifications";
 
 export default function Work() {
   return (
@@ -43,6 +44,11 @@ export default function Work() {
         <p className={styles.sub_2}>History!</p>
         <h2>My Experiences</h2>
         <Experiences />
+      </section>
+      <section className={styles.exp}>
+        <p className={styles.sub_2}>Powers I possess!</p>
+        <h2>Certifications</h2>
+        <Certifications />
       </section>
       <LinksContainer>
         <LinkRow
