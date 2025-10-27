@@ -13,7 +13,7 @@
 - 💬 Let's Talk about **JS, TS, HTML, CSS, ReactJS, Express.js, Hono, Dart, Flutter**
   
 - 👉🏻Latest Projects
-  - 👉 [Toolbox](https://github.com/kushagra-aa/toolbox/)
+  - 👉 [The Ship Quest](https://github.com/kushagra-aa/the-ship-quest/)
   - 👉 [Passwrdifi](https://github.com/kushagra-aa/passwrdifi/)
   - 👉 [WaMe QR](https://github.com/kushagra-aa/wame-qr/)
   - 👉 [Road Game](https://github.com/kushagra-aa/road-game/)
