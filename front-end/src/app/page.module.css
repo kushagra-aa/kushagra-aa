@@ -226,10 +226,6 @@
     flex-direction: column;
   }
 
-  .projects_container > div {
-    display: none;
-  }
-
   /* About Section */
   .about {
     display: flex;
@@ -259,7 +255,7 @@
 
   /* Projects Section */
   .projects > .projects_container {
-    --card-size: 10rem;
+    --card-size: 12rem;
 
     display: flex;
     flex-direction: column;
@@ -269,10 +265,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .projects_container > div {
-    display: none;
   }
 
   .projects_cards_container > .projects_cards {

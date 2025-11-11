@@ -17,8 +17,6 @@ const getFeaturedProjectsAPI = async () => {
     projects = data.data as unknown as ProjectType[];
   }
 
-  console.log("projects", projects);
-
   return {
     projects,
   };
