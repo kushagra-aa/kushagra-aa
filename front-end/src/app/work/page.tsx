@@ -63,7 +63,7 @@ export default function Work() {
           icon={<IdCardIcon />}
           subTitle="Are you HR?"
           title="A Compressed Resume for you"
-          link="/resume/fs.pdf"
+          link="/resume/full.pdf"
           target="_blank"
         />
         <LinkRow
