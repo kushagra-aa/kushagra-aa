@@ -2,15 +2,29 @@
   {
     "name": "Hired To Be",
     "slug": "hired_to_be",
-    "picture": "/thumbnails/base-thumbnail.webp",
+    "picture": "/thumbnails/hired-to-be-thumbnail.webp",
     "tags": "monorepo, web, api",
-    "tech": "hono, react, typescript",
+    "tech": "hono, reactjs, typescript",
     "description": "<b>HiredToBe</b> - It is WIP. \nA job hunt tracker that helps you stay organized, motivated, and one step closer to your next offer. \nBuilt with 🤍 For You!",
     "short_description": "A job hunt tracker.",
     "link": "https://hiredtobe.kushagra-pyjs.workers.dev/",
     "github": "https://github.com/kushagra-aa/hired-to-be/",
     "started_at": "12-09-2025",
     "completed_at": "01-11-2025",
+    "featured": true
+  },
+  {
+    "name": "PennyWise",
+    "slug": "pennywise",
+    "picture": "/thumbnails/pennywise-thumbnail.webp",
+    "tags": "mobile, web, local",
+    "tech": "solidjs, tailwind,typescript",
+    "description": "<b>Pennywise</b> - Managing expenses has never been smoother. \nTrack Expenses, Incomes, EMIs, Bills, and alot more Everything Fully local, fully offline. \nMobile First Local PWA, making it safer. \nBuilt with 🤍 For You!",
+    "short_description": "Manage expenses like never before.",
+    "link": "https://pennywise-k.netlify.app/",
+    "github": "https://github.com/kushagra-aa/pennywise/",
+    "started_at": "10-11-2025",
+    "completed_at": "05-12-2025",
     "featured": true
   },
   {
@@ -197,7 +211,7 @@
     "github": "https://github.com/kushagra-aa/wame-qr/",
     "started_at": "18-06-2023",
     "completed_at": "06-07-2023",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Quizzz",
@@ -246,7 +260,7 @@
     "slug": "apis_by_k",
     "picture": "/thumbnails/apis-thumbnail.webp",
     "tags": "api, backend",
-    "tech": "django, python, djangorest",
+    "tech": "django, python, django",
     "description": " Rest APIs For Some Projects. \nBuilt with 🤍 For You!",
     "short_description": " Rest APIs For Some Projects.",
     "link": "https://github.com/kushagra-aa/apisby-k/",
@@ -435,7 +449,7 @@
     "github": "https://github.com/kushagra-aa/road-game/",
     "started_at": "16-02-2022",
     "completed_at": "01-04-2022",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Not Lorem",
