@@ -25,7 +25,9 @@ export async function GET(request: NextRequest) {
         const tech = params.tech.split(",");
         projects = projects.filter((project) => {
           const projectTech = project.tech.split(",");
-          return tech.some((t) => projectTech.includes(t));
+          return tech.some((t) =>
+            projectTech.some((tt) => tt.trim() === t.trim()),
+          );
         });
       }
       if (params.tags) {
