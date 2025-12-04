@@ -101,7 +101,7 @@ export default function Contact() {
         </div>
       </section>
       <div className={styles.socials_container}>
-        <h3>Other means to Connect</h3>
+        <h2>Other means to Connect</h2>
         <Socials />
       </div>
     </div>

@@ -12,7 +12,7 @@ function ProjectCard({ project = PROJECTS[0] }: { project?: ProjectType }) {
         <Image src={project.picture} alt={project.name} fill sizes="100%" />
       </div>
       <div className="project_info">
-        <h6>{project.name}</h6>
+        <h2>{project.name}</h2>
         <p>{project.short_description}</p>
         <div className="project_tags">
           <p>tags:</p>

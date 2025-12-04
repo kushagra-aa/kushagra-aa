@@ -120,7 +120,7 @@
   background-color: var(--color-bg-2);
 }
 
-.experience_details > h4 {
+.experience_details > h3 {
   font-size: var(--font-size-heading-4);
   font-weight: 600;
 }

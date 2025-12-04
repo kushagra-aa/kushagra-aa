@@ -59,7 +59,7 @@
       }
     }
 
-    & > h6 {
+    & > h2 {
       text-align: center;
       font-size: var(--font-size-heading-4);
       font-weight: 600;

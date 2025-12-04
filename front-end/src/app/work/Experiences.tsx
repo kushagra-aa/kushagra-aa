@@ -37,7 +37,7 @@ function Experiences() {
         experiences.map((experience) => (
           <div key={experience.name} className={styles.experience_container}>
             <div className={styles.experience_details}>
-              <h4>{experience.role}</h4>
+              <h3>{experience.role}</h3>
               {experience.website ? (
                 <Link
                   className={styles.experience_org}

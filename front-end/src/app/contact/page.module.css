@@ -179,7 +179,7 @@
   gap: 0.5rem 0;
 }
 
-.socials_container > h3 {
+.socials_container > h2 {
   font-size: var(--font-size-heading-3);
   font-weight: 600;
   color: var(--global-color-dark-1);
