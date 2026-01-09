@@ -6,14 +6,14 @@
 
 - 🔭 I’m currently working on [Hired To Be](https://github.com/kushagra-aa/hired-to-be/)
 
-- ⚡ I’ve recently made [Wrap IT](https://github.com/kushagra-aa/wrap-it/) &  [Dr. Text](https://github.com/kushagra-aa/dr-text/)
+- ⚡ I’ve recently made [PennyWise](https://pennywise-k.netlify.app/)
 
 - 🌱 I’m currently learning **React Native**
 
 - 💬 Let's Talk about **JS, TS, HTML, CSS, ReactJS, Express.js, Hono, Dart, Flutter**
   
 - 👉🏻Latest Projects
-  - 👉 [The Ship Quest](https://github.com/kushagra-aa/the-ship-quest/)
+  - 👉 [Wrap IT](https://github.com/kushagra-aa/wrap-it/) &  [Dr. Text](https://github.com/kushagra-aa/dr-text/)
   - 👉 [Passwrdifi](https://github.com/kushagra-aa/passwrdifi/)
   - 👉 [WaMe QR](https://github.com/kushagra-aa/wame-qr/)
   - 👉 [Road Game](https://github.com/kushagra-aa/road-game/)
