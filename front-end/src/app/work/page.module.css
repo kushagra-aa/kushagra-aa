@@ -75,9 +75,14 @@
   line-height: 2rem;
 }
 
-.info > .info_para > .para_highlight {
+.para_highlight {
   color: var(--global-color-accent-1);
   font-size: var(--font-size-heading-3);
+  font-weight: 600;
+}
+
+.para_highlight_md {
+  color: var(--global-color-accent-1);
   font-weight: 600;
 }
 
@@ -93,8 +98,18 @@
   font-weight: 300;
 }
 
+.builds_list {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-heading-5);
+}
+
+.builds_more {
+  font-weight: 200;
+  margin-top: 0.25rem;
+}
+
 .exp > .experiences_container {
-  --detials-width: 35%;
+  --details-width: 35%;
 
   position: relative;
   isolation: isolate;
@@ -112,7 +127,7 @@
 .experience_container > .experience_details {
   display: flex;
   flex-direction: column;
-  width: var(--detials-width);
+  width: var(--details-width);
   padding: 0.625rem;
 }
 
@@ -143,7 +158,7 @@
 
 .experience_container > .experience_projects_skills_outer {
   position: relative;
-  width: calc(100% - var(--detials-width));
+  width: calc(100% - var(--details-width));
 }
 
 .work_ill {
@@ -265,6 +280,12 @@
   margin-bottom: 1.5rem;
 }
 
+.skills > .para {
+  font-size: var(--font-size-heading-5);
+  width: 75%;
+  margin-bottom: 0.5rem;
+}
+
 .skill_category_loader_container {
   --color-bg: var(--color-bg-2-rgb);
 
@@ -341,7 +362,7 @@
   }
 
   .experiences_container > .experience_container {
-    --detials-width: 100%;
+    --details-width: 100%;
   }
 
   .experience_container:hover

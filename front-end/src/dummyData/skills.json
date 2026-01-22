@@ -4,8 +4,7 @@
         "list": [
             "JavaScript",
             "Python",
-            "Dart",
-            "C++"
+            "Dart"
         ]
     },
     {
@@ -15,8 +14,7 @@
             "ExpressJS",
             "Hono",
             "NestJS",
-            "Django",
-            "Firebase"
+            "Django"
         ]
     },
     {
@@ -39,8 +37,7 @@
             "Tailwind CSS",
             "TanStack",
             "ViteJS",
-            "Redux",
-            "MUI"
+            "Redux"
         ]
     },
     {
@@ -51,9 +48,7 @@
             "PostMan",
             "Figma",
             "Cloudflare",
-            "Vercel",
-            "Pnpm WorkSpaces",
-            "Yarn"
+            "Vercel"
         ]
     },
     {
