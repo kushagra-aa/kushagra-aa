@@ -169,3 +169,10 @@
     transform: none;
   }
 }
+
+/* Mobile Page */
+@media screen and (width <=600px) {
+  .featured_project_card > .project_card_content {
+    align-items: center !important;
+  }
+}

@@ -170,6 +170,7 @@
 }
 
 .projects_container > p {
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
@@ -257,14 +258,25 @@
   /* Hero Section */
   .hero {
     min-height: calc(var(--main-height) - 12vh);
+    gap: 1.25rem;
   }
 
   .hero_ill {
     display: none;
   }
 
+  .hero > h1 {
+    font-size: var(--font-size-display-2);
+  }
+
+  .hero > h2 {
+    font-size: var(--font-size-heading-5);
+    width: 95%;
+  }
+
   .hero > p {
-    width: 90%;
+    font-size: calc(var(--font-size-heading-6) - 2px);
+    width: 95%;
   }
 
   /* Projects Section */
@@ -290,7 +302,17 @@
   .about {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .about > h3 {
+    text-align: left;
+    width: 90%;
+  }
+
+  .about > p {
+    text-align: left;
+    width: 90%;
   }
 
   .about > .about_ill {
