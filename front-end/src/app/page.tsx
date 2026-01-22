@@ -10,8 +10,14 @@ function HeroSection() {
     <section className={styles.hero} id="hero">
       <h2>Hi, I&apos;m</h2>
       <h1>Kushagra Agnihotri</h1>
-      <h2>and I Make Applications</h2>
-      <p>FullStack and Beyond 💫</p>
+      <h2>
+        Senior Full-Stack Engineer building production software with React,
+        Node.js & TypeScript
+      </h2>
+      <p>
+        I build scalable web platforms, APIs, and developer tools that solve
+        real problems and ship to production.
+      </p>
       <Button
         type="link"
         size="large"
@@ -19,7 +25,7 @@ function HeroSection() {
         foregroundColor="dark-2"
       >
         <Link className={styles.hero_cta1} href="/#projects">
-          Checkout my work <ThunderboltIcon />
+          Explore my work <ThunderboltIcon />
         </Link>
       </Button>
       <Button
@@ -48,7 +54,12 @@ function ProjectsSection() {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.projects_container}>
-        <h2>What I&apos;ve made recently?</h2>
+        <h3>Top Shelf Stuff!</h3>
+        <h2>My Featured Work</h2>
+        <p>
+          A selection of production systems, side projects, and developer tools
+          I&apos;ve built and maintain.
+        </p>
         <div className={styles.projects_ill} />
         <FeaturedProjectsCards />
       </div>
@@ -60,10 +71,13 @@ function AboutSection() {
   return (
     <section className={styles.about} id="about">
       <h2>Let me introduce myself!</h2>
-      <h3>Hello! My name is Kushagra and I love Programming</h3>
+      <h3>
+        I help teams ship features faster by crafting reliable code, clean APIs,
+        and intuitive user interfaces.
+      </h3>
       <p>
-        I help people bring their ideas to life. Powered by Designs, Code and
-        coffee, A lot of code and coffee.
+        I&rsquo;m a senior full-stack developer with 3.5+ years of experience
+        building web products, APIs, and developer tooling used in production.
       </p>
       {/* <div className={styles.about_ill} /> */}
       <Image src="/HeartVector.png" alt="" fill sizes="100%" />

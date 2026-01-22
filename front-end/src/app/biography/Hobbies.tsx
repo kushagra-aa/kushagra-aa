@@ -1,3 +1,5 @@
+/* eslint-disable react/no-danger */
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -30,7 +32,9 @@ function Hobbies() {
     <ul>
       {isLoading
         ? [1, 2, 3, 4, 5, 6]?.map((i) => <ListItemLoader key={i} />)
-        : hobbies?.map((hobby) => <li key={hobby}>{hobby}</li>)}
+        : hobbies?.map((hobby) => (
+            <li key={hobby} dangerouslySetInnerHTML={{ __html: hobby }} />
+          ))}
     </ul>
   );
 }

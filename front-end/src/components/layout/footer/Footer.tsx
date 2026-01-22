@@ -8,6 +8,7 @@ function Footer() {
     <footer>
       <div className="left">
         <Button
+          className="footer-btn"
           size="medium"
           type="link"
           backgroundColor="dark-2"
@@ -21,6 +22,7 @@ function Footer() {
       <Socials />
       <div className="right">
         <Button
+          className="footer-btn"
           size="medium"
           type="link"
           backgroundColor="dark-2"
@@ -28,8 +30,8 @@ function Footer() {
           strokeColor="accent-1"
           stoke="stroke-1"
         >
-          <Link href="/resume/full.pdf" target="_blank">
-            my resume
+          <Link href="/resume/one.pdf" target="_blank">
+            View Résumé
           </Link>
         </Button>
       </div>

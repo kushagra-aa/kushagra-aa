@@ -1,7 +1,11 @@
 footer {
   background-color: var(--global-color-dark-2);
   display: grid;
-  grid-template: "lft mid rght" 4fr "btm btm btm" 1fr / 0.5fr 2fr 0.5fr;
+  grid-template: "lft mid rght" 4fr "btm btm btm" 1fr / 1fr 2fr 1fr;
+
+  .footer-btn {
+    padding: 0.5rem 1rem !important;
+  }
 
   & > .right,
   & > .left {
@@ -41,7 +45,7 @@ footer {
     }
 
     & > .socials {
-      --size: 3rem;
+      --size: 2rem;
 
       display: flex;
       gap: 1rem;
@@ -75,7 +79,7 @@ footer {
 
     & > p {
       font-weight: 100;
-      font-size: var(--font-size-sub-heading-2);
+      font-size: calc(var(--font-size-heading-6) - 4px);
     }
   }
 

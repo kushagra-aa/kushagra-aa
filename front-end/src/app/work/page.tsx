@@ -6,6 +6,7 @@ import { FolderOpenIcon, IdCardIcon, SendIcon } from "@/components/Icons";
 import Experiences from "./Experiences";
 import Skills from "./Skills";
 import Certifications from "./Certifications";
+import Builds from "./Builds";
 
 export default function Work() {
   return (
@@ -24,21 +25,28 @@ export default function Work() {
           </div>
         </div>
         <p className={styles.info_para}>
-          Hello Visitor, I am
-          <span className={styles.para_highlight}> Kushagra Agnihotri </span>
-          from
-          <span className={styles.para_highlight}> Lucknow, India</span>. <br />
-          Someone who loves Developing Applications. I make Full-stack,
-          Front-end, Back-end, and UI/UX Designs. I have a passion for
-          <span className={styles.para_highlight}> Learning </span>and
-          <span className={styles.para_highlight}> Helping</span>. Solving
-          problems is my main goal. Developing
-          <span className={styles.para_highlight}> Applications </span>
-          that help someone keeps me going. I use my
-          <span className={styles.para_highlight}> Creative </span>side to
-          design and my<span className={styles.para_highlight}> Logical </span>
-          side to code.
+          I am
+          <span className={styles.para_highlight}> Kushagra Agnihotri </span> —
+          a
+          <span className={styles.para_highlight}>
+            {" "}
+            Senior Full-Stack Engineer
+          </span>
+          . <br />I design and ship production-grade web applications, backend
+          services, and developer tooling using modern frameworks like React,
+          Node.js, and TypeScript. I&apos;ve worked with startups and growth
+          teams to{" "}
+          <span className={styles.para_highlight_md}>
+            {" "}
+            build real systems from concept to production
+          </span>{" "}
+          — including dashboards, APIs, integrations, and developer extensions.
         </p>
+      </section>
+      <section className={styles.exp}>
+        <p className={styles.sub_2}>Bullet Points!</p>
+        <h2>What I build</h2>
+        <Builds />
       </section>
       <section className={styles.exp}>
         <p className={styles.sub_2}>History!</p>
@@ -55,15 +63,15 @@ export default function Work() {
           button="Let's Connect"
           icon={<SendIcon />}
           subTitle="Impressed Yet?"
-          title="Want to add your name to the list?"
+          title="Want to build something together?"
           link="/work"
         />
         <LinkRow
           button="My Resume"
           icon={<IdCardIcon />}
-          subTitle="Are you HR?"
+          subTitle="Are you Recruiting?"
           title="A Compressed Resume for you"
-          link="/resume/full.pdf"
+          link="/resume/one.pdf"
           target="_blank"
         />
         <LinkRow
@@ -77,6 +85,10 @@ export default function Work() {
       <section className={styles.skills}>
         <p className={styles.sub_2}>Want some Action?</p>
         <h2>My Arsenal</h2>
+        <p className={styles.para}>
+          I care deeply about code quality, system reliability, and building
+          things that are easy to reason about six months later.
+        </p>
         <Skills />
       </section>
     </div>

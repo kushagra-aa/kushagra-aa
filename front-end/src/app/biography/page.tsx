@@ -9,47 +9,65 @@ export default function Biography() {
   return (
     <div className={styles.main}>
       <h1>Who Am I?</h1>
+      <p className={styles.sub_title}>
+        Sit back, relax, It&apos;s gonna be a long one
+      </p>
       <div className={styles.story}>
         <div className={styles.story_container}>
-          <p className={styles.story_sub}>As Anansi says</p>
-          <p className={styles.story_head}>Let me tell you a story!</p>
+          <p className={styles.story_sub}>As Anansi would say...</p>
+          <p className={styles.story_head}>Let me tell you a story</p>
           <p className={styles.story_para}>
             Once upon a time, there was a
-            <span className={styles.story_highlight}> boy </span>, a very
-            <span className={styles.story_highlight}> curious </span>
-            one. He saw a piece of tech that was used to{" "}
+            <span className={styles.story_highlight}>very curious kid.</span>.
+            He discovered a strange machine — one that could
             <span className={styles.story_highlight}>
-              play games, watch movies,{" "}
+              {" "}
+              play games, show movies,{" "}
             </span>
             and
-            <span className={styles.story_highlight}> listen to songs</span>. He
-            was amazed by the endless possibilities of a
-            <span className={styles.story_highlight}> Computer</span>
-            . <br />
-            Some time passed, In school they taught him to make a page that can
-            be viewed in a
+            <span className={styles.story_highlight}>
+              {" "}
+              carry music inside it
+            </span>
+            . That machine was a
+            <span className={styles.story_highlight}> computer</span> and to
+            him, it felt less like a device and more like a doorway. A doorway
+            to endless possibilities.
+            <br />
+            Years later, in school, he learned how to make a simple page that
+            lived inside a
             <span className={styles.story_highlight}> Web Browser</span>.
-            Curiosity struck and he linked a bunch of pages together and made
+            Curiosity took over. One page became two. Two became many. That was
             his
-            <span className={styles.story_highlight}> First Website</span>.
-            After some years, the
-            <span className={styles.story_highlight}> Internet </span>
-            emerged and from there he spread his wings. That boy was
-            <span className={styles.story_highlight}> Me</span>
-            , obviously. <br />
+            <span className={styles.story_highlight}> first website</span>— and
+            the moment the internet stopped being something he used and became
+            something he built.
+            <br />
+            Time passed. The web grew. So did he
+            <br />
             <span className={styles.story_highlight}> C++ </span>
-            was my first, and we have a very special connection.
+            was my first language — my introduction to how computers really
+            think.
             <span className={styles.story_highlight}> JavaScript </span>
-            has my Heart but
+            though, has my heart.
             <span className={styles.story_highlight}> Typescript </span>
             and
             <span className={styles.story_highlight}> Python </span>
-            are also lovely. I make
-            <span className={styles.story_highlight}> Web Applications </span>
-            and I love that. Now I am trying to branch out and learn
-            <span className={styles.story_highlight}> Mobile Applications</span>
-            . That&apos;s why at the moment I&apos;m focusing on learning
-            <span className={styles.story_highlight}> React Native </span>.
+            came along and felt like natural companions. Over time, I realized
+            what I enjoy most is building
+            <span className={styles.story_highlight}> Web Applications </span>—
+            systems that people actually use, rely on, and sometimes don&apos;t
+            even notice because they “just work”.
+            <br />
+            Today, I build full-stack applications, APIs, and developer tools. I
+            care about clean code, thoughtful design, and systems that are easy
+            to understand six months later — not just on launch day. Lately,
+            I&apos;ve been branching out into mobile development as well,
+            exploring React Native and the ideas that come with building for
+            smaller screens and different constraints.{" "}
+            <span className={styles.story_highlight}>
+              The curiosity never really left. It just got better tools.
+            </span>
           </p>
         </div>
         <div className={styles.story_ill}>
@@ -59,7 +77,8 @@ export default function Biography() {
         </div>
       </div>
       <div className={styles.hobbies}>
-        <h2>My Hobbies</h2>
+        <h3>Coding is great but, I also gotta have some other</h3>
+        <h2>Hobbies</h2>
         <Hobbies />
       </div>
       <LinksContainer>
@@ -73,9 +92,9 @@ export default function Biography() {
         <LinkRow
           button="My Resume"
           icon={<IdCardIcon />}
-          subTitle="Are you HR?"
+          subTitle="Are you Recruiting?"
           title="A Compressed Resume for you"
-          link="/resume/full.pdf"
+          link="/resume/one.pdf"
           target="_blank"
         />
         <LinkRow
@@ -86,6 +105,9 @@ export default function Biography() {
           link="/portfolio"
         />
       </LinksContainer>
+      <p className={styles.closing_statement}>
+        Still curious. Still learning. Still building. Still being Awesome!
+      </p>
     </div>
   );
 }

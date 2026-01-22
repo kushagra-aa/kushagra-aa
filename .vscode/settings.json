@@ -8,17 +8,17 @@
         "typescriptreact",
         "javascriptreact"
     ],
-    "stylelint.validate": [
-        "css",
-        "less",
-        "postcss"
-    ],
+    // "stylelint.validate": [
+    //     // "css",
+    //     "less",
+    //     "postcss"
+    // ],
     "eslint.workingDirectories": [
         {
             "directory": "front-end"
         }
     ],
-    "stylelint.configFile": "front-end/.stylelintrc",
+    // "stylelint.configFile": "front-end/.stylelintrc",
     "prettier.configPath": "front-end/.prettierrc",
     "editor.formatOnSave": true,
     "scss.validate": false,
