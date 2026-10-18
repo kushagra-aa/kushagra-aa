@@ -1,0 +1,7 @@
+node_modules/
+.next/
+out/
+build/
+old-portfolio/
+public/
+pnpm-lock.yaml

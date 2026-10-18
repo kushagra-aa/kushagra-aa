@@ -1,5 +1,9 @@
 {
     "editor.codeActionsOnSave": {
+        "source.addMissingImports.ts": "always",
+        "source.fixAll.eslint": "always",
+        "source.fixAll.prettier": "always",
+        "source.organizeImports": "always",
         "source.fixAll": "explicit"
     },
     "eslint.validate": [
@@ -8,22 +12,6 @@
         "typescriptreact",
         "javascriptreact"
     ],
-    // "stylelint.validate": [
-    //     // "css",
-    //     "less",
-    //     "postcss"
-    // ],
-    "eslint.workingDirectories": [
-        {
-            "directory": "front-end"
-        }
-    ],
-    // "stylelint.configFile": "front-end/.stylelintrc",
-    "prettier.configPath": "front-end/.prettierrc",
-    "editor.formatOnSave": true,
-    "scss.validate": false,
-    "css.validate": false,
-    "postcss.validate": false,
     "cSpell.words": [
         "anansi",
         "Astro",
@@ -42,7 +30,4 @@
         "Widflixx",
         "Zustand"
     ],
-    "files.associations": {
-        "*.css": "postcss"
-    }
 }

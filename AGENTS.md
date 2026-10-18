@@ -43,11 +43,14 @@ Legacy content and assets live under `old-portfolio/src/dummyData/` and `old-por
 
 - Next.js `16.4.2`, React `19.3.0`, TypeScript, and the App Router.
 - Tailwind CSS `4` with `@tailwindcss/turbopack`; the root stylesheet currently imports Tailwind with `@import "tailwindcss"`.
-- ESLint 9 with flat config in `eslint.config.mjs`, using `eslint-config-next` core web vitals and TypeScript rules.
+- ESLint 10 with flat config in `eslint.config.ts`, using `eslint-config-next` core web vitals and TypeScript rules. `jiti` is required for Node to load the TypeScript config.
+- Prettier is a separate formatter configured in `prettier.config.ts`; `eslint-config-prettier` disables conflicting formatting rules inside ESLint but does not run Prettier. The TypeScript Prettier config requires Node.js `>=22.6.0`.
 - Package manager: pnpm `12.4.2`. There is currently no tracked lockfile; do not introduce a second package manager or commit generated dependency directories.
 - TypeScript path alias: `@/*` resolves to `src/*`.
 - Prefer server components by default. Add `"use client"` only for browser state, effects, event handlers, or other client-only APIs.
 - Use `next/image` for local images and `next/link` for internal navigation. Keep meaningful alt text and accessible labels.
+- Use App Router file conventions deliberately: `page.tsx` and `layout.tsx` expose UI routes, `loading.tsx` provides loading UI, `error.tsx` provides a route error boundary, `not-found.tsx` handles missing content, and `route.ts` is for API endpoints.
+- Use `proxy.ts` for request proxying when needed. Do not introduce the older `middleware.ts` convention without checking the Next.js 16 migration guidance.
 - Keep route-specific components/styles close to their route. Put genuinely shared UI in `src/components/`; put reusable data/domain helpers in appropriately named `src/lib/`, `src/data/`, or `src/types/` directories as they are introduced.
 - Keep portfolio content separate from presentation so projects, experience, skills, certifications, hobbies, and social links can be updated without rewriting layout components.
 - Preserve the existing visual identity only when it is an intentional migration choice. The old CSS is split across global, utility, component, and route-specific files; do not copy it wholesale without checking responsive behavior and accessibility.
@@ -58,6 +61,14 @@ Before changing Next.js APIs, routing, caching, metadata, or configuration, read
 
 The current `next.config.ts` enables `cacheComponents`, `partialPrefetching`, and the Tailwind Turbopack loader. Review the Next.js 16 documentation before changing these options or introducing new caching, dynamic route, or prefetch behavior.
 
+With Cache Components enabled:
+
+- Use the `"use cache"` directive and `cacheLife`/`cacheTag` where data or rendered UI should be reusable. Make caching explicit rather than relying on older route-level `dynamic` or `revalidate` assumptions.
+- Put uncached request-time work, including `cookies()`, `headers()`, or request-dependent data, behind an appropriate `<Suspense>` boundary so the static shell can prerender and stream dynamic content.
+- Avoid carrying forward legacy `dynamic = "force-dynamic"`, `dynamic = "force-static"`, or `dynamic = "error"` settings from the old app without consulting the Cache Components migration guide.
+
+With Partial Prefetching enabled, normal links prefetch a route's App Shell. Use `prefetch={true}` only when URL-specific cached content should also be prefetched, and use `prefetch={false}` when prefetching is undesirable. Validate navigation behavior in a production build; automatic prefetching does not run in the same way during `next dev`.
+
 ## Commands
 
 Run from the repository root:
@@ -66,11 +77,16 @@ Run from the repository root:
 pnpm install       # install dependencies when needed
 pnpm dev           # start local development
 pnpm lint          # run ESLint
+pnpm typecheck     # generate Next route types and run TypeScript checks
+pnpm format        # format root source and configuration files with Prettier
+pnpm format:check  # check formatting without changing files
 pnpm build         # create a production build
 pnpm start         # serve a successful production build
 ```
 
-Run validation after meaningful changes. At minimum, use `pnpm lint`; use `pnpm build` when changing routes, metadata, images, configuration, or server/client boundaries.
+Run validation after meaningful changes. At minimum, use `pnpm lint`, `pnpm typecheck`, and `pnpm format:check`; use `pnpm build` when changing routes, metadata, images, configuration, or server/client boundaries.
+
+Current validation note: `old-portfolio/` is intentionally excluded from the root ESLint and Prettier checks because it is a legacy reference implementation. Do not fix or modernize that code unless explicitly asked. New root-app code should be lint-clean and formatted.
 
 ## Migration guidance
 
